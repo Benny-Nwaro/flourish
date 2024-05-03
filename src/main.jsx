@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createBrowserRouter,
+  // eslint-disable-next-line no-unused-vars
+  BrowserRouter as Router,
+  // eslint-disable-next-line no-unused-vars
+  Routes,
+  Route,
   RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
 
 
@@ -18,49 +24,23 @@ import Give from './pages/Give.jsx';
 import Pace from './pages/Pace.jsx';
 import Sermons from './pages/Sermons.jsx';
 import Live from './pages/Live.jsx';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>,
-    errorElement: <Oops />,
-  },
-  {
-    path: "about",
-    element: <About/>,
-    
-  },
-  {
-    path: "sermons",
-    element: <Sermons/>,
-    
-  },
-  {
-    path: "expressions",
-    element: <Expressions/>,
-    
-  },
-  {
-    path: "pace",
-    element: <Pace/>,
-    
-  },
-  {
-    path: "blogs",
-    element: <Blogs/>,
-    
-  },
-  {
-    path: "give",
-    element: <Give/>,
-    
-  },
-  {
-    path: "live",
-    element: <Live/>,
-    
-  },
+const router = createBrowserRouter(
+  createRoutesFromElements(
 
-]);
+    <>
+        <Route  path="/" element={<Home/>} />
+        <Route  path="home" element={<Home/>} />
+        <Route path="sermons" element={<Sermons />} />
+        <Route path="whoweare" element={<About />} />
+        <Route path="expressions" element={<Expressions/>} />
+        <Route path="aboutpace" element={<Pace/>} />
+        <Route path="blogs" element={<Blogs/>} />
+        <Route path="give" element={<Give/>} />
+        <Route path="live" element={<Live/>} />
+        <Route path="*" element={<Oops/>} />
+      </>
+  )
+  );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,12 +1,30 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Flourish from '../components/Flourish'
+import WhatsComing from '../components/WhatsComing'
+import Trainings from '../components/Trainings'
+import Statement from '../components/Statement'
+import Ministries from '../components/Ministries'
+import Pastor from '../components/Pastor'
+import Location from '../components/Location'
+import Invest from '../components/Invest'
+import Updates from '../components/Updates'
+
 
 
 export default function Home() {
   return (
     <Layout>
-    <h1>Welcome to the Home Page!</h1>
-    <p>This is some content specific to the Home Page.</p>
+    
+    <Flourish/>
+    <WhatsComing/>
+    <Trainings/>
+    <Statement/>
+    <Ministries/>
+    <Pastor/>
+    <Location/>
+    <Invest/>
+    <Updates/>
   </Layout>
   )
 }
