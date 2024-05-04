@@ -1,11 +1,21 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Streaming from '../components/Streaming'
+import Stream from '../components/Stream'
+import Experience from '../components/Experience'
+import Updates from '../components/Updates'
+import LivePst from '../components/LivePst'
+LivePst
 
 export default function Live() {
   return (
     <Layout>
-    <h1>Welcome to the About Page!</h1>
-    <p>This is some content specific to the Live Page.</p>
+    <LivePst/>
+    <Streaming/>
+    <Stream/>
+    <Experience/>
+    <Updates/>
+    
   </Layout>
   )
 }

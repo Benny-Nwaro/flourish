@@ -1,11 +1,16 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import BlogsSection from '../components/BlogsSection'
+import BlogsTop from '../components/BlogsTop'
+import Updates from '../components/Updates'
+Updates
 
 export default function Blogs() {
   return (
     <Layout>
-    <h1>Welcome to the Blogs Page!</h1>
-    <p>This is some content specific to the Home Page.</p>
+    <BlogsTop/>
+    <BlogsSection/>
+    <Updates/>
   </Layout>
   )
 }

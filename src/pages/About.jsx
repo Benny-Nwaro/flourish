@@ -1,12 +1,22 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Mission from '../components/Mission'
+import Vision from '../components/Vision'
+import Updates from '../components/Updates'
+import FlExperience from '../components/FlExperience'
+import Approach from '../components/Approach'
+Approach
 
 
 export default function About() {
   return (
     <Layout>
-    <h1>Welcome to the About Page!</h1>
-    <p>This is some content specific to the Home Page.</p>
+      <Mission/>
+      <Vision/>
+     <FlExperience/>
+      <Approach/>
+      <Updates/>
+
   </Layout>
   )
 }

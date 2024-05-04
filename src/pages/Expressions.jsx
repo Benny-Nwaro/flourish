@@ -1,11 +1,20 @@
 import React from 'react'
 import Layout from '../components/Layout'
-Layout
+import Gospel from '../components/Gospel'
+import Countries from '../components/Countries'
+import FlExperience from '../components/FlExperience'
+import Updates from '../components/Updates'
+
+
+
+
 export default function Expressions() {
   return (
     <Layout>
-    <h1>Welcome to the About Page!</h1>
-    <p>This is some content specific to the Expressions Page.</p>
+    <Gospel/>
+    <Countries/>
+    <FlExperience/>
+    <Updates/>
   </Layout>
   )
 }
