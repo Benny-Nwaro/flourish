@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function Mission() {
   return (
+    <section className="flex justify-center items-center  px-16  max-md:px-5 bg-slate-200">
+
+    <div className="flex justify-center items-center mb-5 px-64 py-6  max-md:px-5 ">
     <div className="flex flex-col grow shrink-0 justify-center items-start px-10 py-9 mt-4 bg-white basis-0 rounded-[32px] w-fit max-md:px-5 max-md:max-w-full">
       <div className="max-w-full w-[944px]">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -9,7 +12,7 @@ export default function Mission() {
             <div className="flex flex-col grow justify-center rounded-xl max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
-                srcSet="..."
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd738bc8bea8a555710d89985e91cb8f543ef701cb1cd89601ef0de85e02bf0b?apiKey=873e47fe7796454e93671642132d9742&"
                 className="w-full aspect-[0.85] max-md:max-w-full"
               />
             </div>
@@ -44,5 +47,7 @@ export default function Mission() {
         </div>
       </div>
     </div>
+    </div>
+    </section>
   )
 }

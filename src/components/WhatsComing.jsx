@@ -3,22 +3,23 @@ import React from 'react'
 const EventCard = ({ image, title, date, location, time, description }) => (
     <div className="flex flex-col text-base tracking-normal leading-6 text-black max-md:max-w-full">
       <div className="flex flex-col items-end px-16 pt-3 pb-20 text-lg tracking-normal text-blue-50 bg-black rounded-2xl max-md:pl-5 max-md:max-w-full">
-        {image}
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&" alt="Calendar icon" className="shrink-0 w-4 aspect-square" />
+           
       </div>
       <h3 className="mt-12 text-4xl tracking-tight max-md:mt-10 font-serif max-md:max-w-full">{title}</h3>
       <div className="flex flex-wrap gap-5 justify-between content-start mt-5">
         <div className="flex flex-col">
           <div className="flex gap-2">
-            <img loading="lazy" src="/calendar-icon.svg" alt="Calendar icon" className="shrink-0 w-4 aspect-square" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2edc6f237f334f4475ac8953a9960df2654ac3b9871f47144da804ed37d4ae7?apiKey=873e47fe7796454e93671642132d9742&" alt="Calendar icon" className="shrink-0 w-4 aspect-square" />
             <div className="my-auto font-serif">{date}</div>
           </div>
           <div className="flex gap-1.5 mt-3">
-            <img loading="lazy" src="/location-icon.svg" alt="Location icon" className="shrink-0 w-4 aspect-square" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/500bf02f33815cb98e44edca6be19298d10cbe964584fe027da4a7e715aec9ba?apiKey=873e47fe7796454e93671642132d9742&" alt="Location icon" className="shrink-0 w-4 aspect-square" />
             <div className="my-auto font-serif">{location}</div>
           </div>
         </div>
         <div className="flex gap-2 self-start font-serif whitespace-nowrap">
-          <img loading="lazy" src="/clock-icon.svg" alt="Clock icon" className="shrink-0 aspect-[1.06] w-[17px]" />
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8cd18ef82053dd585197772922b595b1b5f44246bb179a1a9cd61a834ff2b609?apiKey=873e47fe7796454e93671642132d9742&" alt="Clock icon" className="shrink-0 aspect-[1.06] w-[17px]" />
           <div className="my-auto">{time}</div>
         </div>
       </div>

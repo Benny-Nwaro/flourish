@@ -13,7 +13,7 @@ function Button({ children, className }) {
   }
 export default function Flourish() {
   return (
-    <section className="flex justify-center items-center mb-5 px-16  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center  px-16  max-md:px-5 bg-slate-200">
 
     <div className="flex flex-col">
       <div className="flex gap-5 justify-between items-start w-full max-md:flex-wrap max-md:pr-5 max-md:max-w-full">

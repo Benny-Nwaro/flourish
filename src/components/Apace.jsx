@@ -7,7 +7,7 @@ export default function Apace() {
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd25aac4e099ee2dbfa0088d991917439f25a454dfd6ae6698b885c05641da5b?apiKey=873e47fe7796454e93671642132d9742&"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
           alt=""
           className="mt-1 mb-96 border-white border-solid aspect-[0.61] border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[51px] max-md:mb-10"
         />

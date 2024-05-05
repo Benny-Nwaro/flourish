@@ -3,17 +3,21 @@ import Layout from '../components/Layout'
 import Mission from '../components/Mission'
 import Vision from '../components/Vision'
 import Updates from '../components/Updates'
-import FlExperience from '../components/FlExperience'
+import Experience from '../components/Experience'
 import Approach from '../components/Approach'
-Approach
+import Flourishing from '../components/Flourishing'
+import WeFlourish from '../components/WeFlourish'
+WeFlourish
 
 
 export default function About() {
   return (
     <Layout>
+      <WeFlourish/>
+      <Flourishing/>
       <Mission/>
       <Vision/>
-     <FlExperience/>
+     <Experience/>
       <Approach/>
       <Updates/>
 

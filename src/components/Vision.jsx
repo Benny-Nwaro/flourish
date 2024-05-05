@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Vision() {
   return (
+    <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
     <div className="flex relative gap-5 mt-36 mb-60 max-md:flex-wrap max-md:my-10 max-md:max-w-full">
       <div className="flex flex-col justify-center items-center self-start px-3 w-11 h-11 bg-white rounded-full">
         <div className="shrink-0 bg-yellow-400 rounded-full h-[22px] w-[22px]" />
@@ -32,7 +33,7 @@ export default function Vision() {
               <div className="flex flex-col grow justify-center rounded-xl max-md:mt-10 max-md:max-w-full">
                 <img
                   loading="lazy"
-                  srcSet="..."
+                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/931511afeff0db440130d2ddb7d61e1929063c6190009153ea1e36f9fa74a5fc?apiKey=873e47fe7796454e93671642132d9742&"
                   className="w-full aspect-[0.85] max-md:max-w-full"
                 />
               </div>
@@ -41,5 +42,6 @@ export default function Vision() {
         </div>
       </div>
     </div>
+    </section>
   )
 }
