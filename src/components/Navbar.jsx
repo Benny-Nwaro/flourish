@@ -19,7 +19,7 @@ const NavMenu = () => {
     <nav className="flex gap-5 justify-between px-14 py-6 text-base leading-6 text-black backdrop-blur-[10.5px] bg-white bg-opacity-60 rounded-[95px] max-md:flex-wrap max-md:px-5">
       {navItems.map((item, index) => (
         
-        <NavItem key={index} ><Link to={item.replaceAll(' ', '')}>{item}</Link></NavItem>
+        <NavItem key={index} ><Link to={"/" + item.replaceAll(' ', '')}>{item}</Link></NavItem>
       ))}
     </nav>
   );

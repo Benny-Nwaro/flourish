@@ -30,11 +30,11 @@ export default function Footer() {
                 </div>
                 <div className='font-serif'>
                 <Link to="/"><div className="mt-5">Home</div></Link>
-                <Link to="whoweare"><div className="mt-5">About</div></Link>
-                <Link to="aboutpace"><div className="mt-5 max-md:mr-1.5">About PACE</div></Link>
-                <Link to="give"><div className="mt-5">Give</div></Link>
-                <Link to="expressions"><div className="mt-5 max-md:mr-2">Expressions</div></Link>
-                <Link to="sermons"><div className="mt-5">Sermons</div></Link>
+                <Link to="/whoweare"><div className="mt-5">About</div></Link>
+                <Link to="/aboutpace"><div className="mt-5 max-md:mr-1.5">About PACE</div></Link>
+                <Link to="/give"><div className="mt-5">Give</div></Link>
+                <Link to="/expressions"><div className="mt-5 max-md:mr-2">Expressions</div></Link>
+                <Link to="/sermons"><div className="mt-5">Sermons</div></Link>
                 </div>
               </div>
             </div>
