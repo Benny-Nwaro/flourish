@@ -11,7 +11,7 @@ function PaceLabel() {
   
   function Title() {
     return (
-      <h1 className="relative mt-5 ml-24 text-7xl tracking-tighter text-white leading-[74px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+      <h1 className="relative mt-5 ml-24 text-7xl font-serif tracking-tighter text-white leading-[74px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
         Pst. Ama Chinecherem Ebenezer
       </h1>
     );
@@ -19,7 +19,7 @@ function PaceLabel() {
   
   function Description() {
     return (
-      <p className="relative mt-5 mb-16 ml-24 text-base tracking-normal leading-6 text-white w-[556px] max-md:mb-10 max-md:max-w-full">
+      <p className="relative mt-5 mb-16 ml-24 font-serif text-base tracking-normal leading-6 text-white w-[556px] max-md:mb-10 max-md:max-w-full">
         Who we are Who we are Who we are Who we areWho we areWho we are Who we are Who we areWho we are Who we areWho we areWho we are
       </p>
     );

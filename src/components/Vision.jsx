@@ -15,6 +15,7 @@ export default function Vision() {
                 <div className="text-6xl tracking-tighter leading-[61px] max-md:text-4xl max-md:leading-10">
                   Our <br />
                   Vision
+                  
                 </div>
                 <div className="mt-3.5 text-2xl tracking-tight leading-7">
                   <span className="text-black">We envision a generation </span>

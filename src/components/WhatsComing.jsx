@@ -2,10 +2,16 @@ import React from 'react'
 
 const EventCard = ({ image, title, date, location, time, description }) => (
     <div className="flex flex-col text-base tracking-normal leading-6 text-black max-md:max-w-full">
-      <div className="flex flex-col items-end px-16 pt-3 pb-20 text-lg tracking-normal text-blue-50 bg-black rounded-2xl max-md:pl-5 max-md:max-w-full">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&" alt="Calendar icon" className="shrink-0 w-4 aspect-square" />
-           
+      <div className="flex overflow-hidden relative rounded-lg flex-col items-end px-16 pt-3 pb-20 w-full min-h-[426px]">
+      <img
+        loading="lazy"
+        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7696e8f660f689a6baf202535294d3e69cf94695163cd3895ccabcd303b2f78c?apiKey=873e47fe7796454e93671642132d9742&"
+        className="object-cover absolute inset-0 size-full"
+      />
+      <div className="relative justify-center p-2.5 mb-56 bg-emerald-500 rounded-[35.882px]">
+        Up next
       </div>
+    </div>
       <h3 className="mt-12 text-4xl tracking-tight max-md:mt-10 font-serif max-md:max-w-full">{title}</h3>
       <div className="flex flex-wrap gap-5 justify-between content-start mt-5">
         <div className="flex flex-col">
@@ -95,7 +101,7 @@ export default function WhatsComing() {
         Events
       </div>
       <h1 className="mt-4 ml-20 text-7xl tracking-tighter font-serif text-black leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">What's Coming</h1>
-      <p className="mt-4 ml-20 text-base tracking-normal leading-6 font-serif text-black w-[600px] max-md:max-w-full">
+      <p className="mt-4 ml-20 text-base tracking-normal leading-6 font-serif text-black  max-md:max-w-full">
         Experience the joy of fellowship and personal growth at our upcoming events at the Flourish Nation Global , where deep connection and spiritual rejuvenation earnestly awaits you. Here, you will get a glimpse on our upcoming events, stay updated for what will come next!
       </p>
       <div className="flex overflow-x-auto gap-5 justify-between self-center mt-16 max-w-full w-[1134px] max-md:flex-wrap max-md:mt-10">

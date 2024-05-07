@@ -21,7 +21,8 @@ export default function Gospel() {
       ];
     
       return (
-        <main className="flex flex-col pt-6 pb-12 rounded-3xl bg-neutral-50">
+        <section className="flex justify-center items-center   max-md:px-5 bg-slate-200">
+        <div className="flex flex-col pt-6 pb-12 rounded-3xl bg-neutral-50">
           <div className="flex gap-5 justify-between w-full max-md:flex-wrap max-md:max-w-full">
             <div className="flex flex-col max-md:max-w-full">
               <img
@@ -30,8 +31,8 @@ export default function Gospel() {
                 alt=""
                 className="border-white border-solid aspect-[0.58] border-[5px] fill-emerald-500 stroke-[4.568px] stroke-white w-[42px]"
               />
-              <div className="flex flex-col self-end px-5 mt-14 max-w-full w-[573px] max-md:mt-10">
-                <h1 className="text-7xl tracking-tighter text-blue-600 leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+              <div className="flex flex-col self-end px-5 mt-14 max-w-full  max-md:mt-10">
+                <h1 className="text-7xl tracking-tighter font-serif text-blue-600 leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
                   Until the Gospel fills the earth{" "}
                   <span className="text-blue-600">
                     as the waters cover the sea
@@ -52,13 +53,14 @@ export default function Gospel() {
               className="shrink-0 self-start mt-28 border-white border-solid aspect-[0.61] border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[51px] max-md:mt-10"
             />
           </div>
-          <section className="justify-between self-center p-9 mt-16 w-full bg-white rounded-3xl max-w-[1063px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+          <div className="justify-between self-center p-9 mt-16 w-full bg-white rounded-3xl max-w-[1063px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               {countryData.map((data, index) => (
                 <CountryCard key={index} count={data.count} label={data.label} />
               ))}
             </div>
-          </section>
-        </main>
+          </div>
+        </div>
+        </section>
       );
 }

@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Social() {
   return (
+    <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
     <div className="flex gap-5 justify-between self-center px-1 pt-7 pb-14 mt-20 w-full bg-white rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col max-md:max-w-full">
         <img
@@ -53,5 +54,6 @@ export default function Social() {
         className="shrink-0 self-start mt-28 border-white border-solid aspect-[0.61] border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[51px] max-md:mt-10"
       />
     </div>
+    </section>
   )
 }

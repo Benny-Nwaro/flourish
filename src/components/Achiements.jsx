@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Achiements() {
   return (
-    <div className="flex z-10 justify-center items-center px-16 py-20 mt-0 w-full bg-white max-md:px-5 max-md:max-w-full">
+    
+    <div className="flex z-10 justify-center items-center border-2 px-16 py-20 mt-0 w-full bg-white max-md:px-5 max-md:max-w-full">
       <div className="px-px mt-24 mb-14 w-full max-w-[1172px] max-md:my-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
@@ -35,7 +36,7 @@ export default function Achiements() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+          <div className="flex flex-col rounded-md ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac7b101124ce7b985f6341db3d85a0c7314fc50ccb91bab0a2f8dc77cbd843e3?apiKey=873e47fe7796454e93671642132d9742&%22,%20alt:%20%22First%20image%20description"

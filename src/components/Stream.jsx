@@ -43,7 +43,8 @@ export default function Stream() {
       ];
     
       return (
-        <div>
+        <section className="flex justify-center items-center mb-5 pb-10 px-48  max-md:px-5 bg-slate-200">
+
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             {socialData.map((card, index) => (
               <SocialCard
@@ -56,6 +57,6 @@ export default function Stream() {
               />
             ))}
           </div>
-        </div>
+        </section>
   )
 }

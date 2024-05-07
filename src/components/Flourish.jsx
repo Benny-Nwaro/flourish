@@ -16,21 +16,27 @@ export default function Flourish() {
     <section className="flex justify-center items-center  px-16  max-md:px-5 bg-slate-200">
 
     <div className="flex flex-col">
-      <div className="flex gap-5 justify-between items-start w-full max-md:flex-wrap max-md:pr-5 max-md:max-w-full">
+      <div className="flex gap-5 justify-between items-start w-full  max-md:pr-5 max-md:max-w-full">
         <div className="flex flex-col self-end mt-16 leading-[93%] max-md:mt-10 max-md:max-w-full">
-          <div className='px-32 w-1/2 '>
-          <div className="justify-center w-4/5 self-start font-bold py-3 px-8 text-sm tracking-normal text-blue-600 bg-white rounded-[65.48px] max-md:px-5">
+          <div className='px-32 '>
+          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-3 w-61 max-w-64 text-sm tracking-normal text-blue-600 rounded-full  max-md:px-5">
             The Church with Eternity in View
           </div>
+     
           </div>
 
-          <div className='w-3/5 px-32 '>
+          <div className=' px-32 max-md:max-w-3/5 '>
        
           <h1 className="mt-5 text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
-            The Righteous shall{" "}
-            <span className="text-blue-600">Flourish</span> 
+            The Righteous {" "}
+            
             
           </h1 >
+          <span className="mt-5 text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Shall           
+          
+          <span className="mt-5 text-7xl pl-5 text-blue-600 tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Flourish     
+    </span>   
+    </span> 
           <h1 className="text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">like a Palm Tree</h1>
           <p className="mt-8 text-base tracking-normal leading-6 text-black font-serif max-md:mr-2 max-md:max-w-50px">
             Experience the joy of fellowship and personal growth at our
@@ -40,7 +46,7 @@ export default function Flourish() {
             next!
           </p>
           <div className="flex gap-3 self-start mt-4 text-xl tracking-normal">
-          <Link to="whoweare/"><Button className="text-white bg-blue-600 hover:bg-opacity-5">Who we are</Button></Link>
+          <Link to="whoweare/"><Button className="text-white whitespace-nowrap bg-blue-600 hover:bg-opacity-5">Who we are</Button></Link>
           <Link to="sermons"> <Button className="text-blue-600 whitespace-nowrap bg-indigo-100 hover:bg-opacity-5">
               Sermons
             </Button></Link>
@@ -50,20 +56,20 @@ export default function Flourish() {
 
 
         </div>
-        <div className="flex flex-col self-start pr-16">
-          <img
+        {/* <div className="flex flex-col self-start pr-16"> */}
+          {/* <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
             alt=""
             className="border-white border-solid aspect-square border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[84px]"
-          />
-          <img
+          /> */}
+          {/* <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e367770d9aa964600fe609877e912d728d08081ae02c4f1438e86ec70b950f2?apiKey=873e47fe7796454e93671642132d9742&"
             alt=""
             className="self-end mt-80 max-w-full border-8 border-white border-solid aspect-[1.09] fill-blue-600 stroke-[8.1px] stroke-white w-[110px] max-md:mt-10"
-          />
-        </div>
+          /> */}
+        {/* </div> */}
       </div>
       <ImagesSection/>
       {/* <img

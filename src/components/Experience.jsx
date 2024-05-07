@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
 
-    <div className="flex flex-col pt-6 pb-20 text-white bg-blue-600 rounded-3xl border-4 border-white border-solid">
+    <div className="flex flex-col pt-6 pb-10 text-white bg-blue-600 rounded-3xl border-4 border-white border-solid">
     <img
       loading="lazy"
       src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf619dcea7c79a0defaa97e7518ef603a63beeb23f496a1ddb9f2bd8a7c4e58d?apiKey=873e47fe7796454e93671642132d9742&"

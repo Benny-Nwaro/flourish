@@ -3,11 +3,11 @@ import React from 'react'
 export default function LivePst() {
   return (
     <main className="flex flex-col justify-center bg-white rounded-3xl">
-    <section className="flex overflow-hidden relative flex-col justify-center items-center px-16 py-20 w-full min-h-[868px] max-md:px-5 max-md:max-w-full">
+    <section className="flex overflow-hidden relative flex-col justify-center pb-5 items-center px-16 py-20 w-full min-h-[868px] max-md:px-5 max-md:max-w-full">
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/70fc52d569db20779153d2736d7d9c9c827591436d4f43571f68b771aa045fcd?apiKey=873e47fe7796454e93671642132d9742&"
-        className="object-cover absolute inset-0 size-full"
+        className=" absolute inset-0 size-full"
         alt=""
       />
       <img
