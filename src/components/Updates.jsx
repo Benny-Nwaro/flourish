@@ -1,11 +1,45 @@
 import React from 'react'
+import { useState } from "react";
 
 
 
 export default function Updates() {
+  const [mailerState, setMailerState] = useState({
+    name: "",
+    email: "",
+   
+  });
+
+  function handleStateChange(e) {
+    setMailerState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({ mailerState });
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ mailerState }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setMailerState({
+          email: "",
+          name: "",
+          
+        });
+      });
+  };
+
   return (
     <section className="flex justify-center items-center px-16 py-10 max-md:px-5 bg-slate-200">
-    <div className="flex justi flex-col items-start self-center pt-1 pr-20 pb-20 mt-32 w-full bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
+    <div className="flex justify-center flex-col items-start self-center pt-1 pr-20 pb-20 mt-32  bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 justify-between max-w-full w-[668px] max-md:flex-wrap max-md:pr-5">
         <img
           loading="lazy"
@@ -25,12 +59,14 @@ export default function Updates() {
         We promise not to SPAM you, but send you edifying and amazing content
         regularly from Flourish Nation Global
       </p>
-      <form>
-      <input className="justify-center py-7 pr-5 pl-12 mt-6 ml-36 text-lg font-serif font-medium tracking-tighter leading-5 text-white border border-white border-solid bg-black bg-opacity-10 rounded-[141px] w-3/5 max-md:pl-5 max-md:max-w-full" id="name" type="text" placeholder="First Name"/>
+      <form >
+      <input className="justify-center py-7 pr-5 pl-12 mt-6 ml-36 text-lg font-serif font-medium tracking-tighter leading-5 text-white border border-white border-solid bg-black bg-opacity-10 rounded-[141px] w-3/5 max-md:pl-5 max-md:max-w-full" id="name"   name="name"
+           value={mailerState.name} onChange={handleStateChange} type="text" placeholder="First Name "/>
       
-      <input className="justify-center py-7 pr-5 pl-12 mt-6 ml-36 text-lg font-serif font-medium tracking-tighter leading-5 text-white border border-white border-solid bg-black bg-opacity-10 rounded-[141px] w-3/5 max-md:pl-5 max-md:max-w-full" id="email" type="text" placeholder="Email"/>
+      <input className="justify-center py-7 pr-5 pl-12 mt-6 ml-36 text-lg font-serif font-medium tracking-tighter leading-5 text-white border border-white border-solid bg-black bg-opacity-10 rounded-[141px] w-3/5 max-md:pl-5 max-md:max-w-full" id="email"   name="email"
+           value={mailerState.email} onChange={handleStateChange} type="text" placeholder="Email"/>
 
-      <button className="justify-center px-11 py-4 mt-6 mb-5 ml-36 text-xl tracking-normal leading-4 font-serif text-white whitespace-nowrap bg-emerald-500 rounded-[58.975px] max-md:px-5 max-md:ml-2.5">
+      <button className="justify-center px-11 py-4 mt-6 mb-5 ml-36 text-xl tracking-normal leading-4 font-serif text-white whitespace-nowrap bg-emerald-500 rounded-[58.975px] max-md:px-5 max-md:ml-2.5" onSubmit={submitEmail}>
         Submit
       </button>
 

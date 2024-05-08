@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -41,15 +43,15 @@ export default function Trainings() {
           <div className="flex flex-col w-[41%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col self-stretch my-auto text-black font-serif leading-[93%] max-md:mt-10">
 
-              <div className='font-serif px-16'>
-              <div className="justify-center px-8  py-3 w-4/5 font-bold text-sm tracking-normal text-blue-600 bg-white rounded-[65.48px] max-md:px-5">
+              <div className='font-serif '>
+              <div className="justify-center  py-3 w-4/5 font-bold text-sm tracking-normal text-blue-600 bg-white rounded-[65.48px] max-md:px-5">
                 The Church with Eternity in View
               </div>
               <Heading>We train people</Heading>
               <Paragraph>
                 At the Flourish Nation Global, we are on a mission to raise a generation of True witnesses, trained in wisdom and stature, favoured of the Lord and Men, Empowered by the Spirit and sent for Kingdom Purpose.
               </Paragraph>
-              <Button className="mt-5 px-2 w-2/4 hover:bg-opacity-5">Sermons</Button>
+              <Link to="/sermons"><Button className="mt-5 px-2 w-2/4 hover:bg-opacity-5">Sermons</Button></Link>
               </div>
              
               

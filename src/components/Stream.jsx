@@ -25,6 +25,7 @@ export default function Stream() {
           ctaText: "Watch now",
           image: "https://cdn.builder.io/api/v1/image/assets/TEMP/423b62941b7e49c6b3dabc897366c95339d4b6aec77b40a291538411c2cf7e56?apiKey=873e47fe7796454e93671642132d9742&",
           imageAlt: "Youtube social card image",
+          url: "https://www.youtube.com/channel/UCoIDa4wRZLEHZhCk0t8iv5Q",
         },
         {
           title: "Join us on Mixlr",
@@ -39,6 +40,7 @@ export default function Stream() {
           ctaText: "Join us now", 
           image: "https://cdn.builder.io/api/v1/image/assets/TEMP/a1c0d4cbada0dc78c2add89bb4f0e25c71a3d4cefee753159232a76d3d228efe?apiKey=873e47fe7796454e93671642132d9742&",
           imageAlt: "Facebook social card image",
+          url: "https://web.facebook.com/flourishnationglobal",
         },
       ];
     

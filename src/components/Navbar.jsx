@@ -46,7 +46,7 @@ const NavMenu = () => {
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px] mr-36 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white">
+  <button className="border-2 border-white h-[50px] w-[100px] ml-32 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white">
     Give
   </button>
   </Link>
@@ -81,12 +81,10 @@ export default function Navbar() {
         <Logo/>
         <ul className='hidden md:flex font-epilogue text-[15px] items-center mx-12 text-gray-600'>
         <NavMenu />
+        <GiveButton />
         </ul>
       </div>
-      <div className='hidden md:flex transition-all duration-700font-epilogue text-[15px] items-center text-gray-600'>
-      <GiveButton />
-
-      </div>
+    
       <div className='flex items-center mr-8'>
                 <img src={menu} alt='menuIcon'className={Sidenav ? 'hidden' : 'flex h-[22px] cursor-pointer md:hidden'} onClick={toggleSidenav} />
       </div>
