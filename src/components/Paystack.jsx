@@ -57,7 +57,7 @@ export default function Paystack() {
             <label for="amount" className="block mb-2 text-sm font-bold font-serif text-gray-900 dark:text-white">Amount</label>
             <input type="curr"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="000,000,000" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required  
               id="amount"
-              onChange={(e) => setAmount(e.target.value)}/>
+              onChange={(e) => setAmount(e.target.value)*100}/>
         </div>
  
     </div>

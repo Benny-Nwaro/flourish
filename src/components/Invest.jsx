@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+Link
 
 function HeroSection() {
   return (
@@ -13,9 +15,10 @@ function HeroSection() {
               <p className="mt-8 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
                 At the Flourish Nation Global, we believe that everything we have ultimately belongs to God and that we are stewards entrusted with managing his resources wisely. By putting our money where our faith is, we prioritise using our financial resources in ways that honour God and partner with him for the advancement of his Kingdom.
               </p>
+              <Link to="/give">
               <button className="justify-center self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal leading-4 text-white bg-blue-600 rounded-[58.975px] max-md:px-5">
                 Give now
-              </button>
+              </button></Link>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">

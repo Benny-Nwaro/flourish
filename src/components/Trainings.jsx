@@ -37,16 +37,16 @@ function Button({ children, className }) {
 
 export default function Trainings() {
   return (
-    <section className="flex justify-center items-center px-16 py-20 bg-slate-200 max-md:pl-5">
+    <section className="flex justify-center items-center px-32 py-20 bg-slate-200 max-md:pl-5">
       <div className="mt-16 w-full max-w-[1290px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[41%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col self-stretch my-auto text-black font-serif leading-[93%] max-md:mt-10">
 
               <div className='font-serif '>
-              <div className="justify-center  py-3 w-4/5 font-bold text-sm tracking-normal text-blue-600 bg-white rounded-[65.48px] max-md:px-5">
-                The Church with Eternity in View
-              </div>
+              <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-3 w-61 max-w-64 text-sm tracking-normal text-blue-600 rounded-full  max-md:px-5">
+            The Church with Eternity in View
+          </div>
               <Heading>We train people</Heading>
               <Paragraph>
                 At the Flourish Nation Global, we are on a mission to raise a generation of True witnesses, trained in wisdom and stature, favoured of the Lord and Men, Empowered by the Spirit and sent for Kingdom Purpose.

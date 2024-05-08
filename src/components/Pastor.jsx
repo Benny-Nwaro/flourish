@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 function PastorImage() {
     return (
@@ -25,9 +27,10 @@ function PastorImage() {
           out and expresses his profound passion of seeing that a generation is separated and preserved unto God,
           effectively living out the Life of Christ in them; built and equipped to walk in their God-given purpose.
         </p>
+        <Link to="/aboutpace">
         <button className="justify-center self-start px-11 py-4 mt-6 text-xl font-serif tracking-normal leading-4 text-white bg-emerald-500 rounded-[58.975px] max-md:px-5">
           About our Pastor
-        </button>
+        </button></Link>
       </div>
     );
   }

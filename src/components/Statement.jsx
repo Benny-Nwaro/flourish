@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+Link
 
 
 export default function Statement() {
@@ -35,12 +37,12 @@ export default function Statement() {
                   are a Flourishing Nation!
                 </p>
               </div>
-              <a
-                href="#"
+              <Link to="/whoweare">
+              <button
                 className="justify-center self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal text-white bg-blue-600 rounded-[58.975px] max-md:px-5"
               >
                 About us
-              </a>
+              </button></Link>
             </div>
           </div>
         </article>
