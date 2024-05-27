@@ -27,7 +27,7 @@ export default function Flourish() {
 
           <div className=' px-32 max-md:max-w-3/5 '>
        
-          <h1 className="mt-5 text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+          <h1 className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
             The Righteous {" "}
             
             

@@ -1,15 +1,7 @@
-
-
 import React, { useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 
-import logo from '../assets/images/logo.svg'
-import downArrow from '../assets/images/icon-arrow-down.svg'
-import upArrow from '../assets/images/icon-arrow-up.svg'
-import todo from '../assets/images/icon-todo.svg'
-import calender from '../assets/images/icon-calendar.svg'
-import reminder from '../assets/images/icon-reminders.svg'
-import planning from '../assets/images/icon-planning.svg'
+import FGClogo from '../assets/images/FGClogo.png'
 import menu from '../assets/images/icon-menu.svg'
 import close from '../assets/images/icon-close-menu.svg'
 
@@ -19,11 +11,11 @@ const Logo = () => (
     <div className="flex flex-col items-center px-8 py-3.5 ml-32 text-xs font-medium text-blue-600 whitespace-nowrap backdrop-blur-[7.5px] bg-white  max-w-[157px] rounded-[121.698px] tracking-[7.43px]">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b98d996d27d080013d782415ba0af3742371f2b7c09bb564c863d77e8dab626d?apiKey=873e47fe7796454e93671642132d9742&"
+        src={FGClogo}
         alt="Church icon"
         className="w-full aspect-[3.7] fill-blue-600"
       />
-      <div>CHURCH</div>
+      
     </div>
   </Link>
 );
