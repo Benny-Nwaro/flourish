@@ -90,6 +90,16 @@ const EventCard = ({ image, title, date, location, time, description }) => (
       time: "8:00am",
       description: "Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: \"Man shall not live by bread alone, but by every word that comes from the mouth of God.\" ",
     },
+        {
+      image: <div className="justify-center p-2.5 mb-56 bg-emerald-500 rounded-[35.882px] max-md:mb-10">Up next</div>,
+      title: "WHY CHURCH",
+      date: "Sunday, 20th December, 2024",
+      location: "Mater Purisima Event Centre",
+      time: "8:00am",
+      description: "Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: \"Man shall not live by bread alone, but by every word that comes from the mouth of God.\" ",
+    },
+  
+ 
  
   ];
   
@@ -104,7 +114,7 @@ export default function WhatsComing() {
       <p className="mt-4 ml-20 text-base tracking-normal leading-6 font-serif text-black  max-md:max-w-full">
         Experience the joy of fellowship and personal growth at our upcoming events at the Flourish Nation Global , where deep connection and spiritual rejuvenation earnestly awaits you. Here, you will get a glimpse on our upcoming events, stay updated for what will come next!
       </p>
-      <div className="flex overflow-x-auto gap-5 justify-between self-center mt-16 max-w-full w-[1134px] max-md:flex-wrap max-md:mt-10">
+      <div className="flex overflow-x-auto gap-10 justify-between self-center mt-16 max-w-full md:overflow-x-auto max-md:mt-10">
         {events.map((event, index) => (
           <EventCard key={index} {...event} />
         ))}
