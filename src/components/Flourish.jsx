@@ -6,39 +6,39 @@ import ImagesSection from './ImagesSection';
 
 function Button({ children, className }) {
     return (
-      <div className={`justify-center px-11 py-4 rounded-[58.975px] max-md:px-5 ${className}`}>
+      <div className={`justify-center px-11 py-4 rounded-[58.975px]  ${className}`}>
         {children}
       </div>
     );
   }
 export default function Flourish() {
   return (
-    <section className="flex justify-center items-center  px-16  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center  px-16   bg-slate-200">
 
     <div className="flex flex-col">
       <div className="flex gap-5 justify-between items-start w-full  max-md:pr-5 max-md:max-w-full">
         <div className="flex flex-col self-end mt-16 leading-[93%] max-md:mt-10 max-md:max-w-full">
-          <div className='px-32 '>
-          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-3 w-61 max-w-64 text-sm tracking-normal text-blue-600 rounded-full  max-md:px-5">
+          <div className='px-16 '>
+          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-blue-600 animate-pulse rounded-full  max-md:px-5">
             The Church with Eternity in View
           </div>
      
           </div>
 
-          <div className=' px-32 max-md:max-w-3/5 '>
+          <div className=' px-16 max-md:w-full '>
        
           <h1 className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
             The Righteous {" "}
             
             
           </h1 >
-          <span className="mt-5 text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Shall           
+          <span className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Shall           
           
-          <span className="mt-5 text-7xl pl-5 text-blue-600 tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Flourish     
+          <span className="mt-5 text-7xl pl-5 text-blue-600 tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Flourish     
     </span>   
     </span> 
-          <h1 className="text-7xl tracking-tighter font-serif text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">like a Palm Tree</h1>
-          <p className="mt-8 text-base tracking-normal leading-6 text-black font-serif max-md:mr-2 max-md:max-w-50px">
+          <h1 className="text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">like a Palm Tree</h1>
+          <p className="mt-8 w-3/5 text-base tracking-normal leading-6 text-black font-serif max-md:mr-2 max-md:max-w-50px">
             Experience the joy of fellowship and personal growth at our
             upcoming events at the Flourish Nation Global, where deep connection
             and spiritual rejuvenation earnestly awaits you. Here, you will get

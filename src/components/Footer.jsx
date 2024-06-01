@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import FGClogo from '../assets/images/FGClogo.png'
 
 
 export default function Footer() {
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col justify-between self-start text-sm tracking-normal leading-5 text-black">
           <img
             loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6a47dfb9ae3e4bee0aa7f729b53eabbe5f66163892ef7af825e7cfbe5ae90ea1?apiKey=873e47fe7796454e93671642132d9742&"
+            srcSet={FGClogo}
             className="aspect-[2.27] backdrop-blur-[7.5px] w-[91px]"
           />
           <div className="mt-7 w-80 font-serif">

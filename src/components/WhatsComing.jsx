@@ -107,14 +107,14 @@ const EventCard = ({ image, title, date, location, time, description }) => (
 export default function WhatsComing() {
   return (
     <div className="flex flex-col items-start p-20 px-32 bg-white max-md:px-5">
-      <div className="justify-center px-8 py-5 mt-4 ml-20 text-sm font-bold tracking-normal leading-3 text-blue-600 whitespace-nowrap bg-blue-600 bg-opacity-10 rounded-[65.48px] max-md:px-5 max-md:ml-2.5">
+      <div className="justify-center px-8 py-5 mt-4 ml-5 text-sm font-bold tracking-normal leading-3 text-blue-600 whitespace-nowrap bg-blue-600 bg-opacity-10 rounded-[65.48px] max-md:px-5 max-md:ml-2.5">
         Events
       </div>
-      <h1 className="mt-4 ml-20 text-7xl tracking-tighter font-serif text-black leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">What's Coming</h1>
-      <p className="mt-4 ml-20 text-base tracking-normal leading-6 font-serif text-black  max-md:max-w-full">
+      <h1 className="mt-4 ml-5 text-7xl tracking-tighter font-kuano text-black leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">What's Coming</h1>
+      <p className="mt-4 ml-5 w-3/5 text-base tracking-normal leading-6 font-serif text-black  max-md:max-w-full">
         Experience the joy of fellowship and personal growth at our upcoming events at the Flourish Nation Global , where deep connection and spiritual rejuvenation earnestly awaits you. Here, you will get a glimpse on our upcoming events, stay updated for what will come next!
       </p>
-      <div className="flex overflow-x-auto gap-10 justify-between self-center mt-16 max-w-full md:overflow-x-auto max-md:mt-10">
+      <div className="flex overflow-x-auto gap-10 justify-between self-center mt-16 max-w-full md:overflow-x-auto max-md:mt-10 max-md:ml-5 ">
         {events.map((event, index) => (
           <EventCard key={index} {...event} />
         ))}

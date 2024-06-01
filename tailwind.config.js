@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        kuano: ['"kuano"', "sans-serif"],
+        kuano: ["Kuano", "sans-serif"],
         // Add more custom font families as needed
       },
     },
