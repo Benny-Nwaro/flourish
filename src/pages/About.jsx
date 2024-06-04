@@ -3,11 +3,11 @@ import Layout from '../components/Layout'
 import Mission from '../components/Mission'
 import Vision from '../components/Vision'
 import Updates from '../components/Updates'
-import Experience from '../components/Experience'
 import Approach from '../components/Approach'
 import Flourishing from '../components/Flourishing'
 import WeFlourish from '../components/WeFlourish'
-WeFlourish
+import MyExperience from '../components/MyExperience'
+MyExperience
 
 
 export default function About() {
@@ -17,7 +17,7 @@ export default function About() {
       <Flourishing/>
       <Mission/>
       <Vision/>
-     <Experience/>
+     <MyExperience/>
       <Approach/>
       <Updates/>
 

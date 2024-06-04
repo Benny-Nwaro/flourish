@@ -2,8 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Gospel from '../components/Gospel'
 import Countries from '../components/Countries'
-import Experience from '../components/Experience'
 import Updates from '../components/Updates'
+import MyExperience from '../components/MyExperience'
 
 
 
@@ -13,7 +13,7 @@ export default function Expressions() {
     <Layout>
     <Gospel/>
     <Countries/>
-    <Experience/>
+    <MyExperience/>
     <Updates/>
   </Layout>
   )

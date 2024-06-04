@@ -1,6 +1,6 @@
 import React from 'react'
 import Playlist from './Playlist';
-Playlist
+
 
 function Button({ children }) {
     return (
@@ -15,17 +15,17 @@ export default function LatestSermons() {
   return (
     <>
     
-    <section className="flex justify-center items-center  py-10 bg-slate-200 max-md:pl-5">
+    <section className="flex justify-center items-center  pt-0 bg-slate-200 max-md:pl-5">
 
-<div className="flex  flex-col px-16  items-start max-md:px-5 ">
-<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d9f51c5d5a5f1c8de43cd34fef0687759a0b12c75dc66770443bc2e907f0c0d?apiKey=873e47fe7796454e93671642132d9742&" alt="" className=" inset-0 rounded-lg " />
+<div className="flex  flex-col w-full h-full  items-start max-md:px-5 ">
+<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d9f51c5d5a5f1c8de43cd34fef0687759a0b12c75dc66770443bc2e907f0c0d?apiKey=873e47fe7796454e93671642132d9742&" alt="PACE Image" className=" inset-0 pt-0 -mt-24 " />
 
 
 </div>
 </section>
 
 
-<div className='px-16 bg-white pt-5'>
+<div className='px-32 pt-20 bg-white '>
 <Playlist />
 </div>
 

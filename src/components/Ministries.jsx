@@ -11,10 +11,11 @@ export default function Ministries() {
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col self-stretch my-auto text-black leading-[93%] max-md:mt-10 max-md:max-w-full">
-              <div className="justify-center px-8 py-5 text-sm tracking-normal text-emerald-500 bg-emerald-50 rounded-[65.48px] max-md:px-5 max-md:max-w-full">
-                The Church with Eternity in View
-              </div>
-              <div className="mt-4 text-7xl tracking-tighter leading-[77px] max-md:max-w-full font-serif max-md:text-4xl max-md:leading-10">
+            <div className="justify-center whitespace-nowrap self-start  font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-emerald-500 bg-emerald-50 animate-pulse rounded-full  max-md:px-5">
+            The Church with Eternity in View
+          </div>
+              
+              <div className="mt-4 text-7xl tracking-tighter leading-[77px] max-md:max-w-full font-kuano max-md:text-4xl max-md:leading-10">
                 Our Ministeries
               </div>
               <div className="mt-4 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
@@ -39,16 +40,16 @@ export default function Ministries() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+          <div className="flex flex-col ml-5 w-full max-md:ml-0 max-md:w-full">
             <div className="grow max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-                <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
                   <div className="flex flex-col grow max-md:mt-5">
                     <div className="shrink-0 bg-white h-[215px]" />
                     <div className="shrink-0 mt-7 bg-white h-[406px]" />
                   </div>
                 </div>
-                <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                <div className="flex flex-col ml-5 w-full max-md:ml-0 max-md:w-full">
                   <div className="flex flex-col grow max-md:mt-5">
                     <div className="shrink-0 bg-white h-[314px]" />
                     <div className="shrink-0 mt-6 bg-white h-[309px]" />

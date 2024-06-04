@@ -27,7 +27,7 @@ const NavMenu = () => {
 
   return (
     
-    <nav className="flex gap-5 justify-between bg-white w-full px-8 mx-10  py-3.5 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
+    <nav className="flex gap-5 justify-between bg-white w-full px-8 py-3.5 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
       {navItems.map((item, index) => (
         
         <NavItem key={index} ><Link to={"/" + item.replaceAll(' ', '')}>{item}</Link></NavItem>
@@ -38,7 +38,7 @@ const NavMenu = () => {
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px] ml-32 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white">
+  <button className="border-2 border-white h-[50px] w-[100px] ml-24 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white">
     Give
   </button>
   </Link>

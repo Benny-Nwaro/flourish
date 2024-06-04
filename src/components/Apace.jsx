@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Apace() {
   return (
-    <div className="flex justify-center items-center px-16 py-20 mt-8 font-serif w-full bg-zinc-100 max-md:px-5 max-md:max-w-full">
+    <div className="flex justify-center items-center px-32 py-20 mt-8 font-serif w-full bg-zinc-100 max-md:px-5 max-md:max-w-full">
     <div className="mt-20 mb-12 w-full max-w-[1112px] max-md:my-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
@@ -17,7 +17,7 @@ export default function Apace() {
             <div className="justify-center px-8 py-5 text-sm tracking-normal leading-3 text-emerald-500 bg-emerald-50 rounded-[65.48px] max-md:px-5 max-md:max-w-full">
               The Church with Eternity in View
             </div>
-            <div className="mt-4 text-7xl tracking-tighter leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">
+            <div className="mt-4 text-7xl font-kuano tracking-tighter leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">
               About PACE
             </div>
             <div className="mt-4 text-base tracking-normal font-serif leading-6 max-md:max-w-full">

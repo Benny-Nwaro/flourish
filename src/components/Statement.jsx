@@ -5,7 +5,7 @@ Link
 
 export default function Statement() {
   return (
-    <main className="flex justify-center items-center px-16 py-20 bg-white max-md:px-5">
+    <main className="flex justify-center items-center px-32 py-20 bg-white max-md:px-5">
       <div className="mt-24 w-full max-w-[1110px] max-md:mt-10 max-md:max-w-full">
         <article className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
@@ -18,10 +18,10 @@ export default function Statement() {
           </div>
           <div className="flex flex-col ml-5 w-[46%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col self-stretch my-auto text-black leading-[93%] max-md:mt-10 max-md:max-w-full">
-              <p className="justify-center px-8 py-5 text-sm  tracking-normal text-emerald-500 font-serif bg-emerald-50 rounded-[65.48px] max-md:px-5 max-md:max-w-full">
-                The Church with Eternity in View
-              </p>
-              <h1 className="mt-4 text-7xl tracking-tighter leading-[77px] max-md:max-w-full font-serif max-md:text-4xl max-md:leading-10">
+            <div className="justify-center whitespace-nowrap self-start  font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-emerald-500 bg-emerald-50 animate-pulse rounded-full  max-md:px-5">
+            The Church with Eternity in View
+          </div>
+              <h1 className="mt-4 text-7xl tracking-tighter leading-[77px] max-md:max-w-full font-kuano max-md:text-4xl max-md:leading-10">
                 Statement of Faith
               </h1>
               <div className="mt-4 text-base tracking-normal leading-6 font-serif max-md:max-w-full">

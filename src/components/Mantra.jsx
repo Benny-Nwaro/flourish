@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Mantra() {
   return (
-    <section className="flex justify-center items-center  px-16  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center  px-32  max-md:px-5 bg-slate-200">
     <div className="flex z-10 flex-col self-center pt-7 pb-1 w-full bg-white rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:max-w-full">
     <div className="flex gap-5 items-start px-5 w-full max-md:flex-wrap max-md:max-w-full">
       <img
@@ -10,7 +10,7 @@ export default function Mantra() {
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/27628be1602de2183a128fcabbae8c10bc55285c875088c310bc036c4ed50adb?"
         className="shrink-0 self-start border-white border-solid aspect-[0.58] border-[5px] fill-blue-600 stroke-[4.568px] stroke-white w-[42px]"
       />
-      <div className="flex-auto my-auto text-7xl tracking-tighter text-blue-600 leading-[77px] max-md:text-4xl max-md:leading-10">
+      <div className="flex-auto my-auto text-7xl font-kuano tracking-tighter text-blue-600 leading-[77px] max-md:text-4xl max-md:leading-10">
         His Mantra
       </div>
       <div className="flex gap-4 self-end mt-9 text-5xl tracking-tight leading-10 text-white max-md:flex-wrap max-md:max-w-full max-md:text-4xl max-md:leading-10">

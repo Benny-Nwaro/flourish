@@ -21,8 +21,8 @@ export default function Gospel() {
       ];
     
       return (
-        <section className="flex justify-center items-center   max-md:px-5 bg-slate-200">
-        <div className="flex flex-col pt-6 pb-12 rounded-3xl bg-neutral-50">
+        <section className="flex justify-center items-center px-32  max-md:px-5 bg-slate-200">
+        <div className="flex flex-col mt-20 pb-12 rounded-3xl justify-center items-center text-center bg-neutral-50">
           <div className="flex gap-5 justify-between w-full max-md:flex-wrap max-md:max-w-full">
             <div className="flex flex-col max-md:max-w-full">
               <img
@@ -31,8 +31,8 @@ export default function Gospel() {
                 alt=""
                 className="border-white border-solid aspect-[0.58] border-[5px] fill-emerald-500 stroke-[4.568px] stroke-white w-[42px]"
               />
-              <div className="flex flex-col self-end px-5 mt-14 max-w-full  max-md:mt-10">
-                <h1 className="text-7xl tracking-tighter font-serif text-blue-600 leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+              <div className="flex flex-col self-end px-5 mt-2 max-w-full  max-md:mt-10">
+                <h1 className="text-7xl font-kuano tracking-tighter text-blue-600 leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
                   Until the Gospel fills the earth{" "}
                   <span className="text-blue-600">
                     as the waters cover the sea

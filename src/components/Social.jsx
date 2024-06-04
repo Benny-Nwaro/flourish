@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Social() {
   return (
-    <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center px-32  max-md:px-5 bg-slate-200">
     <div className="flex gap-5 justify-between self-center px-1 pt-7 pb-14 mt-20 w-full bg-white rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col max-md:max-w-full">
         <img
@@ -10,8 +10,8 @@ export default function Social() {
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/27628be1602de2183a128fcabbae8c10bc55285c875088c310bc036c4ed50adb?"
           className="border-white border-solid aspect-[0.58] border-[5px] fill-blue-600 stroke-[4.568px] stroke-white w-[42px]"
         />
-        <div className="flex flex-col self-end px-5 mt-24 max-w-full w-[591px] max-md:mt-10">
-          <div className="text-5xl tracking-tighter leading-10 text-blue-600 max-md:max-w-full max-md:text-4xl max-md:leading-10">
+        <div className="flex flex-col justify-center items-center text-center self-end px-5 mt-8 max-w-full w-full max-md:mt-10">
+          <div className="text-5xl font-kuano tracking-tighter leading-10 text-blue-600 max-md:max-w-full max-md:text-4xl max-md:leading-10">
             Click on icon to follow his social media and keep up
           </div>
           <div className="justify-between py-7 mt-4 max-md:pr-5 max-md:max-w-full">

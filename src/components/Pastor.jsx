@@ -19,7 +19,7 @@ function PastorImage() {
     return (
       
       <div className="flex z-10 flex-col self-stretch px-5 my-auto text-white max-md:mt-10 max-md:max-w-full">
-        <h1 className="text-7xl tracking-tighter font-serif leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+        <h1 className="text-7xl tracking-tighter font-kuano leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
           Meet our Pastor
         </h1>
         <p className="mt-6 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
@@ -39,7 +39,7 @@ export default function Pastor() {
   return (
     
 
-    <section className="flex justify-center items-center px-44 bg-slate-200  max-md:px-5">
+    <section className="flex justify-center items-center px-32 bg-slate-200  max-md:px-5">
 
     <div className="flex gap-5 bg-blue-600 rounded-3xl border-4 border-white border-solid max-md:flex-wrap">
       <img

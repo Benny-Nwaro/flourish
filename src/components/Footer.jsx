@@ -7,7 +7,7 @@ export default function Footer() {
   return (
  
     <div className="flex flex-col justify-center pt-12 pb-2.5 bg-white">
-    <div className="flex flex-col justify-between items-center px-16 pb-3.5 w-full max-md:px-5 max-md:max-w-full">
+    <div className="flex flex-col justify-between items-center px-32 pb-3.5 w-full max-md:px-5 max-md:max-w-full">
       <div className="flex gap-5 justify-between px-px w-full max-w-[1140px] max-md:flex-wrap max-md:max-w-full">
         <div className="flex flex-col justify-between self-start text-sm tracking-normal leading-5 text-black">
           <img
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
       </div>
     </div>
-    <div className="flex justify-center items-center px-16 py-7 mt-5 w-full border-t border-solid border-stone-300 max-md:px-5 max-md:max-w-full">
+    <div className="flex justify-center items-center px-32 py-7 mt-5 w-full border-t border-solid border-stone-300 max-md:px-5 max-md:max-w-full">
       <div className="flex gap-5 justify-between w-full max-w-[1140px] max-md:flex-wrap max-md:max-w-full">
         <div className="flex gap-1.5 text-black max-md:flex-wrap">
           <div className="text-2xl">©</div>

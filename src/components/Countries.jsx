@@ -8,4 +8,26 @@ const ChurchCard = ({ name, address, icon }) => ( <div className="flex flex-col 
 
 
 
-export default function Countries() { return ( <div className="flex flex-col items-center p-20 bg-blue-600 rounded-3xl max-md:px-5"> <div className="flex flex-wrap gap-2 gap-y-5 justify-between content-start mt-5 text-lg tracking-tight leading-4 text-white whitespace-nowrap" > {countries.map((country, index) => ( <CountryButton key={index} name={country.name} flag={country.flag} isActive={country.name === "Nigeria"} /> ))} </div> <div className="mt-12 w-full max-w-[937px] max-md:mt-10 max-md:max-w-full"> {[...Array(3)].map((_, index) => ( <div key={index} className="mt-5 w-full max-w-[937px] max-md:max-w-full"> <div className="flex gap-5 max-md:flex-col max-md:gap-0"> {churches.slice(index * 2, index * 2 + 2).map((church, i) => ( <div key={i} className={`flex flex-col ${i === 0 ? "w-6/12 max-md:ml-0" : "ml-5 w-6/12 max-md:ml-0"} max-md:w-full`} > <ChurchCard name={church.name} address={church.address} icon={church.icon} /> </div> ))} </div> </div> ))} </div> </div> ); }
+export default function Countries() 
+{ 
+    return ( 
+        <section className="flex justify-center items-center  px-32 mb-10   bg-slate-200">
+
+    <div className="flex flex-col items-center w-full  p-10 mt-20 bg-blue-600 rounded-3xl max-md:px-5"> 
+    <div className="flex flex-wrap gap-2 gap-y-5 justify-between content-start mt-5 text-lg tracking-tight leading-4 text-white whitespace-nowrap" > 
+    {countries.map((country, index) => ( <CountryButton key={index} name={country.name} flag={country.flag} isActive={country.name === "Nigeria"} /> ))} 
+    </div> 
+    <div className="mt-12 w-full max-w-[937px] max-md:mt-10 max-md:max-w-full"> 
+    {[...Array(3)].map((_, index) => ( 
+    <div key={index} className="mt-5 w-full max-w-[937px] max-md:max-w-full"> 
+    <div className="flex gap-5 max-md:flex-col max-md:gap-0"> 
+    {churches.slice(index * 2, index * 2 + 2).map((church, i) => ( 
+    <div key={i} className={`flex flex-col ${i === 0 ? "w-6/12 max-md:ml-0" : "ml-5 w-6/12 max-md:ml-0"} max-md:w-full`} > 
+    <ChurchCard name={church.name} address={church.address} icon={church.icon} /> 
+    </div> ))} 
+    </div> 
+    </div> ))} 
+    </div> 
+    </div>
+    </section> ); 
+    }

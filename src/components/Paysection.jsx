@@ -7,8 +7,8 @@ function HeroImage({ src, alt, className }) {
 
 function HeroText({ title, description }) {
   return (
-    <div className="flex flex-col self-end px-5 mt-3 max-w-full w-[528px]">
-      <h1 className="text-7xl tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+    <div className="flex flex-col self-end mt-3 max-w-full w-full">
+      <h1 className="text-7xl font-kuano tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
         {title}
       </h1>
       <p className="mt-8 text-base tracking-normal leading-6 max-md:max-w-full">
@@ -21,8 +21,8 @@ function HeroText({ title, description }) {
 
   function HeroContent() {
     return (
-      <div className="flex flex-col self-end px-5 mt-3 max-w-full w-[528px]">
-        <h1 className="text-7xl tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+      <div className="flex flex-col  self-end  mt-3 max-w-full w-3/5">
+        <h1 className="text-7xl tracking-tighter  leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
           Invest in what you truly believe in
         </h1>
         <p className="mt-8 text-base tracking-normal leading-6 max-md:max-w-full">
@@ -57,8 +57,8 @@ const heroText = {
 };
 
 return (
-  <section className="flex justify-center items-center font-serif  px-16 pt-20  max-md:px-5 bg-slate-200">
-  <div className="flex justify-center items-center mb-5 px-16  max-md:px-5 pt-6 pb-20 text-black bg-white rounded-3xl max-md:flex-wrap">
+  <section className="flex justify-center items-center  pt-20 px-32 max-md:px-5 bg-slate-200">
+  <div className="flex justify-center items-center mb-5   max-md:px-5 pt-6 pb-20 text-black bg-white rounded-3xl max-md:flex-wrap">
     <div className="flex flex-col max-md:max-w-full">
       <HeroImage {...heroImages[0]} />
       <HeroText {...heroText} />

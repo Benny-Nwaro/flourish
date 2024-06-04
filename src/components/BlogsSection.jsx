@@ -96,7 +96,7 @@ export default function BlogsSection() {
       ];
     
       return (
-        <main className="flex flex-col">
+        <main className="flex flex-col px-32">
           <div className="px-5 w-full max-md:max-w-full">
             <ChurchCardRow churches={churches.slice(0, 3)} />
           </div>

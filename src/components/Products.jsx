@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Products() {
   return (
-    <div className="flex justify-center items-center px-16 py-20 w-full bg-zinc-100 max-md:px-5 max-md:max-w-full">
+    <div className="flex justify-center items-center px-32 py-20 w-full bg-zinc-100 mb-20 max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col mt-16 mb-10 w-full max-w-[1138px] max-md:mt-10 max-md:max-w-full">
         <div className="justify-center self-start px-8 py-5 text-sm tracking-normal leading-3 text-emerald-500 bg-emerald-50 rounded-[65.48px] max-md:px-5 max-md:max-w-full">
           The Church with Eternity in View
         </div>
-        <div className="mt-4 text-7xl tracking-tighter text-black leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+        <div className="mt-4 text-7xl font-kuano tracking-tighter text-black leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
           His Products and Intellectual Properties
         </div>
         <div className="mt-4 text-base tracking-normal leading-6 text-black max-md:max-w-full">
