@@ -1,7 +1,7 @@
 import React from 'react'
 
 const EventCard = ({ image, title, date, location, time, description }) => (
-    <div className="flex flex-col text-base pr-10  hover:shadow-2xl tracking-normal leading-6 text-black max-md:max-w-full">
+    <div className="flex flex-col flex-shrink:1  text-base pr-10  hover:shadow-2xl tracking-normal leading-6 text-black max-md:max-w-full max-md:flex-shrink-0">
       <div className="flex overflow-hidden relative rounded-lg flex-col items-end px-16 pt-3 pb-20 w-full min-h-[426px]">
       <img
         loading="lazy"
@@ -82,16 +82,21 @@ const EventCard = ({ image, title, date, location, time, description }) => (
       time: "8:00am",
       description: "Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: \"Man shall not live by bread alone, but by every word that comes from the mouth of God.\" ",
     },
+    {
+      image: <div className="justify-center p-2.5 mb-56 bg-emerald-500 rounded-[35.882px] max-md:mb-10">Up next</div>,
+      title: "WHY CHURCH",
+      date: "Sunday, 20th December, 2024",
+      location: "Mater Purisima Event Centre",
+      time: "8:00am",
+      description: "Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: \"Man shall not live by bread alone, but by every word that comes from the mouth of God.\" ",
+    },
     
-  
- 
- 
   ];
   
 
 export default function WhatsComing() {
   return (
-   <div className='flex flex-col items-start  p-20 px-32 bg-white shadow-xl max-md:px-5'>
+   <div className='flex flex-col  items-start  p-20 px-32 bg-white shadow-xl max-md:px-5'>
     <div className="justify-center px-8 py-5 mt-4 ml-5 text-sm font-bold tracking-normal leading-3 text-blue-600 whitespace-nowrap bg-blue-600 bg-opacity-10 rounded-[65.48px] max-md:px-5 max-md:ml-2.5">
         Events
       </div>
@@ -106,11 +111,11 @@ export default function WhatsComing() {
           <EventCard key={index} {...event} />
         ))}
         </div>
-  <div class="flex animate-loop-scroll group-hover:paused" aria-hidden="true">
+  {/* <div class="flex animate-loop-scroll group-hover:paused" aria-hidden="true">
   {events.map((event, index) => (
           <EventCard key={index} {...event} />
         ))}
-        </div>
+        </div> */}
 </div>
    </div>
   )
