@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function PastorImage() {
     return (
-      <div className="flex overflow-hidden relative flex-col rounded-full font-serif justify-center items-end px-16 py-20 w-full min-h-[767px] max-md:pl-5 max-md:max-w-full">
+      <div className="flex overflow-hidden relative flex-col rounded-full font-serif justify-center items-end px-16 pb-20 w-full min-h-[767px] max-md:pl-5 max-md:max-w-full">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cfca2b6af4518b3bef82b890149decb852182d03c870a193ae8ec6cf74c11293?apiKey=873e47fe7796454e93671642132d9742&" alt="Pastor" className="object-cover absolute inset-0 size-full" />
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
@@ -18,7 +18,7 @@ function PastorImage() {
   function PastorInfo() {
     return (
       
-      <div className="flex z-10 flex-col self-stretch px-5 my-auto text-white max-md:mt-10 max-md:max-w-full">
+      <div className="flex  flex-col self-stretch px-5 mt-5 text-white max-md:mt-10 max-md:max-w-full">
         <h1 className="text-7xl tracking-tighter font-kuano leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
           Meet our Pastor
         </h1>
@@ -28,7 +28,7 @@ function PastorImage() {
           effectively living out the Life of Christ in them; built and equipped to walk in their God-given purpose.
         </p>
         <Link to="/aboutpace">
-        <button className="justify-center self-start px-11 py-4 mt-6 text-xl font-serif tracking-normal leading-4 text-white bg-emerald-500 rounded-[58.975px] max-md:px-5">
+        <button className="justify-center hover:opacity-50 self-start px-11 py-4 mt-6 text-xl font-serif tracking-normal leading-4 text-white bg-emerald-500 rounded-[58.975px] max-md:px-5">
           About our Pastor
         </button></Link>
       </div>
@@ -37,9 +37,7 @@ function PastorImage() {
   
 export default function Pastor() {
   return (
-    
-
-    <section className="flex justify-center items-center px-32 bg-slate-200  max-md:px-5">
+       <section className="flex justify-center items-center mr-8 px-32 pb-20 bg-slate-200  max-md:px-5 max-md:mr-2">
 
     <div className="flex gap-5 bg-blue-600 rounded-3xl border-4 border-white border-solid max-md:flex-wrap">
       <img

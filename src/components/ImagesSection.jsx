@@ -26,7 +26,7 @@ export default function ImagesSection() {
 
   return (
     <div className="text-center">
-    <div className="max-w-[1200px] h-[780px] w-full m-auto py-16 px-16 relative group ">
+    <div className="max-w-[1200px] h-[780px] w-full m-auto py-16 max-md:pr-10 max-md:pl-10  max-md:h-[700px] relative group ">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
         className="w-full h-full shadow-2xl rounded-2xl bg-center bg-cover duration-500 "

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import ImagesSection from './ImagesSection';
+import VideoPlayer2 from './VideoPlayer2';
+VideoPlayer2
 
 
 
@@ -13,19 +15,19 @@ function Button({ children, className }) {
   }
 export default function Flourish() {
   return (
-    <section className="flex justify-center items-center  px-16   bg-slate-200">
+  // <section className="flex justify-center items-center  px-32   bg-slate-200">
 
-    <div className="flex flex-col max-sm:pl-5">
-      <div className="flex gap-5 justify-between items-start w-full  max-md:pr-5 max-md:max-w-full">
+    <div className="flex flex-col ">
+      <div className="flex gap-5 justify-between items-start w-full   max-md:max-w-full">
         <div className="flex flex-col self-end mt-16 leading-[93%] max-md:mt-10 max-md:max-w-full">
-          <div className='px-16 '>
-          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-blue-600 animate-pulse rounded-full  max-md:px-5 ">
+          <div className='px-32 max-md:px-5 ' >
+          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-blue-600 animate-pulse rounded-full  ">
             The Church with Eternity in View
           </div>
      
           </div>
 
-          <div className=' px-16 max-md:w-full '>
+          <div className=' px-32 max-md:w-full max-md:px-5 '>
        
           <h1 className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
             The Righteous {" "}
@@ -71,7 +73,8 @@ export default function Flourish() {
           />
         </div> */}
       </div>
-      <ImagesSection/>
+      {/* <ImagesSection/> */}
+      <VideoPlayer2/>
       {/* <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/138b857960483ee06d38f82390f53d01cd9f545371ef26e1e4dd6b8221942049?apiKey=873e47fe7796454e93671642132d9742&"
@@ -79,6 +82,6 @@ export default function Flourish() {
         className="flex justify-center items-center px-32 pb-64 max-md:px-5 mt-24  aspect-[1.54] "
       /> */}
     </div>
-    </section>
+    // </section>
   )
 }

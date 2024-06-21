@@ -4,15 +4,15 @@ Link
 
 function HeroSection() {
   return (
-    <section className="flex justify-center items-center px-32 py-20 max-md:px-5 bg-slate-200">
-      <div className="mt-16 max-w-[1140px] max-md:mt-10 max-md:max-w-full">
+    <section className="flex justify-center items-center px-32 pb-20 max-md:px-5 bg-slate-200">
+      <div className="max-w-[1140px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col self-stretch my-auto text-black max-md:mt-10 max-md:max-w-full">
-              <h1 className="text-7xl font-kuano tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
+              <h1 className="text-7xl  font-kuano tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
                 Invest in what you truly believe in
               </h1>
-              <p className="mt-8 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
+              <p className="mt-2 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
                 At the Flourish Nation Global, we believe that everything we have ultimately belongs to God and that we are stewards entrusted with managing his resources wisely. By putting our money where our faith is, we prioritise using our financial resources in ways that honour God and partner with him for the advancement of his Kingdom.
               </p>
               <Link to="/give">

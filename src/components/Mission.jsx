@@ -4,7 +4,7 @@ export default function Mission() {
   return (
     <section className="flex justify-center items-center  px-32 mt-20  max-md:px-5 bg-slate-200">
 
-    <div className="flex justify-center items-center mb-5  py-6  max-md:px-5 ">
+    <div className="flex justify-center items-center mb-5  py-6 ">
     <div className="flex flex-col grow shrink-0 justify-center items-start px-10 py-9 mt-4 bg-white basis-0 rounded-[32px] w-fit max-md:px-5 max-md:max-w-full">
       <div className="max-w-full ">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">

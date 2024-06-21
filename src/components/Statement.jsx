@@ -5,7 +5,7 @@ Link
 
 export default function Statement() {
   return (
-    <main className="flex justify-center items-center px-32 py-20 bg-white max-md:px-5">
+    <main className="flex justify-center items-center px-32 pb-10 bg-white max-md:px-5">
       <div className="mt-24 w-full max-w-[1110px] max-md:mt-10 max-md:max-w-full">
         <article className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
@@ -13,7 +13,7 @@ export default function Statement() {
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3eaf8a7f25a3fa28bf3628f9a6dc5df301029f3d09b9118d13a3925bc25f29b?apiKey=873e47fe7796454e93671642132d9742&"
               alt="Statement of Faith"
-              className="grow w-full aspect-[0.9] max-md:mt-10 max-md:max-w-full"
+              className="grow w-full aspect-[0.9] shadow-xl rounded-3xl max-md:max-w-full"
             />
           </div>
           <div className="flex flex-col ml-5 w-[46%] max-md:ml-0 max-md:w-full">
@@ -39,7 +39,7 @@ export default function Statement() {
               </div>
               <Link to="/whoweare">
               <button
-                className="justify-center self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal text-white bg-blue-600 rounded-[58.975px] max-md:px-5"
+                className="justify-center self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal text-white bg-blue-600 rounded-[58.975px] hover:opacity-50 max-md:px-5"
               >
                 About us
               </button></Link>

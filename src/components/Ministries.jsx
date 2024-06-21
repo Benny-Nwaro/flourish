@@ -6,7 +6,7 @@ export default function Ministries() {
   return (
     <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
 
-    <div className="flex justify-center items-center px-16 py-20 w-full max-md:px-5 max-md:max-w-full">
+    <div className="flex justify-center items-center px-16 pb-20 w-full max-md:px-5 max-md:max-w-full">
       <div className="mt-16 mb-10 w-full max-w-[1138px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">

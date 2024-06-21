@@ -2,10 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Streaming from '../components/Streaming'
 import Stream from '../components/Stream'
-import Experience from '../components/Experience'
 import Updates from '../components/Updates'
 import LivePst from '../components/LivePst'
-LivePst
+import MyExperience from '../components/MyExperience'
+import Carouse from '../components/Carouse'
+Carouse
+
 
 export default function Live() {
   return (
@@ -13,8 +15,9 @@ export default function Live() {
     <LivePst/>
     <Streaming/>
     <Stream/>
-    <Experience/>
+     <MyExperience/>
     <Updates/>
+    <Carouse/>
     
   </Layout>
   )

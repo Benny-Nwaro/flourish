@@ -15,29 +15,32 @@ export default function Social() {
             Click on icon to follow his social media and keep up
           </div>
           <div className="justify-between py-7 mt-4 max-md:pr-5 max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+            <div className="flex gap-5 max-md:flex-row max-md:gap-0">
+              <div className="flex flex-col px-2 w-3/12 max-md:ml-0 max-md:w-full">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/47a645514e67c493c9df75c9a5f1afd1d5f3109e08855f2b49f864675195b2e9?"
                   className="shrink-0 aspect-square fill-gray-200 w-[90px] max-md:mt-10"
                 />
               </div>
-              <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col ml-5 px-2 w-3/12 max-md:ml-0 max-md:w-full">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffb5048c008da23bb11a314fbcadc2735719635755b456be96ac7afc1fc2fe5f?"
                   className="shrink-0 aspect-square fill-gray-200 w-[90px] max-md:mt-10"
                 />
               </div>
-              <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col ml-5 px-2 w-3/12 max-md:ml-0 max-md:w-full">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1206f04c6e2f176f9f15431c91bd7ba88d9a13e9ed486d277fdd5945b081a25?"
                   className="shrink-0 aspect-square fill-gray-200 w-[90px] max-md:mt-10"
                 />
               </div>
-              <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+
+              
+              
+              <div className="flex flex-col ml-5 px-2 w-3/12 max-md:ml-0 max-md:w-full">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/c4cc9d5feb30499ebec5221a703c133b1af14b153556280bacedc72456b488c4?"

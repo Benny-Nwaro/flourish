@@ -3,7 +3,7 @@ import { PaystackButton } from "react-paystack"
 
 
 export default function Paystack() {
-    const publicKey = "pk_test_385cf61e72cf12a464e715aa4c6058105adcff51"
+  const publicKey = "pk_test_385cf61e72cf12a464e715aa4c6058105adcff51"
   const [amount, setAmount] = useState(0)
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
@@ -11,10 +11,10 @@ export default function Paystack() {
 
   const componentProps = {
     email,
-    amount,
+    amount:amount*100,
     metadata: {
-      name,
-      phone,
+    name,
+    phone,
     },
     publicKey,
     text: "Pay Now",
@@ -49,21 +49,14 @@ export default function Paystack() {
               onChange={(e) => setPhone(e.target.value)}/>
         
         
-            <input type="curr"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 mb-5 focus:border-blue-500 block w-full p-2.5 ml-50 dark:w-64 dark:mx-40 dark:mr-40 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Amount in numbers" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required  
+            <input type="curr"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 mb-5 focus:border-blue-500 block w-full p-2.5 ml-50 dark:w-64 dark:mx-40 dark:mr-40 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 max-md:w-full" placeholder="Amount in numbers" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required  
               id="amount"
-              onChange={(e) => setAmount(e.target.value)*100}/>
+              onChange={(e) => setAmount(e.target.value)}/>
         
  
-    
-
-
-
-<PaystackButton {...componentProps} className="bg-white hover:opacity-50 text-blue-700 font-bold pb-3 pt-3 px-5 mx-48 rounded-2xl max-sm:w-3/5 " />
-
-
-
-   
     </form>
+    <PaystackButton {...componentProps} className="bg-white hover:opacity-50 text-blue-700 font-bold pb-3 pt-3 px-5 mx-48 rounded-2xl max-md:w-2/5  " />
+
 
 
    

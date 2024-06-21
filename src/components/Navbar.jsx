@@ -20,7 +20,7 @@ const Logo = () => (
   </Link>
 );
 
-const NavItem = ({ children }) => <div>{children}</div>;
+const NavItem = ({ children }) => <div className='hover:text-lg hover:text-blue-700 active:text-blue-700'>{children}</div>;
 
 const NavMenu = () => {
   const navItems = ["Home", "Who we are", "Sermons", "About PACE", "Expressions", "Blogs", "Live"];
@@ -38,7 +38,7 @@ const NavMenu = () => {
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px] ml-24 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white">
+  <button className="border-2 border-white h-[50px] w-[100px] ml-40 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
     Give
   </button>
   </Link>
@@ -68,10 +68,10 @@ export default function Navbar() {
         SetSideCom(!sideCom);
     }
   return (
-    <div className='max-w-full sticky top-0 z-50 pt-5 pb-5  mx-auto flex justify-between '>
+    <div className='w-full sticky top-0 z-50 pt-5 pb-5   flex justify-between '>
       <div className='flex items-center  w-full'>
         <Logo/>
-        <ul className='hidden md:flex font-epilogue text-[15px] items-center mx-12 text-gray-600'>
+        <ul className='hidden md:flex font-epilogue text-[15px] items-center w-full  px-32 text-gray-600'>
         <NavMenu />
         <GiveButton />
         </ul>
@@ -80,27 +80,20 @@ export default function Navbar() {
       <div className='flex items-center mr-8'>
                 <img src={menu} alt='menuIcon'className={Sidenav ? 'hidden' : 'flex h-[22px] cursor-pointer md:hidden'} onClick={toggleSidenav} />
       </div>
-      {/* <div className={Comnav ? 'absolute top-20 ml-[370px] w-[120px] h-[100px] shadow-2xl rounded-xl flex flex-col justify-center bg-white' : 'hidden'}>
-                <ul className='flex flex-col text-gray-600 font-epilogue text-[15px] items-center'>
-                    <li className='my-1'>History</li>
-                    <li className='my-1'>Our Team</li>
-                    <li className='my-1'>Blog</li>
-                </ul>
-      </div> */}
-
+    
       <div className={`absolute flex justify-end overflow-hidden z-50 w-[100%] ${Sidenav ? 'pointer-events-auto' : 'pointer-events-none'}`}>
                 <div className={`h-screen  right-0 w-[60%] flex flex-col bg-slate-200 ${Sidenav ? 'translate-x-0' : 'translate-x-full '}  ease-in-out duration-300`}>
                     <div className='flex justify-end mt-[29px] mr-[32px]'>
                         <img src={close} alt='closeIcon' className='h-[25px] cursor-pointer' onClick={toggleSidenav} />
                     </div>
                     <ul className='text-black  font-epilogue text-[18px] flex flex-col ml-[25px] mt-6'>
-                        <li className='my-3'><Link to="/home">Home</Link></li>
-                        <li className='my-3'> <Link to="/whoweare">Who we are</Link></li>
-                        <li className='my-3'><Link to="/sermons">Sermons</Link></li>
-                        <li className='my-3'><Link to="/aboutpace">About PACE</Link></li>
-                        <li className='my-3'><Link to="/expressions">Expressions</Link></li>
-                        <li className='my-3'><Link to="/Blogs">Blogs</Link></li>
-                        <li className='my-3'><Link to="/Live">Live</Link></li>
+                        <li className='my-3 hover:text-blue-700 hover:text-xl'><Link to="/home">Home</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'> <Link to="/whoweare">Who we are</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/sermons">Sermons</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/aboutpace">About PACE</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/expressions">Expressions</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Blogs">Blogs</Link></li>
+                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Live">Live</Link></li>
                     </ul>
                     <div className='text-gray-600 font-epilogue flex flex-col justify-center items-center'>
                         

@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ChurchCard = ({ imageSrc, title, socialLinks }) => (
+  
     <div className="flex flex-col grow px-3 pt-3 pb-12 w-full bg-white rounded-3xl leading-[93%] max-md:mt-10">
       <img src={imageSrc} alt={title} className="w-full aspect-[0.83]" />
       <div className="flex flex-col px-5 mt-7">
@@ -96,11 +97,11 @@ export default function BlogsSection() {
       ];
     
       return (
-        <main className="flex flex-col px-32">
-          <div className="px-5 w-full max-md:max-w-full">
+        <main className="flex flex-col px-32 max-md:px-5">
+          <div className="w-full  max-md:max-w-full">
             <ChurchCardRow churches={churches.slice(0, 3)} />
           </div>
-          <div className="px-5 mt-11 w-full max-md:mt-10 max-md:max-w-full">
+          <div className="mt-11 w-full  max-md:mt-10 max-md:max-w-full">
             <ChurchCardRow churches={churches.slice(3, 6)} />
           </div>
         </main>
