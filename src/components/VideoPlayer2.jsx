@@ -3,9 +3,9 @@ import video from '../assets/videos/video1.mp4'
 
 const VideoPlayer2 = () => {
   return (
-    <div className='flex justify-center items-center w-full pt-20 pb-20 px-32 h-[800px] rounded-2xl max-md:px-5 max-md: '>
+    <div className='flex justify-center items-center w-full pt-10 pb-10 px-32  rounded-2xl max-md:px-5 max-md:pt-10 max-md:pb-10 '>
       
-      <video src={video} controls allow="autoplay"  className='flex justify-center items-center w-full h-[500px] rounded-2xl shadow-2xl shadow-zinc-800  ' />
+      <video src={video} controls allow="autoplay"  className='flex justify-center items-center w-full h-[800px] rounded-2xl shadow-2xl shadow-zinc-800 max-md:h-[500px] ' />
     </div>
   );
 };

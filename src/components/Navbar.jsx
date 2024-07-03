@@ -8,7 +8,7 @@ import close from '../assets/images/icon-close-menu.svg'
 
 const Logo = () => (
   <Link to="/">
-    <div className="flex flex-col items-center bg-white px-8 py-3.5 ml-32 text-xs font-medium text-blue-600 whitespace-nowrap backdrop-blur-[7.5px] max-w-[157px] rounded-[121.698px] max-md:ml-2  tracking-[7.43px]">
+    <div className="flex flex-col items-center bg-white px-8 py-3.5 text-xs font-medium text-blue-600 whitespace-nowrap backdrop-blur-[7.5px] max-w-[157px] rounded-[121.698px] max-md:ml-5  tracking-[7.43px]">
       <img
         loading="lazy"
         src={FGClogo}
@@ -27,7 +27,7 @@ const NavMenu = () => {
 
   return (
     
-    <nav className="flex gap-5 justify-between bg-white w-full px-8 py-3.5 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
+    <nav className="flex gap-5 justify-between bg-white w-full px-8 py-3.5 ml-20 mr-20 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
       {navItems.map((item, index) => (
         
         <NavItem key={index} ><Link to={"/" + item.replaceAll(' ', '')}>{item}</Link></NavItem>
@@ -38,7 +38,7 @@ const NavMenu = () => {
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px] ml-40 rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
+  <button className="border-2 border-white h-[50px] w-[100px]  rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
     Give
   </button>
   </Link>
@@ -68,10 +68,10 @@ export default function Navbar() {
         SetSideCom(!sideCom);
     }
   return (
-    <div className='w-full sticky top-0 z-50 pt-5 pb-5   flex justify-between '>
+    <div className='w-full sticky top-0 z-50 pt-5 pb-5 pl-32  pr-24  flex justify-between max-md:pl-0 max-md:pr-0 '>
       <div className='flex items-center  w-full'>
         <Logo/>
-        <ul className='hidden md:flex font-epilogue text-[15px] items-center w-full  px-32 text-gray-600'>
+        <ul className='hidden md:flex font-epilogue text-[15px] items-center w-full  text-gray-600'>
         <NavMenu />
         <GiveButton />
         </ul>

@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Ministries() {
   return (
-    <section className="flex justify-center items-center px-16  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center px-16  max-md:px-0 bg-slate-200">
 
     <div className="flex justify-center items-center px-16 pb-20 w-full max-md:px-5 max-md:max-w-full">
       <div className="mt-16 mb-10 w-full max-w-[1138px] max-md:mt-10 max-md:max-w-full">

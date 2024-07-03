@@ -52,8 +52,8 @@ export default function Updates() {
 
  
   return (
-    <section className="flex justify-center items-center w-full  max-md:px-5 bg-slate-200">
-    <div className="flex justify-center flex-col items-start self-center pt-1 pr-20 pb-20 mb-16  bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:pr-5  max-md:max-w-full">
+    <section className="flex justify-center items-center w-full px-32  max-md:px-5 bg-slate-200">
+    <div className="flex justify-center w-full flex-col items-start self-center pt-1 pr-20 pb-20 mb-16  bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:pr-5  max-md:max-w-full">
       <div className="flex gap-5 justify-between max-w-full w-[668px] max-md:flex-wrap max-md:pr-5">
         <img
           loading="lazy"

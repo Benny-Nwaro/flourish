@@ -5,8 +5,7 @@ import Stream from '../components/Stream'
 import Updates from '../components/Updates'
 import LivePst from '../components/LivePst'
 import MyExperience from '../components/MyExperience'
-import Carouse from '../components/Carouse'
-Carouse
+
 
 
 export default function Live() {
