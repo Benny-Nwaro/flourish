@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function Vision() {
   return (
-    <section className="flex justify-center px-32  items-center max-md:px-5 bg-slate-200">
-    <div className="flex relative gap-5 mt-20 mb-20  max-md:flex-wrap max-md:my-10 max-md:max-w-full">
+    <section className="flex justify-center pr-32 pl-20  items-center max-md:px-5 bg-slate-200">
+    <div className="flex relative gap-5  mb-10  max-md:flex-wrap max-md:my-10 max-md:max-w-full">
         <div className="shrink-0 bg-yellow-400 rounded-full h-[22px] w-[22px]" />
-      <div className="flex flex-col grow shrink-0 justify-center items-end px-16 py-9 bg-white basis-0 rounded-[32px] w-fit max-md:px-5 max-md:max-w-full">
-        <div className="max-w-full w-[945px]">
+      <div className="flex flex-col grow shrink-0 justify-center items-end px-16 py-9 bg-white basis-0 rounded-3xl w-fit max-md:px-5 max-md:max-w-full">
+        <div className="max-w-full ">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[42%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col self-stretch my-auto text-black max-md:mt-10">

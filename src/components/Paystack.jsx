@@ -24,7 +24,7 @@ export default function Paystack() {
   }
 
   return (
-    <section className="flex justify-center items-center px-32 py-10 max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center px-32 pb-10 max-md:px-5 bg-slate-200">
 
 <div className="flex justify-center flex-col items-center w-full self-center pt-10 pb-20 mt-16  bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:pr-5 max-md:mt-10 max-md:max-w-full">
 
@@ -33,7 +33,7 @@ export default function Paystack() {
           Invest
         </p>
         
-            <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ml-50 mb-5 dark:w-64 dark:mx-40 dark:mr-40  dark:text-white dark:focus:ring-blue-500 max-sm:w-full  dark:focus:border-blue-500 " placeholder="Enter your name" required
+            <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  mb-5 dark:w-64 dark:mx-40 dark:mr-40  dark:text-white dark:focus:ring-blue-500 max-sm:w-full  dark:focus:border-blue-500 " placeholder="Enter your name" required
               id="name"
               onChange={(e) => setName(e.target.value)}/>
         

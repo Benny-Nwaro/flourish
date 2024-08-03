@@ -16,7 +16,6 @@ export default function Live() {
     <Stream/>
      <MyExperience/>
     <Updates/>
-    <Carouse/>
     
   </Layout>
   )

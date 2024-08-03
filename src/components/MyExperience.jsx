@@ -3,8 +3,8 @@ import React from 'react'
 export default function MyExperience() {
   return (
     
-    <section className="flex justify-center items-center px-32 py-10 max-md:px-5  bg-slate-200">
-    <div className="flex justify-center border-4 border-white border-solid items-center pt-6 pr-10 text-white bg-blue-600 rounded-3xl max-md:px-5 ">
+    <section className="flex justify-center items-center px-32 py-10 max-md:px-5 bg-slate-200">
+    <div className="flex justify-center border-4 border-white border-solid items-center pt-6 pr-10 text-white bg-blue-600 rounded-3xl ">
     <img
       loading="lazy"
       src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf619dcea7c79a0defaa97e7518ef603a63beeb23f496a1ddb9f2bd8a7c4e58d?apiKey=873e47fe7796454e93671642132d9742&"

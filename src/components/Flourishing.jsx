@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Flourishing() {
   return (
-    <section className="flex justify-center items-center px-32 pt-20 max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center px-32 max-md:px-5 bg-slate-200">
 
     <div className="flex justify-center w-full items-center py-9 bg-white rounded-[32px] max-md:px-5">
       <div className="w-full max-w-[908px] max-md:max-w-full">

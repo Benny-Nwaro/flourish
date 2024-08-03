@@ -7,7 +7,7 @@ function HeroImage({ src, alt, className }) {
 
 function HeroText({ title, description }) {
   return (
-    <div className="flex flex-col self-end mt-3 max-w-full w-full">
+    <div className="flex flex-col self-start ml-10  mb-5 max-w-full w-4/5">
       <h1 className="text-7xl font-kuano tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
         {title}
       </h1>
@@ -25,7 +25,7 @@ function HeroText({ title, description }) {
         <h1 className="text-7xl tracking-tighter  leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
           Invest in what you truly believe in
         </h1>
-        <p className="mt-8 text-base tracking-normal leading-6 max-md:max-w-full">
+        <p className="mt-8 mb-8 text-base tracking-normal leading-6 max-md:max-w-full">
           Who we are Who we are Who we are Who we are Who we are Who we are Who
           we are Who we are Who we are Who we areWho we are Who we are Who we are
           Who we are Who we are Who we areWho we are Who we are Who we are Who we
@@ -57,8 +57,8 @@ const heroText = {
 };
 
 return (
-  <section className="flex justify-center items-center  pt-20 px-32 max-md:px-5 bg-slate-200">
-  <div className="flex justify-center items-center mb-5   max-md:px-5 pt-6 pb-20 text-black bg-white rounded-3xl max-md:flex-wrap">
+  <section className="flex justify-center items-center  pt-20 mb-5  px-32 max-md:px-5 bg-slate-200">
+  <div className="flex justify-center items-center max-md:px-5 pt-6  text-black bg-white rounded-3xl max-md:flex-wrap">
     <div className="flex flex-col max-md:max-w-full">
       <HeroImage {...heroImages[0]} />
       <HeroText {...heroText} />

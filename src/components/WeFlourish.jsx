@@ -27,7 +27,7 @@ function AboutUs() {
 
 export default function WeFlourish() {
   return (
-    <section className="flex justify-center items-center pt-10 px-32 pb-20  max-md:px-5 bg-slate-200">
+    <section className="flex justify-center items-center pt-10 px-32 pb-10  max-md:px-5 bg-slate-200">
     <div className="flex flex-col items-start px-16 pt-20 pb-20 text-blue-600 bg-white rounded-3xl max-md:px-5">
       <div className="flex flex-col ml-5 max-w-full ">
         <AboutUs />

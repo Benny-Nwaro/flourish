@@ -58,21 +58,26 @@ export default function Flourish() {
 
 
         </div>
-        <div className="flex flex-col self-start pr-16">
+
+      </div>
+      <div className="flex flex-col self-end mr-48 -mt-40 max-md:mr-16   ">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
             alt=""
-            className="border-white border-solid aspect-square border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[84px]"
+            className=""
           />
+
+        </div>
+        <div className="flex flex-col self-end mr-64 -mt-80 mb-24 max-md:mr-8 max-md:mb-80 max-md:pt-10 max-md:w-16 ">
+ 
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e367770d9aa964600fe609877e912d728d08081ae02c4f1438e86ec70b950f2?apiKey=873e47fe7796454e93671642132d9742&"
             alt=""
-            className="self-end mt-80 max-w-full border-8 border-white border-solid aspect-[1.09] fill-blue-600 stroke-[8.1px] stroke-white w-[110px] max-md:mt-10"
+            className=" "
           />
         </div>
-      </div>
       {/* <ImagesSection/> */}
       <VideoPlayer2/>
       {/* <img

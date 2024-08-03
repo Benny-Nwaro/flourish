@@ -14,7 +14,8 @@ import Updates from '../components/Updates'
 
 export default function Home() {
   return (
-    <Layout>
+    <div>
+          <Layout>
     
     <Flourish/>
     <WhatsComing/>
@@ -26,5 +27,7 @@ export default function Home() {
     <Invest/>
     <Updates/>
   </Layout>
+    </div>
+
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Approach() {
   return (
     <section className="flex justify-center items-center  px-32   max-md:px-5 bg-slate-200">
-    <div className="flex justify-center items-center px-16 rounded-3xl py-20 mt-24 w-full bg-zinc-100 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+    <div className="flex justify-center items-center px-16 rounded-3xl py-20 mt-10 w-full bg-zinc-100 max-md:px-5 max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col items-start mt-16 mb-10 w-full max-w-[1144px] max-md:mt-10 max-md:max-w-full">
         <div className="justify-center px-8 py-5 text-sm tracking-normal leading-3 text-emerald-500 bg-emerald-50 rounded-[65.48px] max-md:px-5">
           The Church with Eternity in View

@@ -20,25 +20,26 @@ const Logo = () => (
   </Link>
 );
 
-const NavItem = ({ children }) => <div className='hover:text-lg hover:text-blue-700 active:text-blue-700'>{children}</div>;
+const NavItem = ({ children }) => <div className='hover:text-sm hover:text-blue-700 active:text-blue-700'>{children}</div>;
 
 const NavMenu = () => {
   const navItems = ["Home", "Who we are", "Sermons", "About PACE", "Expressions", "Blogs", "Live"];
 
   return (
     
-    <nav className="flex gap-5 justify-between bg-white w-full px-8 py-3.5 ml-20 mr-20 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
+    <nav className="flex gap-5 justify-between bg-white ml-20 mr-20 px-8 py-3.5 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
       {navItems.map((item, index) => (
         
         <NavItem key={index} ><Link to={"/" + item.replaceAll(' ', '')}>{item}</Link></NavItem>
       ))}
     </nav>
+    
   );
 }; 
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px]  rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
+  <button className="border-2 border-white h-[50px] w-[100px] rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
     Give
   </button>
   </Link>
@@ -68,25 +69,25 @@ export default function Navbar() {
         SetSideCom(!sideCom);
     }
   return (
-    <div className='w-full sticky top-0 z-50 pt-5 pb-5 pl-32  pr-24  flex justify-between max-md:pl-0 max-md:pr-0 '>
-      <div className='flex items-center  w-full'>
+    <div className=' sticky top-0  z-50 pt-5 pb-5 ml-32 flex justify-between max-md:pl-0 max-md:pr-0 max-md:ml-0 '>
+      
         <Logo/>
         <ul className='hidden md:flex font-epilogue text-[15px] items-center w-full  text-gray-600'>
         <NavMenu />
         <GiveButton />
         </ul>
-      </div>
+      
     
       <div className='flex items-center mr-8'>
-                <img src={menu} alt='menuIcon'className={Sidenav ? 'hidden' : 'flex h-[22px] cursor-pointer md:hidden'} onClick={toggleSidenav} />
+                <img src={menu} alt='menuIcon'className={Sidenav ? 'hidden' : 'flex h-[22px] cursor-pointer  md:hidden'} onClick={toggleSidenav} />
       </div>
     
-      <div className={`absolute flex justify-end overflow-hidden z-50 w-[100%] ${Sidenav ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-                <div className={`h-screen  right-0 w-[60%] flex flex-col bg-slate-200 ${Sidenav ? 'translate-x-0' : 'translate-x-full '}  ease-in-out duration-300`}>
+      <div className={`absolute flex justify-end overflow-hidden z-50 w-[100%] h-[550px] ${Sidenav ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+                <div className={` right-0 w-[60%] flex flex-col bg-slate-200 bg-opacity-80  rounded-2xl ${Sidenav ? 'translate-x-0' : 'translate-x-full '}  ease-in-out duration-500`}>
                     <div className='flex justify-end mt-[29px] mr-[32px]'>
                         <img src={close} alt='closeIcon' className='h-[25px] cursor-pointer' onClick={toggleSidenav} />
                     </div>
-                    <ul className='text-black  font-epilogue text-[18px] flex flex-col ml-[25px] mt-6'>
+                    <ul className='text-black font-kuano  text-[22px] flex flex-col ml-[25px] mt-0'>
                         <li className='my-3 hover:text-blue-700 hover:text-xl'><Link to="/home">Home</Link></li>
                         <li className='my-3  hover:text-blue-700 hover:text-xl'> <Link to="/whoweare">Who we are</Link></li>
                         <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/sermons">Sermons</Link></li>
@@ -95,7 +96,7 @@ export default function Navbar() {
                         <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Blogs">Blogs</Link></li>
                         <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Live">Live</Link></li>
                     </ul>
-                    <div className='text-gray-600 font-epilogue flex flex-col justify-center items-center'>
+                    <div className='text-gray-600 font-kuano text-lg flex flex-col pl-5 pt-5 '>
                         
                     <GiveButton />
                     </div>
