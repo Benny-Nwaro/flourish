@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 
 function AutoPlay() {
@@ -10,7 +9,7 @@ function AutoPlay() {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
   };
   return (
     <div className="slider-container">

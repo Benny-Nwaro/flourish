@@ -1,88 +1,66 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
-
-
-
-
-function Button({ children, className }) {
-    return (
-      <button className={`justify-center px-11 py-4 text-xl tracking-normal text-white whitespace-nowrap bg-blue-600 rounded-[58.975px] max-md:px-5 ${className}`}>
-        {children}
-      </button>
-    );
-  }
-  
-  function Heading({ children, className }) {
-    return (
-      <h1 className={`mt-4 text-7xl tracking-tighter font-kuano leading-[77px] max-md:text-4xl max-md:leading-10 ${className}`}>
-        {children}
-      </h1>
-    );
-  }
-  
-  function Paragraph({ children, className }) {
-    return (
-      <p className={`mt-4 text-base tracking-normal leading-6 ${className}`}>
-        {children}
-      </p>
-    );
-  }
-  
-  function Image({ src, alt, className }) {
-    return (
-      <img loading="lazy" src={src} alt={alt} className={className} />
-    );
-  }
+import Button from "./UI/Button";
 
 export default function Trainings() {
   return (
-    <section className="flex justify-center items-center px-32 py-10 bg-slate-200 max-md:px-5">
-      
-      <div className="mt-16 w-full max-w-[1290px]  max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          
-          <div className="flex flex-col w-[41%] max-md:ml-0 max-md:w-full">
-          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-blue-600 animate-pulse rounded-full  max-md:px-5">
-            The Church with Eternity in View
+    <section className="flex justify-center items-center py-[100px] min-[500px]:pl-[60px] pl-[30px] xl:pl-[150px] bg-white/20 ">
+      <div className="flex min-[825px]:flex-row justify-between gap-[100px] min-[1155px]:gap-[171px] flex-col h-full ">
+        <div className="flex flex-col gap-[32px] justify-center min-[825px]:w-[40%] xl:w-[30%]">
+          <div className="flex flex-col gap-[16px]">
+            <div className=" bg-white w-[137.62px] font-bold px-[33.31px] py-[18.88px] text-sm tracking-normal text-brandBlue rounded-[65.48px]">
+              Our Vision
+            </div>
+            <div>
+              <h1 className="text-[60px] leading-[98%] tracking-[-2.5%] text-black font-dmserif  w-full max-md:text-4xl ">
+                We envision a <span className="text-brandBlue">Generation</span>{" "}
+                living out the life of Christ
+              </h1>
+            </div>
+            <p className="tracking-[-1%] leading-[143%] text-black  w-full font-stem">
+              At the Flourish Generation Church, we are on a mission to raise a
+              generation of True witnesses, trained in wisdom and stature,
+              favoured of the Lord and Men, Empowered by the Spirit and sent for
+              Kingdom Purpose.
+            </p>
           </div>
-            <div className="flex flex-col self-stretch my-auto text-black font-serif leading-[93%] max-md:mt-5">
+          <Button
+            route="/whoweare"
+            className="text-white font-bold whitespace-nowrap bg-brandBlue hover:bg-lightBlue hover:text-brandBlue font-redhat py-[16px] px-[42px] text-[18.1px] leading-[93%] tracking-[1%]"
+          >
+            About us
+          </Button>
+        </div>
+        <div className="flex flex-col min-[825px]:w-[40%] mr-5 min-[825px]:mx-5 xl:w-[60%]">
+          <div className="  xl:ml-20 min-[825px]:bg-white h-full rounded-[13px] flex justify-start items-center min-[825px]:py-10">
+            <div className="flex gap-8 max-md:flex-col">
+              <div className="flex flex-col min-[825px]:-ml-28 xl:-ml-32 ">
+                <div className="flex flex-col min-[825px]:w-[200px] min-[825px]:h-[300px] min-[1155px]:w-[313.08px] min-[1155px]:h-[495.62px] rounded-2xl">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/699b52b171cc53fa35fd45504c9a5126c6a8f4cdc67118e4d859f309988fb1bd?apiKey=873e47fe7796454e93671642132d9742&"
+                    alt=""
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
 
-              <div className='font-serif '>
-         
-              <Heading>We train people</Heading>
-              <Paragraph>
-                At the Flourish Nation Global, we are on a mission to raise a generation of True witnesses, trained in wisdom and stature, favoured of the Lord and Men, Empowered by the Spirit and sent for Kingdom Purpose.
-              </Paragraph>
-              <Link to="/sermons"><Button className="mt-5 px-2 w-2/4 hover:bg-opacity-5">Sermons</Button></Link>
-              </div>
-             
-              
-            </div>
-          </div>
-          <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
-            <div className="grow py-10  w-full bg-white rounded-xl max-md:mt-10 max-md:max-w-full max-md:w-full">
-              <div className="flex gap-8 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col -ml-10 max-md:ml-0 max-md:px-5 max-md:w-full">
-                  <div className="flex flex-col   my-auto  rounded-2xl bg-zinc-300 max-md:mt-5">
-                    <Image src="https://cdn.builder.io/api/v1/image/assets/TEMP/699b52b171cc53fa35fd45504c9a5126c6a8f4cdc67118e4d859f309988fb1bd?apiKey=873e47fe7796454e93671642132d9742&" alt="" className="max-w-full rounded-2xl aspect-[0.63] max-md:w-full shadow-lg hover:scale-75" />
-                  
-                  </div>
-                  
-                </div>
- 
-                <div className="flex flex-col pr-8  max-md:ml-0 max-md:pl-5 max-md:w-full">
-                  <div className="flex flex-col justify-center items-center  my-auto w-full rounded-2xl bg-zinc-300 max-md:mt-10">
-                    <Image src="https://cdn.builder.io/api/v1/image/assets/TEMP/5932a3d2785828c62b43b2f4d458ce8fe514ad439df6dd7fe88d615fa8483656?apiKey=873e47fe7796454e93671642132d9742&" alt="" className="max-w-full rounded-2xl aspect-[0.63] max-md:w-full shadow-lg hover:scale-75" />
-                  
-                  </div>
-                  
+              <div className="flex flex-col min-[825px]:pr-8">
+                <div className="flex flex-col justify-center items-center  my-auto rounded-2xl min-[825px]:w-[200px] min-[825px]:h-[300px] min-[1155px]:w-[313.08px] min-[1155px]:h-[495.62px]">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5932a3d2785828c62b43b2f4d458ce8fe514ad439df6dd7fe88d615fa8483656?apiKey=873e47fe7796454e93671642132d9742&"
+                    alt=""
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
               </div>
             </div>
           </div>
+          {/* <img
+            src={trainings}
+            width={817}
+            height={633}
+            className="w-full object-contain h-full"
+          /> */}
         </div>
       </div>
     </section>
-  )
+  );
 }

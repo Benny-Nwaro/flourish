@@ -1,52 +1,48 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-Link
-
+import Button from "./UI/Button";
 
 export default function Statement() {
   return (
-    <main className="flex justify-center items-center px-32 pb-10 bg-white max-md:px-5">
-      <div className="mt-24 w-full max-w-[1110px] max-md:mt-10 max-md:max-w-full">
-        <article className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <div className="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3eaf8a7f25a3fa28bf3628f9a6dc5df301029f3d09b9118d13a3925bc25f29b?apiKey=873e47fe7796454e93671642132d9742&"
-              alt="Statement of Faith"
-              className="grow w-full aspect-[0.9] shadow-xl rounded-3xl max-md:max-w-full"
-            />
-          </div>
-          <div className="flex flex-col ml-5 w-[46%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col self-stretch my-auto text-black leading-[93%] max-md:mt-10 max-md:max-w-full">
-            <div className="justify-center whitespace-nowrap self-start  font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-emerald-500 bg-emerald-50 animate-pulse rounded-full  max-md:px-5">
-            The Church with Eternity in View
-          </div>
-              <h1 className="mt-4 text-7xl tracking-tighter leading-[77px] max-md:max-w-full font-kuano max-md:text-4xl max-md:leading-10">
-                Statement of Faith
-              </h1>
-              <div className="mt-4 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
-                <p>
-                  We flourish on every side because God said to us "Flourish!".{" "}
-                </p>
-                <p>
-                  We are a city set on a hill that cannot be hid, our leaves do
-                  not wither and everything we do prospers.
-                </p>
-                <p>
-                  We are like trees planted by the rivers of water, because we
-                  are a Flourishing Nation!
-                </p>
-              </div>
-              <Link to="/whoweare">
-              <button
-                className="justify-center self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal text-white bg-blue-600 rounded-[58.975px] hover:opacity-50 max-md:px-5"
-              >
-                About us
-              </button></Link>
+    <main className="flex justify-between  items-center min-[500px]:px-[60px] px-[30px] xl:px-[150px] py-[100px] bg-white">
+      <article className="flex gap-5 max-md:flex-col justify-between md:gap-[98px]">
+        <div className="flex flex-col md:w-[50%]">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3eaf8a7f25a3fa28bf3628f9a6dc5df301029f3d09b9118d13a3925bc25f29b?apiKey=873e47fe7796454e93671642132d9742&"
+            alt="Statement of Faith"
+            className="grow w-full aspect-[0.9] rounded-3xl max-md:max-w-full"
+          />
+        </div>
+        <div className="flex flex-col gap-[32px] justify-center md:w-[38%]">
+          <div className="flex flex-col gap-[16px] text-black">
+            <h1 className="text-[60px] leading-[98%] tracking-[-2.5%] text-black font-dmserif  w-full max-md:text-4xl ">
+              Statement of Faith
+            </h1>
+            {/* WRITTEN STATEMENT */}
+            <div className="font-redhat tracking-[-1%] leading-[143%]">
+              <p>
+                We flourish on every side because God said to us &quot;Flourish!
+                &quot;.
+              </p>
+              <p>
+                We are a city set on a hill that cannot be hid, our leaves do
+                not wither and everything we do prospers.
+              </p>
+            </div>
+            <div className="font-redhat tracking-[-1%] leading-[143%]">
+              <p>
+                We are like trees planted by the rivers of water, because we are
+                a Flourishing Nation!
+              </p>
             </div>
           </div>
-        </article>
-      </div>
+          <Button
+            route="/whoweare"
+            className="text-white font-bold whitespace-nowrap bg-brandBlue hover:bg-lightBlue hover:text-brandBlue font-redhat py-[16px] px-[42px] text-[18.1px] leading-[93%] tracking-[1%]"
+          >
+            About us
+          </Button>
+        </div>
+      </article>
     </main>
-  )
+  );
 }

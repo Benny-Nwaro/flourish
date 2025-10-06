@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Products() {
   return (
     <div className="flex justify-center items-center px-32 py-20 w-full bg-zinc-100 mb-20 max-md:px-5 max-md:max-w-full">
@@ -66,5 +64,5 @@ export default function Products() {
         </div>
       </div>
     </div>
-  )
+  );
 }
