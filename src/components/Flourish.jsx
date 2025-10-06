@@ -1,92 +1,58 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
-import ImagesSection from './ImagesSection';
-import VideoPlayer2 from './VideoPlayer2';
-VideoPlayer2
+import VideoPlayer2 from "./VideoPlayer2";
+import web from "../assets/icons/webHero.png";
+import star from "../assets/icons/starhero.png";
+import Button from "./UI/Button";
 
-
-
-function Button({ children, className }) {
-    return (
-      <div className={`justify-center px-11 py-4 rounded-[58.975px]  ${className}`}>
-        {children}
-      </div>
-    );
-  }
 export default function Flourish() {
   return (
-  // <section className="flex justify-center items-center  px-32   bg-slate-200">
-
-    <div className="flex flex-col ">
-      <div className="flex gap-5 justify-between items-start w-full   max-md:max-w-full">
-        <div className="flex flex-col self-end mt-16 leading-[93%] max-md:mt-10 max-md:max-w-full">
-          <div className='px-32 max-md:px-5 ' >
-          <div className="justify-center whitespace-nowrap self-start bg-white font-bold py-3 px-5 w-61 max-w-64 text-sm tracking-normal text-blue-600 animate-pulse rounded-full  ">
-            The Church with Eternity in View
+    <div className="relative flex flex-col py-[150px] ">
+      <div className="flex relative gap-5 flex-col justify-center items-center w-[80%] mx-auto h-full pb-[150px] ">
+        <div className="flex flex-col justify-center items-center w-[90%] md:w-[70%] lg:w-[42%] font-dmserif h-full">
+          <div>
+            <h1 className="md:text-[89.41px] leading-[83%] text-center tracking-tighter text-black w-full text-7xl ">
+              We
+              <span className=" text-brandBlue ml-5 ">Flourish</span>
+            </h1>
+            <h1 className="md:text-[89.41px] leading-[83%] text-center tracking-tighter text-black w-full text-7xl ">
+              on Every Side!
+            </h1>
           </div>
-     
-          </div>
-
-          <div className=' px-32 max-md:w-full max-md:px-5 '>
-       
-          <h1 className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
-            The Righteous {" "}
-            
-            
-          </h1 >
-          <span className="mt-5 text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Shall           
-          
-          <span className="mt-5 text-7xl pl-5 text-blue-600 tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">Flourish     
-    </span>   
-    </span> 
-          <h1 className="text-7xl tracking-tighter font-kuano text-black-600 leading-[77px] max-md:max-w-full max-md:text-4xl max-md:leading-10">like a Palm Tree</h1>
-          <p className="mt-8 w-3/5 text-base tracking-normal leading-6 text-black font-serif max-md:mr-2 max-md:max-w-50px">
-            Experience the joy of fellowship and personal growth at our
-            upcoming events at the Flourish Nation Global, where deep connection
-            and spiritual rejuvenation earnestly awaits you. Here, you will get
-            a glimpse on our upcoming events, stay updated for what will come
+          <p className="mt-6 text-center text-[18px] tracking-[-1%] leading-[143%] text-black  w-full font-redhat">
+            Experience the joy of fellowship and personal growth at our upcoming
+            events at the Flourish Nation Global, where deep connection and
+            spiritual rejuvenation earnestly awaits you. Here, you will get a
+            glimpse of our upcoming events, stay updated for what will come
             next!
           </p>
-          <div className="flex gap-3 self-start mt-4 text-xl tracking-normal">
-          <Link to="whoweare/"><Button className="text-white whitespace-nowrap bg-blue-600 hover:bg-opacity-5 max-sm:w-4/5 max-sm:pl-2 max-sm:text-md">Who we are</Button></Link>
-          <Link to="sermons"> <Button className="text-blue-600 whitespace-nowrap bg-indigo-100 hover:bg-opacity-5 max-sm:w-4/5 max-sm:pl-2 max-sm:text-md">
+          <div className="flex flex-col [@media(min-width:420px)]:flex-row gap-3  mt-4 text-xl tracking-normal">
+            <Button
+              route="/whoweare"
+              className="text-white font-bold whitespace-nowrap bg-brandBlue hover:bg-lightBlue hover:text-brandBlue font-redhat py-[16px] px-[42px] text-[18.1px] leading-[93%] tracking-[1%]"
+            >
+              Who we are
+            </Button>
+            <Button
+              route="/sermons"
+              className="text-brandBlue whitespace-nowrap bg-lightBlue hover:bg-brandBlue hover:text-white font-bold font-redhat py-[16px] px-[42px] text-[18.1px] leading-[93%] tracking-[1%]"
+            >
               Sermons
-            </Button></Link>
+            </Button>
           </div>
-          </div>
-          
-
-
         </div>
 
+        {/* STAR ICON */}
+        <div className="absolute -top-20 left-0">
+          <img src={star} alt="star" className="w-[55.19px] h-[55.19px]" />
+        </div>
+
+        {/* WEB ICON */}
+        <div className="absolute right-10 bottom-10 md:bottom-28">
+          <img src={web} alt="web" className="w-[119.39px] h-[108.03px]" />
+        </div>
       </div>
-      <div className="flex flex-col self-end mr-48 -mt-40 max-md:mr-16   ">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
-            alt=""
-            className=""
-          />
 
-        </div>
-        <div className="flex flex-col self-end mr-64 -mt-80 mb-24 max-md:mr-8 max-md:mb-80 max-md:pt-10 max-md:w-16 ">
- 
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e367770d9aa964600fe609877e912d728d08081ae02c4f1438e86ec70b950f2?apiKey=873e47fe7796454e93671642132d9742&"
-            alt=""
-            className=" "
-          />
-        </div>
       {/* <ImagesSection/> */}
-      <VideoPlayer2/>
-      {/* <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/138b857960483ee06d38f82390f53d01cd9f545371ef26e1e4dd6b8221942049?apiKey=873e47fe7796454e93671642132d9742&"
-        alt=""
-        className="flex justify-center items-center px-32 pb-64 max-md:px-5 mt-24  aspect-[1.54] "
-      /> */}
+      <VideoPlayer2 />
     </div>
-    // </section>
-  )
+  );
 }

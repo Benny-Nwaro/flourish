@@ -1,109 +1,217 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from "react-router-dom";
-
-import FGClogo from '../assets/images/FGClogo.png'
-import menu from '../assets/images/icon-menu.svg'
-import close from '../assets/images/icon-close-menu.svg'
-
+import { useState } from "react";
+import { Link } from "react-router";
+import FGClogo from "../assets/images/FGClogo.png";
+import menu from "../assets/images/icon-menu.svg";
+import close from "../assets/images/icon-close-menu.svg";
+import { NavLink } from "react-router";
 
 const Logo = () => (
   <Link to="/">
-    <div className="flex flex-col items-center bg-white px-8 py-3.5 text-xs font-medium text-blue-600 whitespace-nowrap backdrop-blur-[7.5px] max-w-[157px] rounded-[121.698px] max-md:ml-5  tracking-[7.43px]">
+    <div className="flex flex-col items-center justify-center bg-white w-[171px] h-[71px] rounded-[121.7px]">
       <img
         loading="lazy"
         src={FGClogo}
-        alt="Church icon"
-        className="w-full aspect-[3.7] fill-blue-600"
+        alt="Flourish Church Logo"
+        className="w-[99px] h-[37.51px]"
       />
-      
     </div>
   </Link>
 );
 
-const NavItem = ({ children }) => <div className='hover:text-sm hover:text-blue-700 active:text-blue-700'>{children}</div>;
-
 const NavMenu = () => {
-  const navItems = ["Home", "Who we are", "Sermons", "About PACE", "Expressions", "Blogs", "Live"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Who we are", path: "/Whoweare" },
+    { name: "Sermons", path: "/Sermons" },
+    { name: "About PACE", path: "/AboutPACE" },
+    { name: "Expressions", path: "/Expressions" },
+    { name: "Blogs", path: "/Blogs" },
+    { name: "Live", path: "/Live" },
+  ];
 
   return (
-    
-    <nav className="flex gap-5 justify-between bg-white ml-20 mr-20 px-8 py-3.5 text-base leading-6 text-black backdrop-blur-[10.5px]  rounded-[95px] max-md:flex-wrap max-md:px-5">
+    <div className="flex gap-2 xl:gap-5 items-center justify-between bg-white/60 text-base xl:leading-[143%] text-black font-normal whitespace-nowrap lg:w-[719px] h-[71px]  py-[25px] px-[20px] xl:px-[59px] rounded-[95px] ">
       {navItems.map((item, index) => (
-        
-        <NavItem key={index} ><Link to={"/" + item.replaceAll(' ', '')}>{item}</Link></NavItem>
+        <NavLink
+          key={index}
+          to={item.path}
+          className={({ isActive }) =>
+            `${
+              isActive ? "font-bold" : ""
+            } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+          }
+        >
+          {item.name}
+        </NavLink>
       ))}
-    </nav>
-    
+    </div>
   );
-}; 
+};
 
 const GiveButton = () => (
   <Link to="/give">
-  <button className="border-2 border-white h-[50px] w-[100px] rounded-full bg-blue-700 text-white hover:text-blue-700 hover:border-gray-800 hover:bg-white ">
-    Give
-  </button>
+    <button className="border-[3.16px] text-[18.61px] border-white h-[71px] lg:w-[123px] rounded-full bg-brandBlue hover:border-none py-[16px] font-stemBold px-[42px] text-white hover:text-brandBlue leading-[93%] tracking-[1%] hover:bg-lightBlue ">
+      Give
+    </button>
   </Link>
 );
 
-
 export default function Navbar() {
-  const [Comnav, SetComNav] = useState(false);
-    const [Sidenav, SetSideNav] = useState(false);
-    const [sideFae, SetSideFae] = useState(false);
-    const [sideCom, SetSideCom] = useState(false);
+  // const [Comnav, SetComNav] = useState(false);
+  const [Sidenav, SetSideNav] = useState(false);
+  // const [sideFae, SetSideFae] = useState(false);
+  // const [sideCom, SetSideCom] = useState(false);
 
+  // function toggleComNav() {
+  //     SetComNav(!Comnav);
+  // }
 
-    function toggleComNav() {
-        SetComNav(!Comnav);
-    }
+  const toggleSidenav = () => {
+    SetSideNav(!Sidenav);
+  };
 
-    const toggleSidenav = () => {
-        SetSideNav(!Sidenav);
-    }
+  // const toggleSideFae = () => {
+  //     SetSideFae(!sideFae);
+  // }
 
-    const toggleSideFae = () => {
-        SetSideFae(!sideFae);
-    }
-
-    const toggleSideCom = () => {
-        SetSideCom(!sideCom);
-    }
+  // const toggleSideCom = () => {
+  //     SetSideCom(!sideCom);
+  // }
   return (
-    <div className=' sticky top-0  z-50 pt-5 pb-5 ml-32 flex justify-between max-md:pl-0 max-md:pr-0 max-md:ml-0 '>
-      
-        <Logo/>
-        <ul className='hidden md:flex font-epilogue text-[15px] items-center w-full  text-gray-600'>
+    <nav className=" sticky z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between gap-[10px] lg:gap-[20px] ">
+      <Logo />
+      <div className="hidden min-[1120px]:block">
+        <NavMenu />
+      </div>
+      <div className="hidden min-[1120px]:block">
+        <GiveButton />
+      </div>
+      {/* <ul className="hidden md:flex justify-between font-epilogue text-[15px] items-center w-full  text-gray-600">
         <NavMenu />
         <GiveButton />
-        </ul>
-      
-    
-      <div className='flex items-center mr-8'>
-                <img src={menu} alt='menuIcon'className={Sidenav ? 'hidden' : 'flex h-[22px] cursor-pointer  md:hidden'} onClick={toggleSidenav} />
-      </div>
-    
-      <div className={`absolute flex justify-end overflow-hidden z-50 w-[100%] h-[550px] ${Sidenav ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-                <div className={` right-0 w-[60%] flex flex-col bg-slate-200 bg-opacity-80  rounded-2xl ${Sidenav ? 'translate-x-0' : 'translate-x-full '}  ease-in-out duration-500`}>
-                    <div className='flex justify-end mt-[29px] mr-[32px]'>
-                        <img src={close} alt='closeIcon' className='h-[25px] cursor-pointer' onClick={toggleSidenav} />
-                    </div>
-                    <ul className='text-black font-kuano  text-[22px] flex flex-col ml-[25px] mt-0'>
-                        <li className='my-3 hover:text-blue-700 hover:text-xl'><Link to="/home">Home</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'> <Link to="/whoweare">Who we are</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/sermons">Sermons</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/aboutpace">About PACE</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/expressions">Expressions</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Blogs">Blogs</Link></li>
-                        <li className='my-3  hover:text-blue-700 hover:text-xl'><Link to="/Live">Live</Link></li>
-                    </ul>
-                    <div className='text-gray-600 font-kuano text-lg flex flex-col pl-5 pt-5 '>
-                        
-                    <GiveButton />
-                    </div>
+      </ul> */}
 
-                </div>
-            </div>
-  
-    </div>
-  )
+      <div className="min-[1120px]:hidden flex justify-center items-center ">
+        <img
+          src={menu}
+          alt="menuIcon"
+          className={
+            Sidenav ? "hidden" : "flex h-[22px] cursor-pointer  md:hidden"
+          }
+          onClick={toggleSidenav}
+        />
+      </div>
+
+      <div
+        className={`absolute md:hidden flex justify-end overflow-hidden z-50 w-[100%] h-[550px] ${
+          Sidenav ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        <div
+          className={` right-0 w-[60%] flex flex-col bg-slate-200 bg-opacity-80  rounded-2xl ${
+            Sidenav ? "translate-x-0" : "translate-x-full "
+          }  ease-in-out duration-500`}
+        >
+          <div className="flex justify-end mt-[29px] mr-[32px]">
+            <img
+              src={close}
+              alt="closeIcon"
+              className="h-[25px] cursor-pointer"
+              onClick={toggleSidenav}
+            />
+          </div>
+          <ul className="text-black font-kuano  text-[22px] flex flex-col ml-[25px] mt-0">
+            <li className="my-3 hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/home"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              {" "}
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/whoweare"
+              >
+                Who we are
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/sermons"
+              >
+                Sermons
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/aboutpace"
+              >
+                About PACE
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/expressions"
+              >
+                Expressions
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/Blogs"
+              >
+                Blogs
+              </NavLink>
+            </li>
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "font-bold" : ""
+                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
+                }
+                to="/Live"
+              >
+                Live
+              </NavLink>
+            </li>
+          </ul>
+          <div className="text-gray-600 font-kuano text-lg flex flex-col pl-5 pt-5 ">
+            <GiveButton />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }

@@ -1,34 +1,60 @@
-import React from 'react'
-
-function ProfileImage({ src, className }) {
+import PropTypes from "prop-types";
+import locationicon from "../assets/icons/location.png";
+import nigeriaIcon from "../assets/icons/9ja.png";
+function CountryTag({ text, icon, className, textColor }) {
   return (
-    <img
-      loading="lazy"
-      src={src}
-      alt="Profile"
-      className={`self-end mr-35 max-w-full border-8 border-white border-solid aspect-[1.09] rounded-2xl fill-blue-600 stroke-[8.1px] stroke-white w-[110px] max-md:mr-2.5 ${className}`}
-    />
-  );
-}
-
-function HeroImage({ src, className }) {
-  return (
-    <img
-      loading="lazy"
-      src={src}
-      alt="Hero"
-      className={` w-full rounded-2xl border-white border-solid aspect-[1.43] border-[14px] max-w-[1149px] max-md:mt-10 max-md:max-w-full ${className}`}
-    />
-  );
-}
-
-export default function Location() {
-  return (
-    <div className="flex flex-col pb-20 bg-slate-200 rounded-2xl max-md:pb-5">
-      {/* <ProfileImage src="ext_0}}" /> */}
-      <main className="flex justify-center items-center px-32 rounded-2xl w-full max-md:px-5  max-md:max-w-full">
-        <HeroImage src="https://cdn.builder.io/api/v1/image/assets/TEMP/af3f0c1d4cab168f0d771975bb72d5f665b92ffae9c45cc2e09608175aef2c41?apiKey=873e47fe7796454e93671642132d9742&" />
-      </main>
+    <div
+      className={`${className} inline-flex justify-center items-center rounded-[58.1px] py-[15.38px] gap-[8.54px] px-[28.2px]`}
+    >
+      <p
+        className={`${textColor} font-stemBold text-[17.09px] leading-[98%] tracking-[-2.5%]`}
+      >
+        {text}
+      </p>
+      {icon && <img src={icon} className="w-[23.92px] h-[23.92px]" />}
     </div>
-  )
+  );
 }
+
+CountryTag.propTypes = {
+  text: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  icon: PropTypes.string,
+  textColor: PropTypes.string,
+};
+
+const Location = () => {
+  return (
+    <section className="bg-brandBlue flex justify-start items-center md:h-[786.91px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]">
+      <section className="flex flex-col gap-[32px] w-full">
+        <div className="flex justify-between gap-[23px] items-center">
+          <CountryTag
+            className={`border-[1.71px] border-white`}
+            textColor={"text-white"}
+            text="All"
+          />
+          <CountryTag
+            className={`bg-white`}
+            textColor={"text-brandBlue"}
+            text="Nigeria"
+            icon={nigeriaIcon}
+          />
+        </div>
+        <div className="bg-cardBlue py-[20px] md:py-[92px] px-[20px] md:px-[99px] rounded-[22px] flex flex-col gap-[20px]">
+          <div className="bg-iconBlue w-[61.22px] h-[61.22px] flex justify-center items-center rounded-[10px]">
+            <img src={locationicon} />
+          </div>
+          <h1 className="text-white font-stemBold text-[30px] md:text-[42px] leading-[98%] tracking-[-1%]">
+            Flourish Church Enugu
+          </h1>
+          <p className="font-redhat text-[25px] md:text-[36px] text-white leading-[143%] tracking-[-1%]">
+            Mater Purisima Event Centre, 187 Ogui Road, Just Opposite 4 Market
+            Days Supermarket, China Town, Enugu, Enugu State
+          </p>
+        </div>
+      </section>
+    </section>
+  );
+};
+
+export default Location;

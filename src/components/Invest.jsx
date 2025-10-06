@@ -1,47 +1,46 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-Link
+import { Link } from "react-router";
+import Button from "./UI/Button";
+Link;
 
 function HeroSection() {
   return (
-    <section className="flex justify-center items-center px-32 pb-20 max-md:px-5 bg-slate-200">
-      <div className="max-w-[1140px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col self-stretch my-auto text-black max-md:mt-10 max-md:max-w-full">
-              <h1 className="text-7xl  font-kuano tracking-tighter leading-[70px] max-md:max-w-full max-md:text-4xl max-md:leading-10">
-                Invest in what you truly believe in
-              </h1>
-              <p className="mt-2 text-base tracking-normal leading-6 font-serif max-md:max-w-full">
-                At the Flourish Nation Global, we believe that everything we have ultimately belongs to God and that we are stewards entrusted with managing his resources wisely. By putting our money where our faith is, we prioritise using our financial resources in ways that honour God and partner with him for the advancement of his Kingdom.
-              </p>
-              <Link to="/give">
-              <button className="justify-center hover:opacity-50 self-start px-11 py-4 mt-8 text-xl font-serif tracking-normal leading-4 text-white bg-blue-600 rounded-[58.975px] max-md:px-5">
-                Give now
-              </button></Link>
-            </div>
-          </div>
-          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow justify-center rounded-mid max-md:mt-10 max-md:max-w-full">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/32f6c1564ed1dc78f95fcdaa01d8c71d7cafc2c00de7bb4fa0a9f59d0d71ec9a?apiKey=873e47fe7796454e93671642132d9742&"
-                alt="Flourish Nation Global"
-                className="w-full aspect-[0.95] rounded-2xl max-md:max-w-full"
-              />
-            </div>
-          </div>
-        </div>
+    <section className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-20 items-center min-[500px]:px-[60px] px-[30px] xl:px-[150px] py-[150px] bg-white">
+      <div className="flex flex-col justify-center gap-[32px] md:w-[498px] text-black">
+        <h1 className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[93%] text-6xl">
+          Invest in what <br />
+          you truly <br />
+          believe in
+        </h1>
+        <p className="tracking-[-1%] leading-[143%] font-stem">
+          At the Flourish Nation Global, we believe that everything we have
+          ultimately belongs to God and that we are stewards entrusted with
+          managing his resources wisely. By putting our money where our faith
+          is, we prioritise using our financial resources in ways that honour
+          God and partner with him for the advancement of his Kingdom.
+        </p>
+        <Button
+          route="/give"
+          className="text-white font-bold whitespace-nowrap bg-brandBlue hover:bg-lightBlue hover:text-brandBlue font-redhat py-[16px] px-[42px] text-[18.1px] leading-[93%] tracking-[1%]"
+        >
+          Give now
+        </Button>
+      </div>
+      <div className=" md:w-[541px] rounded-b-[15px]">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/32f6c1564ed1dc78f95fcdaa01d8c71d7cafc2c00de7bb4fa0a9f59d0d71ec9a?apiKey=873e47fe7796454e93671642132d9742&"
+          alt="Worship Offering Tithe Prophetic Giving"
+          className="w-fit rounded-b-[15px] "
+        />
       </div>
     </section>
   );
 }
-
 
 export default function Invest() {
   return (
     <main>
       <HeroSection />
     </main>
-  )
+  );
 }

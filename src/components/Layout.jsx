@@ -1,16 +1,19 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import { Link, Outlet } from 'react-router-dom'
-
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { Outlet } from "react-router";
+import PropTypes from "prop-types";
 
 export default function Layout({ children }) {
   return (
     <>
-    <Navbar/>
-    {children}
-    <Outlet/>
-    <Footer/>
+      <Navbar />
+      {children}
+      <Outlet />
+      <Footer />
     </>
-  )
+  );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

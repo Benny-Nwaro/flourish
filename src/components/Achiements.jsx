@@ -1,8 +1,5 @@
-import React from 'react'
-
 export default function Achiements() {
   return (
-    
     <div className="flex z-10 justify-center items-center border-2 px-32 py-20 mt-0 w-full bg-white max-md:px-5 max-md:max-w-full">
       <div className="px-px mt-24 mb-14 w-full max-w-[1172px] max-md:my-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -46,5 +43,5 @@ export default function Achiements() {
         </div>
       </div>
     </div>
-  )
+  );
 }

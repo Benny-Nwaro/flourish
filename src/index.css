@@ -1,16 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@font-face {
-    font-family: "Kuano";
-    src: url("../fonts/KuanoDemo/Kuano_Demo.ttf");
-  }
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  /* 🎨 Colors */
+  --color-brandBlue: #0057ff;
+  --color-lightBlue: #dfeaff;
+  --color-greenSecondary: #00d770;
+  --color-iconBlue: #003eb8;
+  --color-cardBlue: #004de3;
+  --color-grey60: #6a6a6a1a;
+
+  /* 🧩 Fonts */
+  --font-redhat: "Red Hat Display", sans-serif;
+  --font-stemBold: "stemBold", sans-serif;
+  --font-stemRegular: "stem", sans-serif;
+  --font-dmserif: "DM Serif Display", serif;
+
+  /* 🌄 Backgrounds */
+  --background-image-pace-pattern: url("/src/assets/images/pace-pattern.png");
+
+  /* 🎞️ Animations */
+  --animate-loop-scroll: loop-scroll 50s linear infinite;
+}
+
+@font-face {
+  font-family: stemBold;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/em-stem/Stem-Bold.otf");
+}
+
+@font-face {
+  font-family: stem;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/em-stem/Stem-Regular.otf");
+}
+
+body {
+  font-family: "Red Hat Display", "DM Serif Display", sans-serif;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
 
 @layer utilities {
   .paused {
     animation-play-state: paused;
+  }
+}
+
+@keyframes loop-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FlExperience() {
   return (
     <div className="flex flex-col self-center pt-7 pb-20 w-full text-white bg-blue-600 rounded-3xl border-4 border-white border-solid max-w-[1148px] max-md:max-w-full">
@@ -44,5 +42,5 @@ export default function FlExperience() {
         />
       </div>
     </div>
-  )
+  );
 }
