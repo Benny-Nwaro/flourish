@@ -40,10 +40,73 @@ export const Caret = ({ className }) => {
   );
 };
 
+export const SearchIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="30"
+      height="32"
+      viewBox="0 0 30 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.375 3.08331C20.9375 3.08331 26.25 8.5729 26.25 15.3541C26.25 22.1354 20.9375 27.625 14.375 27.625C7.8125 27.625 2.5 22.1354 2.5 15.3541C2.5 10.575 5.1375 6.44165 9 4.41373"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M27.5 28.9166L25 26.3333"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const HeadPhoneIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        opacity="0.4"
+        d="M2.60974 13.3372C2.323 13.3372 2.08522 13.0994 2.08522 12.8127V8.82636C2.05026 6.93111 2.7566 5.14076 4.07139 3.798C5.38618 2.46223 7.14856 1.72791 9.04381 1.72791C12.9182 1.72791 16.0723 4.882 16.0723 8.75643V12.7428C16.0723 13.0295 15.8346 13.2673 15.5478 13.2673C15.2611 13.2673 15.0233 13.0295 15.0233 12.7428V8.75643C15.0233 5.46246 12.3448 2.77694 9.04381 2.77694C7.4283 2.77694 5.93168 3.39937 4.8197 4.53232C3.70073 5.67227 3.10628 7.18987 3.13426 8.81238V12.8057C3.13426 13.0994 2.90347 13.3372 2.60974 13.3372Z"
+        fill="#0057FF"
+      />
+      <path
+        d="M4.84067 9.0011H4.74975C3.2811 9.0011 2.08521 10.197 2.08521 11.6656V12.9804C2.08521 14.4491 3.2811 15.645 4.74975 15.645H4.84067C6.30931 15.645 7.50521 14.4491 7.50521 12.9804V11.6656C7.50521 10.197 6.30931 9.0011 4.84067 9.0011Z"
+        fill="#0057FF"
+      />
+      <path
+        d="M13.4078 9.0011H13.3169C11.8482 9.0011 10.6523 10.197 10.6523 11.6656V12.9804C10.6523 14.4491 11.8482 15.645 13.3169 15.645H13.4078C14.8765 15.645 16.0723 14.4491 16.0723 12.9804V11.6656C16.0723 10.197 14.8765 9.0011 13.4078 9.0011Z"
+        fill="#0057FF"
+      />
+    </svg>
+  );
+};
+
 Arrow.propTypes = {
   className: PropTypes.string,
 };
 
 Caret.propTypes = {
+  className: PropTypes.string,
+};
+
+SearchIcon.propTypes = {
+  className: PropTypes.string,
+};
+
+HeadPhoneIcon.propTypes = {
   className: PropTypes.string,
 };

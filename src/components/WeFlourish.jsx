@@ -8,7 +8,7 @@ export default function WeFlourish() {
         <Navbar />
         <div className="flex flex-col gap-[10px] md:gap-[32px] justify-center relative my-auto pl-[20px] md:pl-[80px] xl:pl-[150px]">
           <div className="justify-center flex flex-col items-center py-[18.88px] text-sm font-extrabold tracking-[1%] w-fit leading-[93%] text-brandBlue whitespace-nowrap bg-lightBlue font-redhat rounded-[65.48px] px-[33.31px]">
-            The Family of Flourish GC
+            <p>The Family of Flourish GC</p>
           </div>
           <div className="flex flex-col gap-[16px] text-white">
             <h1 className="text-6xl md:text-[78.28px] leading-[95%] tracking-[-2.5%] text-white font-dmserif  w-fit">
