@@ -15,7 +15,7 @@ export default function Trainings() {
                 living out the life of Christ
               </h1>
             </div>
-            <p className="tracking-[-1%] leading-[143%] text-black  w-full font-stem">
+            <p className="tracking-[-1%] leading-[143%] text-black  w-full font-stemRegular">
               At the Flourish Generation Church, we are on a mission to raise a
               generation of True witnesses, trained in wisdom and stature,
               favoured of the Lord and Men, Empowered by the Spirit and sent for

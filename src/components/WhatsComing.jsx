@@ -29,7 +29,7 @@ const EventCard = ({ title, date, location, time, description }) => (
               alt="Calendar icon"
               className="shrink-0 w-4 aspect-square"
             />
-            <div className="my-auto font-stem">{date}</div>
+            <div className="my-auto font-stemRegular">{date}</div>
           </div>
           <div className="flex gap-1.5">
             <img
@@ -38,7 +38,7 @@ const EventCard = ({ title, date, location, time, description }) => (
               alt="Location icon"
               className="shrink-0 w-4 aspect-square"
             />
-            <div className="my-auto font-stem">{location}</div>
+            <div className="my-auto font-stemRegular">{location}</div>
           </div>
         </div>
         <div className="flex gap-2 self-start whitespace-nowrap">
@@ -48,10 +48,10 @@ const EventCard = ({ title, date, location, time, description }) => (
             alt="Clock icon"
             className="shrink-0 aspect-[1.06] w-[17px]"
           />
-          <div className="my-auto font-stem">{time}</div>
+          <div className="my-auto font-stemRegular">{time}</div>
         </div>
       </div>
-      <p className="leading-[143%] tracking-[-1%] max-md:max-w-full font-stem">
+      <p className="leading-[143%] tracking-[-1%] max-md:max-w-full font-stemRegular">
         {description}
       </p>
     </div>
@@ -105,7 +105,7 @@ export default function WhatsComing() {
             What&apos;s Coming
           </h1>
 
-          <p className=" w-fit justify-center text-lg tracking-[-1%] leading-[151%] font-serif text-black font-stem">
+          <p className=" w-fit justify-center text-lg tracking-[-1%] leading-[151%] text-black font-stemRegular">
             Experience the joy of fellowship and personal growth at our upcoming
             events at the Flourish Nation Global , where deep connection and
             spiritual rejuvenation earnestly awaits you. Here, you will get a

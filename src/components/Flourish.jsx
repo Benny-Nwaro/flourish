@@ -7,7 +7,7 @@ export default function Flourish() {
   return (
     <div className="relative flex flex-col py-[150px] ">
       <div className="flex relative gap-5 flex-col justify-center items-center w-[80%] mx-auto h-full pb-[150px] ">
-        <div className="flex flex-col justify-center items-center w-[90%] md:w-[70%] lg:w-[42%] font-dmserif h-full">
+        <div className="flex flex-col justify-center items-center w-[90%] md:w-[70%] lg:w-[50%] font-dmserif h-full">
           <div>
             <h1 className="md:text-[89.41px] leading-[83%] text-center tracking-tighter text-black w-full text-7xl ">
               We

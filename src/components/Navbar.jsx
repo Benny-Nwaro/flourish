@@ -30,7 +30,7 @@ const NavMenu = () => {
   ];
 
   return (
-    <div className="flex gap-2 xl:gap-5 items-center justify-between bg-white/60 text-base xl:leading-[143%] text-black font-normal whitespace-nowrap lg:w-[719px] h-[71px]  py-[25px] px-[20px] xl:px-[59px] rounded-[95px] ">
+    <div className="flex gap-2 xl:gap-5 items-center justify-between bg-white/60 text-lg xl:leading-[143%] text-black font-normal whitespace-nowrap lg:w-[719px] h-[71px]  py-[25px] px-[20px] xl:px-[59px] rounded-[95px] ">
       {navItems.map((item, index) => (
         <NavLink
           key={index}
@@ -57,28 +57,14 @@ const GiveButton = () => (
 );
 
 export default function Navbar() {
-  // const [Comnav, SetComNav] = useState(false);
   const [Sidenav, SetSideNav] = useState(false);
-  // const [sideFae, SetSideFae] = useState(false);
-  // const [sideCom, SetSideCom] = useState(false);
-
-  // function toggleComNav() {
-  //     SetComNav(!Comnav);
-  // }
 
   const toggleSidenav = () => {
     SetSideNav(!Sidenav);
   };
 
-  // const toggleSideFae = () => {
-  //     SetSideFae(!sideFae);
-  // }
-
-  // const toggleSideCom = () => {
-  //     SetSideCom(!sideCom);
-  // }
   return (
-    <nav className=" sticky z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between gap-[10px] lg:gap-[20px] ">
+    <nav className=" w-full sticky z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between gap-[10px] lg:gap-[20px] ">
       <Logo />
       <div className="hidden min-[1120px]:block">
         <NavMenu />
@@ -86,24 +72,18 @@ export default function Navbar() {
       <div className="hidden min-[1120px]:block">
         <GiveButton />
       </div>
-      {/* <ul className="hidden md:flex justify-between font-epilogue text-[15px] items-center w-full  text-gray-600">
-        <NavMenu />
-        <GiveButton />
-      </ul> */}
 
-      <div className="min-[1120px]:hidden flex justify-center items-center ">
+      <div className="min-[1120px]:hidden z-999 flex justify-center items-center ">
         <img
           src={menu}
           alt="menuIcon"
-          className={
-            Sidenav ? "hidden" : "flex h-[22px] cursor-pointer  md:hidden"
-          }
+          className={Sidenav ? "hidden" : "flex h-[22px] cursor-pointer"}
           onClick={toggleSidenav}
         />
       </div>
 
       <div
-        className={`absolute md:hidden flex justify-end overflow-hidden z-50 w-[100%] h-[550px] ${
+        className={`absolute right-0 flex justify-end overflow-hidden z-50 w-full h-[550px] ${
           Sidenav ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
