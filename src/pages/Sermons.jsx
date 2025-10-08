@@ -1,16 +1,12 @@
 import Layout from "../components/Layout";
-// import Playlist from '../components/Playlist'
 import LatestSermons from "../components/LatestSermons";
-import Updates from "../components/Updates";
+import Navbar from "../components/Navbar";
 
 export default function Sermons() {
   return (
     <Layout>
+      <Navbar />
       <LatestSermons />
-
-      {/* <Playlist/> */}
-
-      <Updates />
     </Layout>
   );
 }

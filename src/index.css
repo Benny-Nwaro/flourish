@@ -21,6 +21,7 @@
   /* 🌄 Backgrounds */
   --background-image-pace-pattern: url("/src/assets/images/pace-pattern.png");
   --background-image-about-hero: url("/src/assets/images/abouthero.png");
+  --background-image-sermons-hero: url("/src/assets/images/sermonspage.png");
 
   /* 🎞️ Animations */
   --animate-loop-scroll: loop-scroll 50s linear infinite;

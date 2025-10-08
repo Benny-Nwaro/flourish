@@ -1,3 +1,5 @@
+import sermonFlier from "../assets/images/sermonFlier.png";
+
 export const events = [
   {
     title: "WHY CHURCH",
@@ -47,9 +49,66 @@ export const testimonies = [
     name: "Awom Charles",
     testimony: "I really love this church",
   },
-  // {
-  //   img: "",
-  //   name: "Obinna Urum-Eke",
-  //   testimony: "Flourish is home",
-  // },
+  {
+    img: "",
+    name: "Obinna Urum-Eke",
+    testimony: "Flourish is home",
+  },
+];
+
+export const sermons = [
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
+  {
+    img: sermonFlier,
+    title: "The Ecclessia (The Church)",
+    audioLink: "https://example.com/sermon1-audio",
+    downloadLink: "https://example.com/sermon1-download",
+  },
 ];
