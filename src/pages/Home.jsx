@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Navbar from "../components/Navbar";
 import Flourish from "../components/Flourish";
 import WhatsComing from "../components/WhatsComing";
 import Trainings from "../components/Trainings";
@@ -10,11 +11,12 @@ import line from "../assets/icons/linehero.png";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <div className="absolute top-0 -right-12  w-[298.34px] h-[348.81px]">
         <img src={line} alt="star" className="w-fit h-fit" />
       </div>
       <Layout>
+        <Navbar />
         <Flourish />
         <WhatsComing />
         <Trainings />
@@ -23,6 +25,6 @@ export default function Home() {
         <Invest />
         <Location />
       </Layout>
-    </div>
+    </section>
   );
 }

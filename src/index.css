@@ -9,6 +9,8 @@
   --color-iconBlue: #003eb8;
   --color-cardBlue: #004de3;
   --color-grey60: #6a6a6a1a;
+  --color-greyd1: #d1d1d1;
+  --color-yellowf9d: "#F9D000"
 
   /* 🧩 Fonts */
   --font-redhat: "Red Hat Display", sans-serif;
@@ -18,6 +20,7 @@
 
   /* 🌄 Backgrounds */
   --background-image-pace-pattern: url("/src/assets/images/pace-pattern.png");
+  --background-image-about-hero: url("/src/assets/images/abouthero.png");
 
   /* 🎞️ Animations */
   --animate-loop-scroll: loop-scroll 50s linear infinite;
@@ -56,4 +59,26 @@ body {
   to {
     transform: translateX(-100%);
   }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 6px 0 #f9d000;
+  }
+  50% {
+    box-shadow: 0 0 15px 4px #f9d000;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
 }

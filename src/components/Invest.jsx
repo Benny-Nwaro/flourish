@@ -11,7 +11,7 @@ function HeroSection() {
           you truly <br />
           believe in
         </h1>
-        <p className="tracking-[-1%] leading-[143%] font-stem">
+        <p className="tracking-[-1%] leading-[143%] font-stemRegular">
           At the Flourish Nation Global, we believe that everything we have
           ultimately belongs to God and that we are stewards entrusted with
           managing his resources wisely. By putting our money where our faith

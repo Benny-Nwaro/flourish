@@ -22,6 +22,28 @@ export const Arrow = ({ className }) => {
   );
 };
 
+export const Caret = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="13"
+      height="20"
+      viewBox="0 0 13 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.2172 19.1494L12.4375 16.9291L5.14219 9.63379L12.4375 2.33848L10.2172 0.118164L0.701563 9.63379L10.2172 19.1494Z"
+        fill="white"
+      />
+    </svg>
+  );
+};
+
 Arrow.propTypes = {
+  className: PropTypes.string,
+};
+
+Caret.propTypes = {
   className: PropTypes.string,
 };

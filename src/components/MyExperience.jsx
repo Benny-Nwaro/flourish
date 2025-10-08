@@ -1,51 +1,62 @@
+import { useState } from "react";
+import { testimonies } from "../constants/data";
+import { Caret } from "../svg/svg";
+
 export default function MyExperience() {
+  const [current, setCurrent] = useState(0);
+
+  const handlePrev = () => {
+    if (current > 0) setCurrent(current - 1);
+  };
+
+  const handleNext = () => {
+    if (current < testimonies.length - 1) setCurrent(current + 1);
+  };
+
+  const isFirst = current === 0;
+  const isLast = current === testimonies.length - 1;
+
   return (
-    <section className="flex justify-center items-center px-32 py-10 max-md:px-5 bg-slate-200">
-      <div className="flex justify-center border-4 border-white border-solid items-center pt-6 pr-10 text-white bg-blue-600 rounded-3xl ">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf619dcea7c79a0defaa97e7518ef603a63beeb23f496a1ddb9f2bd8a7c4e58d?apiKey=873e47fe7796454e93671642132d9742&"
-          alt="Decorative image"
-          className="border-white border-solid aspect-[0.58] border-[5px] fill-emerald-500 stroke-[4.568px] stroke-white w-[42px]"
-        />
-        <div className="flex flex-col self-center mt-2.5 w-full max-w-[1017px] max-md:max-w-full">
-          <header className="flex gap-5 text-5xl tracking-tighter leading-[51px] max-md:flex-wrap max-md:max-w-full max-md:text-4xl max-md:leading-10">
-            <h1 className="flex-auto font-kuano max-md:max-w-full max-md:text-4xl max-md:leading-10">
-              My Flourish Church Experience
-            </h1>
+    <section className="bg-brandBlue gap-[43px] rounded-[5px] flex flex-col justify-center items-center md:h-[718.63px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]">
+      <div className="bg-cardBlue flex flex-col w-full py-[20px] md:py-[92px] px-[20px] md:px-[99px] rounded-[22px]">
+        <div key={current} className="flex flex-col gap-[66px] fade-in">
+          <p className="font-redhat text-[25px] md:text-[36px] text-white leading-[143%] tracking-[-1%]">
+            {testimonies[current].testimony}
+          </p>
+          <div className=" inline-flex items-center gap-[19px]">
             <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe11ca80106f144999b34b9f73d8513d89e7d6801d4ee9cc708274bb775dd8d0?apiKey=873e47fe7796454e93671642132d9742&"
-              alt="Decorative image"
-              className="shrink-0 self-end mt-6 border-white border-solid aspect-[0.61] border-[5px] fill-yellow-400 stroke-[5px] stroke-white w-[51px]"
+              src={testimonies[current].img}
+              className="w-[59.22px] h-[58.63px] rounded-[48861.34px]"
             />
-          </header>
-          <div className="flex justify-center items-center px-16 py-20 mt-6 bg-blue-700 rounded-3xl max-md:px-5 max-md:max-w-full">
-            <div className="flex flex-col my-4 w-full max-w-[777px] max-md:max-w-full">
-              <p className="text-2xl tracking-tight leading-9 max-md:max-w-full">
-                Who we are Who we areWho we areWho we areWho we areWho we areWho
-                we areWho we areWho we areWho we areWho we areWho we areWho we
-                areWho we areWho we areWho we areWho we areWho we areWho we
-                areWho we are
-              </p>
-              <div className="flex gap-5 self-start mt-14 text-xl tracking-normal leading-7 max-md:mt-10">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ce47274880d5246d84fa3e5b6bb57289b0b84aa7973d20c491fd912f85ef518?apiKey=873e47fe7796454e93671642132d9742&"
-                  alt="Profile picture of Awom Charles"
-                  className="shrink-0 aspect-square w-[59px]"
-                />
-                <p className="my-auto">Awom Charles</p>
-              </div>
-            </div>
+            <h1 className="text-white font-stemRegular font-medium text-[20px] leading-[143%] tracking-[-1%]">
+              {testimonies[current].name}
+            </h1>
           </div>
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/caa76d25cfa02ff82cc3c071c5154a8a3ac593600044af4c6b7a5455fbdfc019?apiKey=873e47fe7796454e93671642132d9742&"
-            alt="Decorative image"
-            className="self-end mt-6 mr-32 aspect-[2.17] w-[92px] max-md:mr-2.5"
-          />
         </div>
+      </div>
+      <div className="self-end flex gap-[1px]">
+        <button
+          className={`w-[45.94px] h-[42px] flex justify-center items-center rounded-l-[8px] ${
+            isFirst
+              ? "bg-[#FFE3A8] cursor-not-allowed"
+              : "bg-[#F9D000] cursor-pointer"
+          }`}
+          onClick={handlePrev}
+          disabled={isFirst}
+        >
+          <Caret />
+        </button>
+        <button
+          className={`w-[45.94px] h-[42px] flex justify-center items-center rounded-r-[8px] ${
+            isLast
+              ? "bg-[#FFE3A8] cursor-not-allowed"
+              : "bg-[#F9D000] cursor-pointer"
+          }`}
+          onClick={handleNext}
+          disabled={isLast}
+        >
+          <Caret className={"rotate-180"} />
+        </button>
       </div>
     </section>
   );
