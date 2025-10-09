@@ -14,7 +14,13 @@ export default function About() {
       <Layout>
         <WeFlourish />
         <Flourishing />
-        <MyExperience />
+        <MyExperience
+          bgColor={"bg-brandBlue"}
+          cardColor={"bg-cardBlue"}
+          textColor={"text-white"}
+          inactiveArrow={"bg-[#FFE3A8]"}
+          activeArrow={"bg-[#F9D000]"}
+        />
         <Approach />
       </Layout>
     </section>

@@ -163,6 +163,23 @@ export const Instagram = () => {
   );
 };
 
+export const PlayButton = () => {
+  return (
+    <svg
+      width="24"
+      height="27"
+      viewBox="0 0 24 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.27009 0.595331C1.91215 -0.800967 0.000488281 0.342897 0.000488281 3.14818V23.8499C0.000488281 26.658 1.91215 27.8004 4.27009 26.4054L21.7975 16.0284C24.1562 14.6316 24.1562 12.3686 21.7975 10.9722L4.27009 0.595331Z"
+        fill="#0057FF"
+      />
+    </svg>
+  );
+};
+
 Arrow.propTypes = {
   className: PropTypes.string,
 };

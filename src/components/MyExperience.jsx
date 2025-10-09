@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { testimonies } from "../constants/data";
 import { Caret } from "../svg/svg";
+import PropTypes from "prop-types";
 
-export default function MyExperience() {
+export default function MyExperience({
+  bgColor,
+  cardColor,
+  textColor,
+  activeArrow,
+  inactiveArrow,
+}) {
   const [current, setCurrent] = useState(0);
 
   const handlePrev = () => {
@@ -17,10 +24,16 @@ export default function MyExperience() {
   const isLast = current === testimonies.length - 1;
 
   return (
-    <section className="bg-brandBlue gap-[43px] rounded-[5px] flex flex-col justify-center items-center md:h-[718.63px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]">
-      <div className="bg-cardBlue flex flex-col w-full py-[20px] md:py-[92px] px-[20px] md:px-[99px] rounded-[22px]">
+    <section
+      className={`${bgColor} gap-[43px] rounded-[5px] flex flex-col justify-center items-center md:h-[718.63px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]`}
+    >
+      <div
+        className={`${cardColor} flex flex-col w-full py-[20px] md:py-[92px] px-[20px] md:px-[99px] rounded-[22px]`}
+      >
         <div key={current} className="flex flex-col gap-[66px] fade-in">
-          <p className="font-redhat text-[25px] md:text-[36px] text-white leading-[143%] tracking-[-1%]">
+          <p
+            className={`font-redhat text-[25px] md:text-[36px] ${textColor} leading-[143%] tracking-[-1%]`}
+          >
             {testimonies[current].testimony}
           </p>
           <div className=" inline-flex items-center gap-[19px]">
@@ -28,7 +41,9 @@ export default function MyExperience() {
               src={testimonies[current].img}
               className="w-[59.22px] h-[58.63px] rounded-[48861.34px]"
             />
-            <h1 className="text-white font-stemRegular font-medium text-[20px] leading-[143%] tracking-[-1%]">
+            <h1
+              className={`${textColor} font-stemRegular font-medium text-[20px] leading-[143%] tracking-[-1%]`}
+            >
               {testimonies[current].name}
             </h1>
           </div>
@@ -38,8 +53,8 @@ export default function MyExperience() {
         <button
           className={`w-[45.94px] h-[42px] flex justify-center items-center rounded-l-[8px] ${
             isFirst
-              ? "bg-[#FFE3A8] cursor-not-allowed"
-              : "bg-[#F9D000] cursor-pointer"
+              ? `${inactiveArrow} cursor-not-allowed`
+              : `${activeArrow} cursor-pointer`
           }`}
           onClick={handlePrev}
           disabled={isFirst}
@@ -49,8 +64,8 @@ export default function MyExperience() {
         <button
           className={`w-[45.94px] h-[42px] flex justify-center items-center rounded-r-[8px] ${
             isLast
-              ? "bg-[#FFE3A8] cursor-not-allowed"
-              : "bg-[#F9D000] cursor-pointer"
+              ? `${inactiveArrow} cursor-not-allowed`
+              : `${activeArrow} cursor-pointer`
           }`}
           onClick={handleNext}
           disabled={isLast}
@@ -61,3 +76,11 @@ export default function MyExperience() {
     </section>
   );
 }
+
+MyExperience.propTypes = {
+  bgColor: PropTypes.string,
+  cardColor: PropTypes.string,
+  textColor: PropTypes.string,
+  inactiveArrow: PropTypes.string,
+  activeArrow: PropTypes.string,
+};

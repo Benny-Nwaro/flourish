@@ -1,18 +1,22 @@
 import Layout from "../components/Layout";
-import Streaming from "../components/Streaming";
 import Stream from "../components/Stream";
-import Updates from "../components/Updates";
 import LivePst from "../components/LivePst";
 import MyExperience from "../components/MyExperience";
+import Location from "../components/Location";
 
 export default function Live() {
   return (
     <Layout>
       <LivePst />
-      <Streaming />
       <Stream />
-      <MyExperience />
-      <Updates />
+      <Location />
+      <MyExperience
+        bgColor={""}
+        cardColor={"bg-white"}
+        textColor={"text-black"}
+        inactiveArrow={"bg-[#C3C3C3]"}
+        activeArrow={"bg-black"}
+      />
     </Layout>
   );
 }

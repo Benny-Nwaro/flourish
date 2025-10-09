@@ -1,20 +1,20 @@
+import { PlayButton } from "../svg/svg";
+import Navbar from "./Navbar";
+
 export default function LivePst() {
   return (
-    <main className="flex flex-col justify-center bg-white rounded-3xl">
-      <section className="flex overflow-hidden relative flex-col justify-center pb-5 items-center px-16 py-20 w-full min-h-[868px] max-md:px-5 max-md:max-w-full -mt-24">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/70fc52d569db20779153d2736d7d9c9c827591436d4f43571f68b771aa045fcd?apiKey=873e47fe7796454e93671642132d9742&"
-          className=" absolute inset-0 size-full"
-          alt=""
-        />
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/33efa31c3bd01be1597afa41a9669545f483a4dd222b8999493dfc5930c672d0?apiKey=873e47fe7796454e93671642132d9742&"
-          className="mt-72 mb-52 max-w-full aspect-[1.01] w-[152px] max-md:my-10 "
-          alt=""
-        />
+    <section className="bg-sermons-hero flex flex-col items-start bg-no-repeat bg-cover h-full min-[400px]:h-[600px] md:h-[600px] xl:h-[800px]">
+      <Navbar />
+      <section className="flex flex-1 w-full justify-center items-center">
+        <a
+          href=""
+          className="bg-[#B7B7B766] rounded-full w-[152px] h-[152px] animate-pulse flex justify-center items-center group cursor-pointer"
+        >
+          <div className="flex items-center justify-center bg-white rounded-full w-[106.05px] h-[105.45px]">
+            <PlayButton />
+          </div>
+        </a>
       </section>
-    </main>
+    </section>
   );
 }
