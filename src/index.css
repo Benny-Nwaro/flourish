@@ -4,13 +4,15 @@
 @theme {
   /* 🎨 Colors */
   --color-brandBlue: #0057ff;
+  --color-grey-ec: "#ECECEC";
   --color-lightBlue: #dfeaff;
   --color-greenSecondary: #00d770;
   --color-iconBlue: #003eb8;
   --color-cardBlue: #004de3;
   --color-grey60: #6a6a6a1a;
   --color-greyd1: #d1d1d1;
-  --color-yellowf9d: "#F9D000"
+  --color-yellowf9d: "#F9D000";
+  --color-lightGreen: "#E3FFF2";
 
   /* 🧩 Fonts */
   --font-redhat: "Red Hat Display", sans-serif;
@@ -22,6 +24,7 @@
   --background-image-pace-pattern: url("/src/assets/images/pace-pattern.png");
   --background-image-about-hero: url("/src/assets/images/abouthero.png");
   --background-image-sermons-hero: url("/src/assets/images/sermonspage.png");
+  --background-image-about-pace-hero: url("/src/assets/images/aboutpacehero.png");
 
   /* 🎞️ Animations */
   --animate-loop-scroll: loop-scroll 50s linear infinite;
@@ -80,6 +83,12 @@ body {
   animation: fadeIn 0.5s;
 }
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
