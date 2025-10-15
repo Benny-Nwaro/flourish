@@ -63,12 +63,14 @@ const churches = [
 ];
 const CountryButton = ({ name, flag, isActive }) => (
   <div
-    className={`flex gap-2.5 justify-between px-7 py-4 ${
-      isActive ? "text-blue-600 bg-white" : "border-2 border-white border-solid"
-    } rounded-[58.101px] max-md:px-5`}
+    className={`flex gap-[8.54px] items-center justify-between px-[28.2px] py-[15.38px] ${
+      isActive
+        ? "text-brandBlue bg-white"
+        : "border-2 border-white text-white border-solid"
+    } rounded-[58.101px] font-stemBold text-[17.04px] tracking-[-2.5%] leading-[108%] max-md:px-5`}
   >
     {" "}
-    <div className="my-auto">{name}</div>{" "}
+    <p>{name}</p>
     {flag && (
       <img
         loading="lazy"
@@ -87,16 +89,13 @@ CountryButton.propTypes = {
 };
 
 const ChurchCard = ({ name, address, icon }) => (
-  <div className="flex flex-col grow px-12 py-10 w-full text-white bg-blue-700 rounded-2xl max-md:px-5 max-md:mt-6 max-md:max-w-full">
+  <div className="flex flex-col px-[46px] py-10 w-full text-white bg-cardBlue rounded-2xl gap-[20px] h-full">
     {" "}
-    <img
-      loading="lazy"
-      src={icon}
-      alt=""
-      className="w-8 aspect-square fill-blue-600"
-    />{" "}
-    <h3 className="mt-5 text-2xl tracking-tight leading-6">{name}</h3>{" "}
-    <p className="mt-5 text-base tracking-normal leading-6">{address}</p>{" "}
+    <img loading="lazy" src={icon} alt="" className="w-8 aspect-square" />{" "}
+    <h3 className="text-[24.65px] tracking-[-1%] leading-[98%] font-stemBold">
+      {name}
+    </h3>{" "}
+    <p className="tracking-[-1%] leading-[143%] font-redhat">{address}</p>{" "}
   </div>
 );
 
@@ -108,9 +107,9 @@ ChurchCard.propTypes = {
 
 export default function Countries() {
   return (
-    <section className="flex justify-center items-center  px-32 mb-10   bg-slate-200 max-md:px-5 ">
-      <div className="flex flex-col items-center w-full  p-10 mt-20 bg-blue-600 rounded-3xl max-md:px-5 ">
-        <div className="flex flex-wrap gap-2 gap-y-5 justify-between content-start mt-5 text-lg tracking-tight leading-4 text-white whitespace-nowrap">
+    <section className="flex justify-center items-center px-[20px] md:px-[80px] xl:px-[150px] py-[150px] ">
+      <div className="flex flex-col items-center justify-center w-full gap-[50px] p-[20px] min-[600px]:p-[45px] md:p-[100px] bg-brandBlue rounded-[25px]">
+        <div className="flex flex-wrap items-center gap-[8px] md:gap-[15px] lg:gap-[23px] justify-between w-full ">
           {countries.map((country, index) => (
             <CountryButton
               key={index}
@@ -120,28 +119,14 @@ export default function Countries() {
             />
           ))}
         </div>
-        <div className="mt-12 w-full max-w-[937px] max-md:mt-10 max-md:max-w-full ">
-          {[...Array(3)].map((_, index) => (
-            <div
-              key={index}
-              className="mt-5 w-full max-w-[937px] max-md:max-w-full"
-            >
-              <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-                {churches.slice(index * 2, index * 2 + 2).map((church, i) => (
-                  <div
-                    key={i}
-                    className={`flex flex-col ${
-                      i === 0 ? "w-6/12 max-md:ml-0" : "ml-5 w-6/12 max-md:ml-0"
-                    } max-md:w-full`}
-                  >
-                    <ChurchCard
-                      name={church.name}
-                      address={church.address}
-                      icon={church.icon}
-                    />
-                  </div>
-                ))}
-              </div>
+        <div className=" grid grid-cols-1 gap-[22px] lg:grid-cols-2 w-full">
+          {churches.map((church, i) => (
+            <div key={i}>
+              <ChurchCard
+                name={church.name}
+                address={church.address}
+                icon={church.icon}
+              />
             </div>
           ))}
         </div>

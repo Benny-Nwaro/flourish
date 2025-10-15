@@ -4,7 +4,7 @@ Link;
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-20 items-center min-[500px]:px-[60px] px-[30px] xl:px-[150px] py-[150px] bg-white">
+    <section className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-20 items-center min-[500px]:px-[60px] px-[30px] py-[30px] min-[500px]:py-[60px] xl:px-[150px] xl:py-[150px] bg-white">
       <div className="flex flex-col justify-center gap-[32px] md:w-[498px] text-black">
         <h1 className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[93%] text-6xl">
           Invest in what <br />

@@ -1,9 +1,9 @@
 export default function BlogsTop() {
   return (
-    <section className="flex flex-col justify-start items-start pt-20  px-32 mb-10   bg-slate-200 max-md:px-5">
-      <h1 className="text-7xl font-kuano tracking-tighter text-black leading-[76.67399999999999px] max-w-[162px]">
+    <section className="flex flex-col justify-start items-start  px-[20px] md:px-[80px] xl:px-[150px] py-[150px]">
+      <p className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] text-6xl">
         Blog
-      </h1>
+      </p>
       <article className="max-w-full w-3/5  mt-5 ">
         <p className="text-base tracking-normal leading-6 text-black ">
           Who we are Who we are Who we are Who we are Who we are Who we are Who

@@ -1,17 +1,20 @@
 export default function Achiements() {
   return (
-    <div className="flex z-10 justify-center items-center border-2 px-32 py-20 mt-0 w-full bg-white max-md:px-5 max-md:max-w-full">
+    <div className="flex z-10 justify-center items-center px-[20px] md:px-[80px] xl:px-[150px] py-20 w-full bg-[#FFFEFE] max-md:max-w-full">
       <div className="px-px mt-24 mb-14 w-full max-w-[1172px] max-md:my-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col self-stretch my-auto text-black max-md:mt-10 max-md:max-w-full">
-              <div className="justify-center self-start px-8 py-5 text-sm tracking-normal leading-3 text-emerald-500 bg-emerald-50 rounded-[65.48px] max-md:px-5">
-                The Church with Eternity in View
+            <div className="flex flex-col gap-[32px] self-stretch my-auto text-black max-md:mt-10 max-md:max-w-full">
+              <div className="justify-center flex flex-col items-center py-[18.88px] tracking-[1%] w-fit leading-[93%] whitespace-nowrap bg-[#E3FFF2] rounded-[65.48px] px-[33.31px]">
+                <p className="font-stemBold text-greenSecondary text-sm">
+                  {" "}
+                  The Church with Eternity in view{" "}
+                </p>
               </div>
-              <div className="mt-4 text-7xl font-kuano tracking-tighter leading-[76.67399999999999px] max-md:max-w-full max-md:text-4xl">
-                Achievements{" "}
+              <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-6xl">
+                Achievements
               </div>
-              <div className="mt-4 text-base tracking-normal leading-6 max-md:max-w-full">
+              <div className="text-base tracking-normal leading-6 max-md:max-w-full font-stem">
                 Over the years, Conferences has been held in the areas of
                 viz....
                 <br />

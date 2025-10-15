@@ -26,7 +26,7 @@ export default function WeFlourish() {
           </div>
         </div>
       </section>
-      <div className="relative top-0 left-3 ">
+      <div className="relative top-0 left-3 w-fit">
         <img src={star} alt="star" className="w-[55.19px] h-[55.19px]" />
       </div>
     </>

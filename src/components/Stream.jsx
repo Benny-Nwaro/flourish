@@ -1,23 +1,41 @@
 import PropTypes from "prop-types";
 
-function SocialCard({ title, description, ctaText, image, imageAlt }) {
+function SocialCard({
+  title,
+  description,
+  ctaText,
+  image,
+  imageAlt,
+  width,
+  height,
+}) {
   return (
-    <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-      <div className="flex flex-col grow items-start pt-14 pl-14 mx-auto w-full text-base tracking-normal text-black bg-white rounded-2xl max-md:mt-8">
-        <h2 className="text-3xl tracking-tight leading-7">{title}</h2>
-        <p className="mt-6 leading-6">{description}</p>
-        <div className="flex gap-4 pr-10 mt-6 text-blue-600 leading-[143%] max-md:pr-5">
-          <div className="my-auto">{ctaText}</div>
+    <div className="flex flex-col bg-white relative rounded-[14px] w-full min-[600px]:w-1/2 h-[530px]">
+      <div className="flex relative flex-col h-fit items-start gap-[22px] top-[52.25px] w-[70%] left-[30px] md:left-[52px] text-black ">
+        <h2 className="text-[24px] min-[700px]:text-[32px] font-stemBold min-[700px]:w-2/3 tracking-[-1%] leading-[93%]">
+          {title}
+        </h2>
+        <p className="tracking-[-1%] font-stemRegular leading-[143%]">
+          {description}
+        </p>
+        <a className="flex cursor-pointer gap-4 text-blue-600 leading-[143%] max-md:pr-5">
+          <div className="text-brandBlue font-stemRegular leading-[143%] tracking-[-1%]">
+            {ctaText}
+          </div>
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/96bd85029765cd888c05633dd5526ac7e09887b38d22ea62d41cba9fb2dc6d37?apiKey=873e47fe7796454e93671642132d9742&"
-            alt=""
-            className="shrink-0 w-6 aspect-square"
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65b4799228ec6667a9c819947537c709980807fa97cc01435b34926214bc560?"
+            className="w-[24px] h-[24px]"
           />
-        </div>
+        </a>
+      </div>
+      <div className={`absolute bottom-0 right-0 w-2/3 h-full object-contain`}>
         <img
           src={image}
           alt={imageAlt}
-          className="self-end mt-5 max-w-full aspect-[0.73] w-[223px]"
+          width={width}
+          height={height}
+          className=" w-fit absolute bottom-0 right-0 h-fit object-cover"
         />
       </div>
     </div>
@@ -30,6 +48,8 @@ SocialCard.propTypes = {
   ctaText: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
 };
 
 export default function Stream() {
@@ -42,6 +62,8 @@ export default function Stream() {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/423b62941b7e49c6b3dabc897366c95339d4b6aec77b40a291538411c2cf7e56?apiKey=873e47fe7796454e93671642132d9742&",
       imageAlt: "Youtube social card image",
       url: "https://www.youtube.com/channel/UCoIDa4wRZLEHZhCk0t8iv5Q",
+      width: "357",
+      height: "286",
     },
     {
       title: "Join us on Mixlr",
@@ -50,6 +72,8 @@ export default function Stream() {
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/227424a92863363e9df6b903893496e228a7aab26f9f60eee76656220b93556a?apiKey=873e47fe7796454e93671642132d9742&",
       imageAlt: "Mixlr social card image",
+      width: "349",
+      height: "349",
     },
     {
       title: "Join us on Facebook",
@@ -59,12 +83,30 @@ export default function Stream() {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a1c0d4cbada0dc78c2add89bb4f0e25c71a3d4cefee753159232a76d3d228efe?apiKey=873e47fe7796454e93671642132d9742&",
       imageAlt: "Facebook social card image",
       url: "https://web.facebook.com/flourishnationglobal",
+      width: "345",
+      height: "345",
     },
   ];
 
   return (
-    <section className="flex justify-center items-center mb-5 pb-10 px-32 max-md:px-5 bg-slate-200">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+    <section className="p-[20px] flex flex-col gap-[78px] md:p-[80px] xl:p-[150px] ">
+      <div className="flex flex-col gap-[16px] lg:w-[889px]">
+        <div className="justify-center flex flex-col items-center py-[18.88px] tracking-[1%] w-fit leading-[93%] whitespace-nowrap bg-[#E3FFF2] rounded-[65.48px] px-[33.31px]">
+          <p className="font-stemBold text-greenSecondary text-sm">
+            {" "}
+            Join us Live{" "}
+          </p>
+        </div>
+        <p className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] text-6xl">
+          Streaming Platforms
+        </p>
+        <p className="font-stemRegular tracking-[-1%] leading-[143%]">
+          Who we are Who we areWho we areWho we areWho we areWho we areWho we
+          areWho we areWho we areWho we areWho we areWho we areWho we areWho we
+          areWho we areWho we areWho we areWho we areWho we areWho we are
+        </p>
+      </div>
+      <div className="flex gap-5 flex-col min-[600px]:flex-row ">
         {socialData.map((card, index) => (
           <SocialCard
             key={index}
@@ -73,6 +115,8 @@ export default function Stream() {
             ctaText={card.ctaText}
             image={card.image}
             imageAlt={card.imageAlt}
+            width={card.width}
+            height={card.height}
           />
         ))}
       </div>
