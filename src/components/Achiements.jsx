@@ -11,7 +11,7 @@ export default function Achiements() {
                   The Church with Eternity in view{" "}
                 </p>
               </div>
-              <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-6xl">
+              <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-[49px]">
                 Achievements
               </div>
               <div className="text-base tracking-normal leading-6 max-md:max-w-full font-stem">
@@ -31,7 +31,7 @@ export default function Achiements() {
                 never ignores.
                 <br />
                 Over the years, our vision and goals is to finish the work God
-                has given us in alignment to his mandate, because there is and
+                has given us in alignment to his mandate, because there is an
                 urgency in the Spirit.
               </div>
             </div>

@@ -25,7 +25,7 @@ CountryTag.propTypes = {
 
 const Location = () => {
   return (
-    <section className="bg-brandBlue flex justify-start items-center md:h-[786.91px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]">
+    <section className="bg-brandBlue flex justify-start items-center md:h-[786.91px] px-[20px] lg:px-[40px] xl:px-[150px] py-[118px]">
       <section className="flex flex-col gap-[32px] w-full">
         <div className="flex justify-between gap-[23px] items-center">
           <CountryTag
@@ -45,12 +45,15 @@ const Location = () => {
             <img src={locationicon} />
           </div>
           <h1 className="text-white font-stemBold text-[30px] md:text-[42px] leading-[98%] tracking-[-1%]">
-            Flourish Church Enugu
+            Flourish Generation Church, Enugu
           </h1>
-          <p className="font-redhat text-[25px] md:text-[36px] text-white leading-[143%] tracking-[-1%]">
+          <a
+            href="https://maps.app.goo.gl/gs7deNniRgcREiRa7"
+            className="font-redhat text-[25px] md:text-[36px] text-white leading-[143%] tracking-[-1%]"
+          >
             Mater Purisima Event Centre, 187 Ogui Road, Just Opposite 4 Market
             Days Supermarket, China Town, Enugu, Enugu State
-          </p>
+          </a>
         </div>
       </section>
     </section>

@@ -12,7 +12,7 @@ import line from "../assets/icons/linehero.png";
 export default function Home() {
   return (
     <section>
-      <div className="absolute top-0 -right-12  w-[298.34px] h-[348.81px]">
+      <div className="absolute top-0 right-0">
         <img src={line} alt="star" className="w-fit h-fit" />
       </div>
       <Layout>

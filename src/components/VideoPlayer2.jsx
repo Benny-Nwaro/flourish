@@ -3,7 +3,7 @@ import star from "../assets/icons/greenstar.png";
 
 const VideoPlayer2 = () => {
   return (
-    <div className="relative flex flex-col mx-auto justify-center items-center w-[84%] xl:w-[80%] rounded-2xl z-0">
+    <div className="relative flex flex-col mx-auto justify-center items-center w-[90%] xl:w-[80%] rounded-2xl z-0">
       <div className="absolute top-0 -left-7 z-0">
         <img src={star} alt="star" className="w-[55.19px] h-[55.19px]" />
       </div>

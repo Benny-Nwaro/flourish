@@ -25,7 +25,7 @@ export default function MyExperience({
 
   return (
     <section
-      className={`${bgColor} gap-[43px] rounded-[5px] flex flex-col justify-center items-center md:h-[718.63px] px-[20px] md:px-[80px] xl:px-[150px] py-[118px]`}
+      className={`${bgColor} gap-[43px] rounded-[5px] flex flex-col justify-center items-center h-full px-[20px] lg:px-[40px] xl:px-[150px] py-[118px]`}
     >
       <div
         className={`${cardColor} flex flex-col w-full py-[20px] md:py-[92px] px-[20px] md:px-[99px] rounded-[22px]`}
@@ -39,7 +39,7 @@ export default function MyExperience({
           <div className=" inline-flex items-center gap-[19px]">
             <img
               src={testimonies[current].img}
-              className="w-[59.22px] h-[58.63px] rounded-[48861.34px]"
+              className="w-[59.22px] h-[58.63px] hidden rounded-[48861.34px]"
             />
             <h1
               className={`${textColor} font-stemRegular font-medium text-[20px] leading-[143%] tracking-[-1%]`}

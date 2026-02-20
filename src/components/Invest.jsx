@@ -4,7 +4,7 @@ Link;
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-20 items-center min-[500px]:px-[60px] px-[30px] py-[30px] min-[500px]:py-[60px] xl:px-[150px] xl:py-[150px] bg-white">
+    <section className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-20 items-center min-[500px]:px-[20px] px-[20px] py-[20px] min-[500px]:py-[60px] lg:px-[40px] xl:px-[150px] xl:py-[150px] bg-white">
       <div className="flex flex-col justify-center gap-[32px] md:w-[498px] text-black">
         <h1 className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[93%] text-6xl">
           Invest in what <br />
@@ -12,10 +12,10 @@ function HeroSection() {
           believe in
         </h1>
         <p className="tracking-[-1%] leading-[143%] font-stemRegular">
-          At the Flourish Nation Global, we believe that everything we have
+          At the Flourish Generation Church, we believe that everything we have
           ultimately belongs to God and that we are stewards entrusted with
           managing his resources wisely. By putting our money where our faith
-          is, we prioritise using our financial resources in ways that honour
+          is, we prioritize using our financial resources in ways that honour
           God and partner with him for the advancement of his Kingdom.
         </p>
         <Button

@@ -5,8 +5,8 @@ import Button from "./UI/Button";
 
 export default function Flourish() {
   return (
-    <div className="relative flex flex-col py-[150px] ">
-      <div className="flex relative gap-5 flex-col justify-center items-center w-[80%] mx-auto h-full pb-[150px] ">
+    <div className="relative flex flex-col pt-[90px] ">
+      <div className="flex relative gap-5 flex-col justify-center items-center mx-[20px] lg:mx-[40px] xl:mx-[150px] h-full pb-[90px] ">
         <div className="flex flex-col justify-center items-center w-[90%] md:w-[70%] lg:w-[50%] font-dmserif h-full">
           <div>
             <h1 className="md:text-[89.41px] leading-[83%] text-center tracking-tighter text-black w-full text-7xl ">
@@ -19,7 +19,7 @@ export default function Flourish() {
           </div>
           <p className="mt-6 text-center text-[18px] tracking-[-1%] leading-[143%] text-black  w-full font-redhat">
             Experience the joy of fellowship and personal growth at our upcoming
-            events at the Flourish Nation Global, where deep connection and
+            events at the Flourish Generation Church, where deep connection and
             spiritual rejuvenation earnestly awaits you. Here, you will get a
             glimpse of our upcoming events, stay updated for what will come
             next!
@@ -46,7 +46,7 @@ export default function Flourish() {
         </div>
 
         {/* WEB ICON */}
-        <div className="absolute right-10 bottom-10 md:bottom-28">
+        <div className="absolute right-10 bottom-0 md:bottom-28">
           <img src={web} alt="web" className="w-[119.39px] h-[108.03px]" />
         </div>
       </div>

@@ -2,7 +2,7 @@ import Button from "./UI/Button";
 
 export default function Statement() {
   return (
-    <main className="flex justify-between  items-center min-[500px]:px-[60px] px-[30px] xl:px-[150px] py-[100px] bg-white">
+    <main className="flex justify-between items-center min-[500px]:px-[20px] px-[20px] xl:px-[150px] py-[100px] bg-white">
       <article className="flex gap-5 max-md:flex-col justify-between md:gap-[98px]">
         <div className="flex flex-col md:w-[50%]">
           <img
@@ -30,8 +30,8 @@ export default function Statement() {
             </div>
             <div className="font-redhat tracking-[-1%] leading-[143%]">
               <p>
-                We are like trees planted by the rivers of water, because we are
-                a Flourishing Nation!
+                We are like trees planted by the rivers of water, that brings
+                forth fruit in due season, because we are a Flourishing Nation!
               </p>
             </div>
           </div>

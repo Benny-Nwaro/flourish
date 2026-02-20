@@ -1,61 +1,144 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
+import { nairaBankAccounts, domBankAccounts } from "../constants/data";
+import { IoCopyOutline, IoCheckmarkOutline } from "react-icons/io5";
 import toast, { Toaster } from "react-hot-toast";
-import { PaystackButton } from "react-paystack";
+import fidelity from "../assets/images/fidelity.png";
+import flag from "../assets/icons/9ja.png";
 
-export default function Paystack() {
-  const publicKey = import.meta.env.VITE_API_KEY;
-  const [amount, setAmount] = useState(0);
-  const [currency, setCurrency] = useState("₦");
+const BankCard = ({ name, accountNumber, bank, bankAlt }) => {
+  const [copied, setCopied] = useState(false);
 
-  const componentProps = {
-    amount: amount * 100,
-    metadata: {},
-    publicKey,
-    text: "Proceed",
-    onSuccess: () => toast.success("God bless you for your kind support"),
-    onClose: () => toast("Wait! Don't leave :("),
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(accountNumber);
+      setCopied(true);
+      toast.success("Copied");
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 1500);
+    } catch (err) {
+      toast.error("Failed to copy");
+    }
   };
 
   return (
+    <div className="flex items-end px-10 py-10 w-full bg-white rounded-2xl gap-4 h-full">
+      <div className="flex flex-col gap-4 w-full h-full">
+        {bank && (
+          <div className="w-[100px] h-fit">
+            <img
+              loading="lazy"
+              src={bank}
+              alt={bankAlt}
+              className="h-10 w-auto object-contain"
+            />
+          </div>
+        )}
+        {/* <h3 className="text-[24.65px] tracking-[-1%] leading-[98%] font-stemBold">
+          {name}
+        </h3>{" "} */}
+        <p className="tracking-[5%] leading-[143%] font-redhat uppercase">
+          {name}{" "}
+        </p>{" "}
+        <h3 className="text-[24.65px] tracking-[-1%] leading-[98%] font-stemBold">
+          {accountNumber}
+        </h3>{" "}
+      </div>
+      <div
+        onClick={handleCopy}
+        className="cursor-pointer flex items-center justify-center"
+      >
+        {copied ? (
+          <IoCheckmarkOutline size={22} className="text-green-500" />
+        ) : (
+          <IoCopyOutline size={22} />
+        )}
+      </div>
+    </div>
+  );
+};
+
+BankCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  accountNumber: PropTypes.string.isRequired,
+  bank: PropTypes.string,
+  bankAlt: PropTypes.string,
+};
+
+export default function Paystack() {
+  const [naira, setNaira] = useState("naira");
+
+  return (
     <>
-      <section className="flex justify-center items-center px-[20px] md:px-[80px] xl:px-[150px] py-[60px]">
-        <div className="flex justify-center flex-col gap-[140px] items-center w-full py-[50px] md:py-[80px] px-[20px] md:px-[50px] bg-white rounded-[25px] z-[100]">
-          <form className="w-[70%] flex flex-col justify-center items-center gap-[40px] pt-[30px] pb-[37.9px] px-[30px] bg-[#F8FAFF] rounded-[20px]">
-            <p className="flex justify-center items-center py-[19px] px-[20px] text-center md:px-[37px] text-[20px] leading-[143%] tracking-[-1%] rounded-[11px] font-stemRegular text-brandBlue bg-[#E2ECFF]">
-              How much would you like to give
-            </p>
+      <section className="flex justify-center items-center px-[20px] lg:px-[40px] xl:px-[150px] py-[60px]">
+        <div className="flex justify-center flex-col gap-4 items-center w-full ">
+          <div className="flex justify-between gap-4 p-3 items-center w-fit mx-auto bg-[#F8FAFF] rounded-full">
+            <span
+              onClick={() => setNaira("naira")}
+              className={`  ${naira === "naira" ? "text-white bg-brandBlue" : ""} font-medium transition-all duration-200 mr-2 cursor-pointer rounded-full px-4 py-3 md:px-8 md:py-4`}
+            >
+              NAIRA ACCOUNT
+            </span>
+            <span
+              onClick={() => setNaira("dollar")}
+              className={` ${naira === "dollar" ? "text-white bg-brandBlue" : ""} cursor-pointer transition-all duration-200 font-medium rounded-full px-4 py-3 md:mr-4 md:px-8 md:py-4`}
+            >
+              DOMICILIARY ACCOUNT
+            </span>
+          </div>
 
-            <div className="flex items-center justify-center gap-2 py-4 md:w-[551px]">
-              {/* Currency Dropdown */}
-              <select
-                value={currency}
-                onChange={(e) => setCurrency(e.target.value)}
-                className="bg-white px-4 rounded-[20px] text-5xl md:text-[78.95px] leading-[89%] -tracking-[2.5%] font-stemBold outline-none"
-              >
-                <option value="₦">₦</option>
-                {/* <option value="$">$</option>
-              <option value="£">£</option>
-              <option value="€">€</option> */}
-              </select>
-
-              {/* Amount Input */}
-              <input
-                type="number"
-                step="100"
-                className="bg-transparent text-5xl md:text-[78.95px] leading-[89%] -tracking-[2.5%] w-full font-stemBold placeholder:text-black text-center outline-none"
-                placeholder="0.00"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+          <div className="flex flex-col gap-6 items-center justify-center w-full">
+            <div className="flex items-center justify-between w-full ">
+              {naira !== "naira" && (
+                <div className="w-[100px] h-fit">
+                  <img
+                    loading="lazy"
+                    src={fidelity}
+                    alt={"Fidelity"}
+                    className="w-fit h-10 object-contain"
+                  />
+                </div>
+              )}
+              <img
+                loading="lazy"
+                src={flag}
+                alt={`nigeria flag`}
+                className="shrink-0 w-6 aspect-square ml-auto"
               />
             </div>
-          </form>
-          <PaystackButton
-            {...componentProps}
-            className="bg-brandBlue hover:bg-lightBlue text-white flex justify-center items-center hover:text-brandBlue font-bold px-[42px] py-[16px] rounded-[58.97px] max-md:w-2/5  "
-          />
+            <div className=" grid grid-cols-1 gap-[22px] lg:grid-cols-2 w-full">
+              {naira === "naira" ? (
+                <>
+                  {nairaBankAccounts.map((bankAccount, i) => (
+                    <div key={i}>
+                      <BankCard
+                        name={bankAccount.name}
+                        accountNumber={bankAccount.accountNumber}
+                        bank={bankAccount.bank}
+                        bankAlt={bankAccount.bankAlt}
+                      />
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {domBankAccounts.map((bankAccount, i) => (
+                    <div key={i}>
+                      <BankCard
+                        name={bankAccount.name}
+                        accountNumber={bankAccount.accountNumber}
+                      />
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </section>
-      <Toaster />
+      <Toaster position="bottom-center" />
     </>
   );
 }
