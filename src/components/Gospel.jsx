@@ -24,33 +24,33 @@ CountryCard.propTypes = {
 
 export default function Gospel() {
   const countryData = [
-    { count: 5, label: "Countries" },
-    { count: "50K", label: "Members" },
-    { count: 20, label: "Expressions" },
+    { count: 1, label: "Country" },
+    { count: "200", label: "Members" },
+    { count: 1, label: "Expression" },
   ];
 
   return (
-    <section className="flex justify-center items-center px-[20px] md:px-[80px] xl:px-[150px]">
-      <div className="flex flex-col justify-center gap-[30px] mt-20 pt-[150px] pb-[50px] rounded-[25px] relative bg-[#FAFAFA] h-full">
+    <section className="flex justify-center items-center px-[20px] lg:px-[40px] xl:px-[150px] overflow-x-hidden">
+      <div className="flex flex-col justify-center gap-[30px] w-full pt-[100px] pb-[50px] rounded-[25px] relative bg-[#FAFAFA]">
         <img
           loading="lazy"
           src={greenstar}
           alt=""
           className="absolute top-5 left-0 w-fit h-fit"
         />
-        <div className="flex flex-col relative left-[20px] md:left-[80px] xl:left-[151px] top-1/3 gap-4 w-[90%] min-[500px]:w-[70%] xl:w-[55%]">
+        <div className="flex flex-col relative left-[20px] md:left-[40px] top-1/2 gap-4 w-[90%] min-[500px]:w-[70%] xl:w-[55%]">
           <h1 className="md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[89%] text-6xl">
             Until the Gospel fills the earth{" "}
           </h1>
           <h1 className="text-brandBlue md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[89%] text-6xl">
             as the waters cover the sea
           </h1>
-          <p className=" tracking-[-1%] leading-[143%] text-black max-md:max-w-full font-dmserif">
+          {/* <p className=" tracking-[-1%] leading-[143%] text-black max-md:max-w-full font-dmserif">
             Who we are Who we are Who we are Who we are Who we are Who we are
             Who we are Who we are Who we are Who we areWho we are Who we are Who
             we are Who we are Who we are Who we areWho we are Who we are Who we
             are Who we are
-          </p>
+          </p> */}
         </div>
         <img
           loading="lazy"
@@ -62,9 +62,9 @@ export default function Gospel() {
           loading="lazy"
           src={line}
           alt=""
-          className="w-fit h-fit absolute -right-24 lg:-right-36 hidden min-[500px]:block top-[320px] z-50"
+          className="w-fit h-fit absolute  -right-24 lg:-right-36 hidden min-[500px]:block top-[320px] z-50"
         />
-        <div className="justify-between relative p-9 bottom-0  bg-white rounded-3xl w-[95%] max-md:px-5 mx-auto">
+        <div className="justify-between relative p-9 bottom-0  bg-white rounded-3xl max-md:px-5 mx-[20px] md:mx-[40px]">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             {countryData.map((data, index) => (
               <CountryCard key={index} count={data.count} label={data.label} />

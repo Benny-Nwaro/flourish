@@ -8,7 +8,7 @@ import line from "../assets/icons/aboutLine.png";
 export default function About() {
   return (
     <section>
-      <div className="absolute top-30 -right-4  w-[298.34px] h-[348.81px]">
+      <div className="absolute top-30 right-0">
         <img src={line} alt="line" className="w-fit h-fit" />
       </div>
       <Layout>

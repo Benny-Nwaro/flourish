@@ -4,6 +4,7 @@ function SocialCard({
   title,
   description,
   ctaText,
+  url,
   image,
   imageAlt,
   width,
@@ -18,7 +19,10 @@ function SocialCard({
         <p className="tracking-[-1%] font-stemRegular leading-[143%]">
           {description}
         </p>
-        <a className="flex cursor-pointer gap-4 text-blue-600 leading-[143%] max-md:pr-5">
+        <a
+          href={url}
+          className="flex cursor-pointer gap-4 text-blue-600 leading-[143%] max-md:pr-5"
+        >
           <div className="text-brandBlue font-stemRegular leading-[143%] tracking-[-1%]">
             {ctaText}
           </div>
@@ -50,24 +54,25 @@ SocialCard.propTypes = {
   imageAlt: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default function Stream() {
   const socialData = [
     {
       title: "Join us on Youtube",
-      description: "Who we are Who we areWho we areWho we areWho we are",
+      // description: "Who we are Who we areWho we areWho we areWho we are",
       ctaText: "Watch now",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/423b62941b7e49c6b3dabc897366c95339d4b6aec77b40a291538411c2cf7e56?apiKey=873e47fe7796454e93671642132d9742&",
       imageAlt: "Youtube social card image",
-      url: "https://www.youtube.com/channel/UCoIDa4wRZLEHZhCk0t8iv5Q",
+      url: "https://www.youtube.com/@flourishgc_global",
       width: "357",
       height: "286",
     },
     {
       title: "Join us on Mixlr",
-      description: "Who we are Who we areWho we areWho we areWho we are",
+      // description: "Who we are Who we areWho we areWho we areWho we are",
       ctaText: "Join us now",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/227424a92863363e9df6b903893496e228a7aab26f9f60eee76656220b93556a?apiKey=873e47fe7796454e93671642132d9742&",
@@ -77,7 +82,7 @@ export default function Stream() {
     },
     {
       title: "Join us on Facebook",
-      description: "Who we are Who we areWho we areWho we areWho we are",
+      // description: "Who we are Who we areWho we areWho we areWho we are",
       ctaText: "Join us now",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a1c0d4cbada0dc78c2add89bb4f0e25c71a3d4cefee753159232a76d3d228efe?apiKey=873e47fe7796454e93671642132d9742&",
@@ -101,9 +106,8 @@ export default function Stream() {
           Streaming Platforms
         </p>
         <p className="font-stemRegular tracking-[-1%] leading-[143%]">
-          Who we are Who we areWho we areWho we areWho we areWho we areWho we
-          areWho we areWho we areWho we areWho we areWho we areWho we areWho we
-          areWho we areWho we areWho we areWho we areWho we areWho we are
+          We at the Flourish Generation Church believe that the word of God and
+          prayer are essential in the growth of a solid believer .
         </p>
       </div>
       <div className="flex gap-5 flex-col min-[600px]:flex-row ">

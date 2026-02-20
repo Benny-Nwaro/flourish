@@ -20,36 +20,23 @@ export default function Apace() {
                   The Church with Eternity in view{" "}
                 </p>
               </div>
-              <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-6xl">
+              <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-[49px]">
                 About PACE
               </div>
               <div className=" tracking-[-1%] font-stem leading-[143% max-md:max-w-full">
-                Pastor Ama Chinecherem Ebenezer is a young man with an ancient
-                heart, whose desires is to catch them young for God.
+                Pastor Ama Chinecherem Ebenezer is the lead steward of the
+                Flourish Generation Church.
                 <br />
-                His food is Evangelism and his heart Cry is that all men will be
-                saved from the bondage of addictions and sinful cravings !!!
-                <br />
-                <br />
-                He has organised life changing programs like viz:
-                <br />
-                Online / Offline Bible studies, reaching out to the poor and
-                needy via alms giving, organised healing and deliverances
-                services, educative, Business and Health meetings, street
-                Evangelism and outreaches, conferences / camping for young /
-                Old, prayer walk and mountain Experience with intensive prayers
-                and fasting etc.
+                With a deep and sincere desire to see more people come into the
+                fullness of the knowledge of Christ, He is committed to his
+                assignment, separating and preserving a generation into God in
+                righteousness through his ministry of deep teaching, sounds and
+                deliverance.
                 <br />
                 <br />
-                Pastor Ama Chinecherem Ebenezer has used his platform to touch
-                lives and many testimonies and Miracles birthed forth through
-                his life as a yielding vessel by the help of God.
-                <br />
-                <br />
-                He is an anointed Music minister, Mentor, Teacher and Pastor to
-                many in Enugu, within Nigeria and in diaspora...... <br />
-                <br />
-                Pastor Ama Chinecherem Ebenezer is a mobile Testimony !!!!
+                His desire is to see a generation effectively living out the
+                Life of Christ in them; built and equipped to walk in their
+                God-given purpose.
               </div>
             </div>
           </div>

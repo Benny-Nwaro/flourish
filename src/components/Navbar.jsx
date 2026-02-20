@@ -25,7 +25,7 @@ const NavMenu = () => {
     { name: "Sermons", path: "/Sermons" },
     { name: "About PACE", path: "/AboutPACE" },
     { name: "Expressions", path: "/Expressions" },
-    { name: "Blogs", path: "/Blogs" },
+    // { name: "Blogs", path: "/Blogs" },
     { name: "Live", path: "/Live" },
   ];
 
@@ -73,11 +73,13 @@ export default function Navbar() {
         <GiveButton />
       </div>
 
-      <div className="min-[1120px]:hidden z-999 flex justify-center items-center ">
+      <div
+        className={`min-[1120px]:hidden z-999 justify-center items-center bg-white rounded-full p-4 ${Sidenav ? "hidden" : "flex"}`}
+      >
         <img
           src={menu}
           alt="menuIcon"
-          className={Sidenav ? "hidden" : "flex h-[22px] cursor-pointer"}
+          className={Sidenav ? "hidden" : "flex h-[22px]  cursor-pointer"}
           onClick={toggleSidenav}
         />
       </div>
@@ -88,11 +90,11 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={` right-0 w-[60%] flex flex-col bg-slate-200 bg-opacity-80  rounded-2xl ${
+          className={` right-0 w-[60%] flex flex-col justify-between bg-slate-200 bg-opacity-80 shadow-md  p-5 rounded-2xl ${
             Sidenav ? "translate-x-0" : "translate-x-full "
           }  ease-in-out duration-500`}
         >
-          <div className="flex justify-end mt-[29px] mr-[32px]">
+          <div className="flex bg-white rounded-full p-4 w-fit self-end">
             <img
               src={close}
               alt="closeIcon"
@@ -100,7 +102,7 @@ export default function Navbar() {
               onClick={toggleSidenav}
             />
           </div>
-          <ul className="text-black font-kuano  text-[22px] flex flex-col ml-[25px] mt-0">
+          <ul className="text-black font-kuano  text-[22px] flex flex-col">
             <li className="my-3 hover:text-blue-700 hover:text-xl">
               <NavLink
                 className={({ isActive }) =>
@@ -162,7 +164,7 @@ export default function Navbar() {
                 Expressions
               </NavLink>
             </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
+            {/* <li className="my-3  hover:text-blue-700 hover:text-xl">
               <NavLink
                 className={({ isActive }) =>
                   `${
@@ -173,7 +175,7 @@ export default function Navbar() {
               >
                 Blogs
               </NavLink>
-            </li>
+            </li> */}
             <li className="my-3  hover:text-blue-700 hover:text-xl">
               <NavLink
                 className={({ isActive }) =>
@@ -187,7 +189,7 @@ export default function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <div className="text-gray-600 font-kuano text-lg flex flex-col pl-5 pt-5 ">
+          <div className="text-gray-600 font-kuano text-lg flex flex-col">
             <GiveButton />
           </div>
         </div>

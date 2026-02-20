@@ -9,14 +9,14 @@ export default function Products() {
               The Church with Eternity in view{" "}
             </p>
           </div>
-          <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-6xl">
+          <div className=" md:text-[78.28px] font-dmserif tracking-[-2.5%] leading-[98%] max-md:max-w-full text-[49px]">
             His Products and Intellectual Properties
           </div>
-          <div className="font-stem tracking-[-1%] leading-[143%] text-black ">
+          {/* <div className="font-stem tracking-[-1%] leading-[143%] text-black ">
             Who we are Who we areWho we areWho we areWho we areWho we areWho we
             areWho we areWho we areWho we areWho we areWho we areWho we areWho
             we areWho we areWho we areWho we areWho we areWho we areWho we are
-          </div>
+          </div> */}
         </div>
         <div className="flex gap-[32px] flex-col flex-wrap md:flex-row md:flex-nowrap">
           <div className="flex w-full justify-center items-center px-[65px] py-[64px] bg-white rounded-[14px]">
@@ -26,13 +26,13 @@ export default function Products() {
               </p>
               <a className="flex cursor-pointer items-end w-full h-full gap-4 text-brandBlue">
                 <p className="text-brandBlue font-stem leading-[143%] tracking-[-1%]">
-                  Check them out
+                  Coming Soon
                 </p>
-                <img
+                {/* <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65b4799228ec6667a9c819947537c709980807fa97cc01435b34926214bc560?"
                   className="w-[24px] h-[24px]"
-                />
+                /> */}
               </a>
             </div>
           </div>
@@ -43,13 +43,13 @@ export default function Products() {
               </p>
               <a className="flex cursor-pointer  w-full items-end h-full gap-4 text-brandBlue">
                 <p className="text-brandBlue font-stem leading-[143%] tracking-[-1%]">
-                  Check them out
+                  Coming Soon
                 </p>
-                <img
+                {/* <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65b4799228ec6667a9c819947537c709980807fa97cc01435b34926214bc560?"
                   className="w-[24px] h-[24px]"
-                />
+                /> */}
               </a>
             </div>
           </div>
@@ -58,7 +58,10 @@ export default function Products() {
               <p className="text-4xl md:text-[40px] tracking-[-2.5%] leading-[98%] font-dmserif text-black">
                 His Sermons
               </p>
-              <a className="flex w-full cursor-pointer items-end  h-full gap-4 text-brandBlue">
+              <a
+                href="https://t.me/FlourishNation"
+                className="flex w-full cursor-pointer items-end  h-full gap-4 text-brandBlue"
+              >
                 <p className="text-brandBlue font-stem leading-[143%] tracking-[-1%]">
                   Check them out
                 </p>

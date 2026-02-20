@@ -5,7 +5,7 @@ export default function Pastor() {
   return (
     <>
       <section className="hidden bg-pace-pattern [@media(min-width:500px)]:flex justify-start items-center bg-no-repeat bg-cover xl:bg-cover h-[500px] md:h-[600px] xl:h-[800px]">
-        <div className="flex flex-col gap-[10px] md:gap-[32px] justify-center relative w-[75%] px-[30px] md:px-0 md:left-[80px] xl:left-[138px] md:w-[366px]">
+        <div className="flex flex-col gap-[10px] md:gap-[32px] justify-center relative w-[75%] left-[20px] lg:left-[40px] xl:left-[150px] md:w-[366px]">
           <div className="flex flex-col gap-[16px] text-white">
             <h1 className="hidden md:block text-[78.28px] leading-[98%] tracking-[-2.5%] text-white font-dmserif  w-full">
               Meet Our <br /> Pastor
@@ -16,10 +16,11 @@ export default function Pastor() {
             {/* WRITTEN STATEMENT */}
             <p className="font-redhat tracking-[-1%] leading-[143%] md:text-[18px]">
               Pastor Ama Chinecherem Ebenezer (PACE) is the Lead Pastor and
-              Founder of Flourish Nation Global where he lives out and expresses
-              his profound passion of seeing that a generation is separated and
-              preserved unto God, effectively living out the Life of Christ in
-              them; built and equipped to walk in their God-given purpose.
+              Founder of the Flourish Generation Church where he lives out and
+              expresses his profound passion of seeing that a generation is
+              separated and preserved unto God, effectively living out the Life
+              of Christ in them; built and equipped to walk in their God-given
+              purpose.
             </p>
           </div>
           <Button
