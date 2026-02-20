@@ -14,19 +14,19 @@ export const events = [
   {
     title: "The Urgency Camp Meeting",
     description:
-      'Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: "Man shall not live by bread alone, but by every word that comes from the mouth of God." ',
+      'At the end of every year, we gather together to retreat in to God and seek his face and counsel for the next year of our lives. It is an atmosphere of intense worship and prayers, deep teaching of the word of God and moments of liberation and deliverance." ',
     src: campMeeting,
   },
   {
     title: "Recalibration",
     description:
-      'Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: "Man shall not live by bread alone, but by every word that comes from the mouth of God." ',
+      'It is that time of the year where we gather to reset, re-strategize and realign ourselves into the blueprint; f God, per time, per season." ',
     src: recalibration,
   },
   {
     title: "Noah Crusades",
     description:
-      'Attending church provides spiritual nourishment, as emphasized in Matthew 4:4: "Man shall not live by bread alone, but by every word that comes from the mouth of God." ',
+      'Just like how the Lord commanded Noah to build an ark and prepare for the flood, the Lord has asked us to announce His good news to the people around us to prepare them to come into Himself (The ark) to be preserved." ',
     src: noahCrusades,
   },
 ];
