@@ -14,7 +14,7 @@ const EventCard = ({ title, description, src }) => (
     </div>
 
     <div className="flex flex-col h-full gap-[20px]">
-      <h3 className="text-[40.73px] h-full tracking-[-1%] leading-[143%] font-stemBold max-md:max-w-full">
+      <h3 className="text-[40.73px] tracking-[-1%] leading-[143%] font-stemBold max-md:max-w-full">
         {title}
       </h3>
       <p className="leading-[143%] tracking-[-1%] max-md:max-w-full font-stemRegular">
