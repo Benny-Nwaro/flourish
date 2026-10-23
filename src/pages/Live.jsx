@@ -1,22 +1,18 @@
 import Layout from "../components/Layout";
-import Stream from "../components/Stream";
-import LivePst from "../components/LivePst";
-import MyExperience from "../components/MyExperience";
-import Location from "../components/Location";
+import LiveHero from "../components/live/LiveHero";
+import StreamingPlatforms from "../components/live/StreamingPlatforms";
+import LiveLocation from "../components/live/LiveLocation";
+import LiveTestimonies from "../components/live/LiveTestimonies";
 
 export default function Live() {
   return (
-    <Layout>
-      <LivePst />
-      <Stream />
-      <Location />
-      <MyExperience
-        bgColor={""}
-        cardColor={"bg-white"}
-        textColor={"text-black"}
-        inactiveArrow={"bg-[#C3C3C3]"}
-        activeArrow={"bg-black"}
-      />
-    </Layout>
+    <div className="bg-pageGrey overflow-x-clip">
+      <Layout>
+        <LiveHero />
+        <StreamingPlatforms />
+        <LiveLocation />
+        <LiveTestimonies />
+      </Layout>
+    </div>
   );
 }
