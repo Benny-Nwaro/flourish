@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Prompt&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Wix+Madefor+Display:wght@500&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -13,12 +13,22 @@
   --color-greyd1: #d1d1d1;
   --color-yellowf9d: "#F9D000";
   --color-lightGreen: "#E3FFF2";
+  --color-brandYellow: #f9d000;
+  --color-pageGrey: #f2f2f2;
+  --color-sectionGrey: #f0f0f0;
+  --color-cardDark: #1b1b1b;
+  --color-inputGrey: #6a6a6a1a;
+  --color-borderGrey: #cdcdcd;
 
   /* 🧩 Fonts */
   --font-redhat: "Red Hat Display", sans-serif;
   --font-stemBold: "stemBold", sans-serif;
   --font-stemRegular: "stem", sans-serif;
   --font-dmserif: "DM Serif Display", serif;
+  /* Champion Gothic is a licensed font; Anton stands in until the file is added */
+  --font-champion: "Champion Gothic", "Anton", sans-serif;
+  --font-prompt: "Prompt", sans-serif;
+  --font-wix: "Wix Madefor Display", sans-serif;
 
   /* 🌄 Backgrounds */
   --background-image-pace-pattern: url("/src/assets/images/pace-pattern.png");
@@ -38,6 +48,14 @@
 }
 
 @font-face {
+  font-family: "Champion Gothic";
+  font-style: normal;
+  font-display: swap;
+  src: local("Champion Gothic Middleweight"), local("ChampionGothic-Middleweight"),
+    url("/fonts/champion-gothic/ChampionGothic-Middleweight.woff2") format("woff2");
+}
+
+@font-face {
   font-family: stem;
   font-style: normal;
   font-display: swap;
@@ -48,6 +66,51 @@ body {
   font-family: "Red Hat Display", "DM Serif Display", sans-serif;
   overflow-x: hidden;
   /* border: 1px solid red; */
+}
+
+/* Figma text styles (exact at the 1440px design width) */
+@utility text-h2 {
+  font-family: var(--font-champion);
+  font-size: clamp(36px, 5.28vw, 76px);
+  line-height: 0.983;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+@utility text-body {
+  font-family: var(--font-redhat);
+  font-size: clamp(17px, 1.39vw, 20px);
+  line-height: 1.51;
+  letter-spacing: -0.01em;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+@utility text-caption {
+  font-family: var(--font-redhat);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 0.93;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+@utility text-subheading {
+  font-family: var(--font-redhat);
+  font-weight: 900;
+  font-size: clamp(24px, 2.08vw, 30px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+/* Figma trims text boxes to cap height / baseline */
+@utility text-trim {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 @layer utilities {

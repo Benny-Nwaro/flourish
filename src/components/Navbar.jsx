@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import FGClogo from "../assets/images/FGClogo.png";
+import logo from "../assets/figma/logo.svg";
 import menu from "../assets/images/icon-menu.svg";
 import close from "../assets/images/icon-close-menu.svg";
 import { NavLink } from "react-router";
 
 const Logo = () => (
-  <Link to="/">
-    <div className="flex flex-col items-center justify-center bg-white w-[171px] h-[71px] rounded-[121.7px]">
-      <img
-        loading="lazy"
-        src={FGClogo}
-        alt="Flourish Church Logo"
-        className="w-[99px] h-[37.51px]"
-      />
-    </div>
+  <Link to="/" className="shrink-0">
+    <img
+      src={logo}
+      alt="Flourish Generation Church"
+      width={111}
+      height={71}
+      className="w-[111px] h-[71px]"
+    />
   </Link>
 );
 
@@ -25,19 +24,19 @@ const NavMenu = () => {
     { name: "Sermons", path: "/Sermons" },
     { name: "About PACE", path: "/AboutPACE" },
     { name: "Expressions", path: "/Expressions" },
-    // { name: "Blogs", path: "/Blogs" },
+    { name: "Blogs", path: "/Blogs" },
     { name: "Live", path: "/Live" },
   ];
 
   return (
-    <div className="flex gap-2 xl:gap-5 items-center justify-between bg-white/60 text-lg xl:leading-[143%] text-black font-normal whitespace-nowrap lg:w-[719px] h-[71px]  py-[25px] px-[20px] xl:px-[59px] rounded-[95px] ">
+    <div className="flex gap-2 xl:gap-5 items-center justify-between backdrop-blur-[10.5px] font-redhat text-base leading-[1.43] text-black whitespace-nowrap lg:w-[719px] h-[71px] py-[25px] px-[20px] xl:px-[59px] rounded-[95px]">
       {navItems.map((item, index) => (
         <NavLink
           key={index}
           to={item.path}
           className={({ isActive }) =>
             `${
-              isActive ? "font-bold" : ""
+              isActive ? "font-black" : "font-normal"
             } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
           }
         >
@@ -50,7 +49,7 @@ const NavMenu = () => {
 
 const GiveButton = () => (
   <Link to="/give">
-    <button className="border-[3.16px] text-[18.61px] border-white h-[71px] lg:w-[123px] rounded-full bg-brandBlue hover:border-none py-[16px] font-stemBold px-[42px] text-white hover:text-brandBlue leading-[93%] tracking-[1%] hover:bg-lightBlue ">
+    <button className="border-[3.155px] border-white h-[53px] rounded-[58.975px] bg-brandBlue px-[42px] font-stemBold text-[18.612px] leading-[0.93] tracking-[0.01em] text-white hover:text-brandBlue hover:bg-lightBlue transition-colors duration-200">
       Give
     </button>
   </Link>
@@ -64,7 +63,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=" w-full sticky z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between gap-[10px] lg:gap-[20px] ">
+    <nav className="w-full relative z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between items-center gap-[10px] lg:gap-[20px] backdrop-blur-[6.5px]">
       <Logo />
       <div className="hidden min-[1120px]:block">
         <NavMenu />
@@ -164,7 +163,7 @@ export default function Navbar() {
                 Expressions
               </NavLink>
             </li>
-            {/* <li className="my-3  hover:text-blue-700 hover:text-xl">
+            <li className="my-3  hover:text-blue-700 hover:text-xl">
               <NavLink
                 className={({ isActive }) =>
                   `${
@@ -175,7 +174,7 @@ export default function Navbar() {
               >
                 Blogs
               </NavLink>
-            </li> */}
+            </li>
             <li className="my-3  hover:text-blue-700 hover:text-xl">
               <NavLink
                 className={({ isActive }) =>
