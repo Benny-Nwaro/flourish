@@ -14,6 +14,7 @@
   --color-yellowf9d: "#F9D000";
   --color-lightGreen: "#E3FFF2";
   --color-brandYellow: #f9d000;
+  --color-mint: #e3fff2;
   --color-pageGrey: #f2f2f2;
   --color-sectionGrey: #f0f0f0;
   --color-cardDark: #1b1b1b;
@@ -54,6 +55,15 @@
   font-display: swap;
   src: local("Champion Gothic Middleweight"), local("ChampionGothic-Middleweight"),
     url("/fonts/champion-gothic/ChampionGothic-Middleweight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Champion Gothic";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local("Champion Gothic Featherweight"), local("ChampionGothic-Featherweight"),
+    url("/fonts/champion-gothic/ChampionGothic-Featherweight.woff2") format("woff2");
 }
 
 @font-face {
