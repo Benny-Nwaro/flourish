@@ -7,8 +7,8 @@ import fasting from "../assets/images/purposeAndPowerOfFasting.jpeg";
 import preservation from "../assets/images/tokensOfPreservation.jpeg";
 import ark1 from "../assets/images/arkFloodRain.jpeg";
 import ark2 from "../assets/images/arkFloodRain2.jpeg";
-import fidelity from "../assets/images/fidelity.png";
-import fcmb from "../assets/images/fcmb1.jpg";
+import fidelity from "../assets/figma/bank-fidelity.png";
+import fcmb from "../assets/figma/bank-fcmb.png";
 import blogPlaceholder from "../assets/figma/blog-placeholder.jpg";
 
 export const events = [
@@ -110,18 +110,21 @@ export const nairaBankAccounts = [
     name: "Tithes/Offering",
     accountNumber: "1026014395",
     bankAlt: "FCMB",
+    bankName: "First City Monument Bank",
   },
   {
     bank: fidelity,
     name: "Partnership",
     accountNumber: "4110156250",
     bankAlt: "Fidelity",
+    bankName: "Fidelity Bank",
   },
   {
     bank: fidelity,
     name: "Rent",
     accountNumber: "5601639182",
     bankAlt: "Fidelity",
+    bankName: "Fidelity Bank",
   },
 ];
 

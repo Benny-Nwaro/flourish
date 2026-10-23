@@ -1,22 +1,18 @@
 import Layout from "../components/Layout";
-import Paystack from "../components/Paystack";
-import MyExperience from "../components/MyExperience";
-import Paysection from "../components/Paysection";
 import Navbar from "../components/Navbar";
+import GiveHero from "../components/give/GiveHero";
+import WaysToGive from "../components/give/WaysToGive";
 
 export default function Give() {
   return (
-    <Layout>
-      <Navbar />
-      <Paysection />
-      <Paystack />
-      <MyExperience
-        bgColor={"bg-brandBlue"}
-        cardColor={"bg-cardBlue"}
-        textColor={"text-white"}
-        inactiveArrow={"bg-[#FFE3A8]"}
-        activeArrow={"bg-[#F9D000]"}
-      />
-    </Layout>
+    <div className="bg-pageGrey overflow-x-clip">
+      <Layout>
+        <div className="bg-white">
+          <Navbar />
+        </div>
+        <GiveHero />
+        <WaysToGive />
+      </Layout>
+    </div>
   );
 }
