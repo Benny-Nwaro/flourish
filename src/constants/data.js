@@ -9,6 +9,7 @@ import ark1 from "../assets/images/arkFloodRain.jpeg";
 import ark2 from "../assets/images/arkFloodRain2.jpeg";
 import fidelity from "../assets/images/fidelity.png";
 import fcmb from "../assets/images/fcmb1.jpg";
+import blogPlaceholder from "../assets/figma/blog-placeholder.jpg";
 
 export const events = [
   {
@@ -146,3 +147,9 @@ export const domBankAccounts = [
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d1bd85b5066a46c020786ecbc67286539f9ba08ccfb8b31a79fc9fd8af64ac44?apiKey=873e47fe7796454e93671642132d9742&",
   },
 ];
+
+// Placeholder posts from the Figma design — replace with real posts
+export const blogPosts = Array.from({ length: 6 }, () => ({
+  img: blogPlaceholder,
+  title: "The Ecclessia (The Church)",
+}));
