@@ -16,7 +16,7 @@ export default function Testimonies() {
     <section className="bg-brandBlue rounded-[5px] overflow-hidden">
       <div className="flex flex-col gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
         <div className="flex items-start justify-between gap-4">
-          <h2 className="text-h3 text-white">Our Vision</h2>
+          <h2 className="text-h2-md text-white">Our Vision</h2>
           <div className="flex gap-[2.7px] shrink-0">
             <button type="button" onClick={() => setCurrent(current - 1)} disabled={isFirst} aria-label="Previous testimony" className={arrowClass(!isFirst)}>
               <img src={prevIcon} alt="" width={79.65} height={58.05} />

@@ -5,7 +5,7 @@ import visionImage from "../../assets/figma/about-vision.jpg";
 function TextCard({ title, children }) {
   return (
     <div className="flex-1 min-w-0 flex flex-col justify-center gap-[24px] bg-white rounded-[32px] px-[30px] py-[50px] md:px-[112px] md:py-[93px] text-black">
-      <h2 className="text-h3">{title}</h2>
+      <h2 className="text-h2-md">{title}</h2>
       <p className="text-trim font-redhat text-[18px] md:text-[22px] leading-[1.51] tracking-[-0.01em]">{children}</p>
     </div>
   );

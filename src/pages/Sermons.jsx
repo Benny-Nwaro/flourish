@@ -1,12 +1,14 @@
 import Layout from "../components/Layout";
-import LatestSermons from "../components/LatestSermons";
-import Navbar from "../components/Navbar";
+import SermonsHero from "../components/sermons/SermonsHero";
+import SermonList from "../components/sermons/SermonList";
 
 export default function Sermons() {
   return (
-    <Layout>
-      <Navbar />
-      <LatestSermons />
-    </Layout>
+    <div className="bg-pageGrey overflow-x-clip">
+      <Layout>
+        <SermonsHero />
+        <SermonList />
+      </Layout>
+    </div>
   );
 }

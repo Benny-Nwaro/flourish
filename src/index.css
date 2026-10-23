@@ -85,11 +85,19 @@ body {
   text-transform: uppercase;
 }
 
-@utility text-h3 {
+@utility text-h2-md {
   font-family: var(--font-champion);
   font-size: clamp(40px, 4.17vw, 60px);
   line-height: 0.983;
   letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+@utility text-h3 {
+  font-family: var(--font-champion);
+  font-size: clamp(36px, 3.47vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
