@@ -7,6 +7,7 @@ import Give from "./pages/Give.jsx";
 import Pace from "./pages/Pace.jsx";
 import Sermons from "./pages/Sermons.jsx";
 import Live from "./pages/Live.jsx";
+import BecomeMember from "./pages/BecomeMember.jsx";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="blogs" element={<Blogs />} />
           <Route path="give" element={<Give />} />
           <Route path="live" element={<Live />} />
+          <Route path="become-a-member" element={<BecomeMember />} />
           <Route path="*" element={<Oops />} />
         </Routes>
       </BrowserRouter>
