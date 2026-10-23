@@ -153,3 +153,23 @@ export const blogPosts = Array.from({ length: 6 }, () => ({
   img: blogPlaceholder,
   title: "The Ecclessia (The Church)",
 }));
+
+// Expressions (church + cells) from the Figma design.
+// Only Enugu has a confirmed address; add the others when known.
+export const expressions = [
+  {
+    name: "Flourish GC Enugu",
+    type: "Church",
+    country: "Nigeria",
+    address:
+      "Mater Purisima Event Centre, 187 Ogui Road, Just Opposite 4 Market Days Supermarket, China Town, Enugu, Enugu State",
+    mapUrl: "https://maps.app.goo.gl/gs7deNniRgcREiRa7",
+  },
+  { name: "Flourish GC Agbani", type: "Cell", country: "Nigeria" },
+  { name: "Flourish GC Abuja", type: "Cell", country: "Nigeria" },
+  { name: "Flourish GC UK", type: "Cell", country: "UK" },
+  { name: "Flourish GC Lagos", type: "Cell", country: "Nigeria" },
+  { name: "Flourish GC Akwa Ibom", type: "Cell", country: "Nigeria" },
+  { name: "Flourish GC Awka", type: "Cell", country: "Nigeria" },
+  { name: "Flourish GC Online", type: "Cell", country: "Online" },
+];

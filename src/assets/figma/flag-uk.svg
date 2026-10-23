@@ -1,0 +1,56 @@
+<svg width="31.0566" height="15.5283" viewBox="0 0 31.0566 15.5283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Page">
+<g id="Expressions">
+<g id="Frame 35905">
+<g id="Frame 35955">
+<g id="Frame 95">
+<g id="Frame">
+<g id="Clip path group">
+<mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="16">
+<g id="a">
+<path id="Vector" d="M0 0V15.5283H31.0566V0H0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_1)">
+<g id="Group">
+<path id="Vector_2" d="M0 0V15.5283H31.0566V0H0Z" fill="#012169"/>
+<g id="Vector_3">
+<path d="M0 0L31.0566 15.5283L0 0ZM31.0566 0L0 15.5283L31.0566 0Z" fill="white"/>
+<path d="M0 0L31.0566 15.5283M31.0566 0L0 15.5283" stroke="white" stroke-width="3.10566"/>
+</g>
+<g id="Clip path group_2">
+<mask id="mask1_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="16">
+<g id="b">
+<path id="Vector_4" d="M15.5283 7.76416H31.0566V15.5283L15.5283 7.76416ZM15.5283 7.76416V15.5283H0L15.5283 7.76416ZM15.5283 7.76416H0V0L15.5283 7.76416ZM15.5283 7.76416V0H31.0566L15.5283 7.76416Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_0_1)">
+<g id="Vector_5">
+<path d="M0 0L31.0566 15.5283L0 0ZM31.0566 0L0 15.5283L31.0566 0Z" fill="white"/>
+<path d="M0 0L31.0566 15.5283M31.0566 0L0 15.5283" stroke="#C8102E" stroke-width="2.07044"/>
+</g>
+</g>
+</g>
+<g id="Vector_6">
+<path d="M15.5283 0V15.5283V0ZM0 7.76416H31.0566H0Z" fill="white"/>
+<path d="M15.5283 0V15.5283M0 7.76416H31.0566" stroke="white" stroke-width="5.17611"/>
+</g>
+<g id="Vector_7">
+<path d="M15.5283 0V15.5283V0ZM0 7.76416H31.0566H0Z" fill="white"/>
+<path d="M15.5283 0V15.5283M0 7.76416H31.0566" stroke="#C8102E" stroke-width="3.10566"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="31.0566" height="15.5283" fill="white"/>
+</clipPath>
+</defs>
+</svg>
