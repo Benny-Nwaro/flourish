@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import PropTypes from "prop-types";
 import logo from "../assets/figma/logo.svg";
+import logoWhite from "../assets/figma/logo-white.svg";
 import menu from "../assets/images/icon-menu.svg";
 import close from "../assets/images/icon-close-menu.svg";
 import { NavLink } from "react-router";
 
-const Logo = () => (
+const Logo = ({ light }) => (
   <Link to="/" className="shrink-0">
     <img
-      src={logo}
+      src={light ? logoWhite : logo}
       alt="Flourish Generation Church"
       width={111}
       height={71}
@@ -17,7 +19,7 @@ const Logo = () => (
   </Link>
 );
 
-const NavMenu = () => {
+const NavMenu = ({ light }) => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Who we are", path: "/Whoweare" },
@@ -29,7 +31,7 @@ const NavMenu = () => {
   ];
 
   return (
-    <div className="flex gap-2 xl:gap-5 items-center justify-between backdrop-blur-[10.5px] font-redhat text-base leading-[1.43] text-black whitespace-nowrap lg:w-[719px] h-[71px] py-[25px] px-[20px] xl:px-[59px] rounded-[95px]">
+    <div className={`flex gap-2 xl:gap-5 items-center justify-between backdrop-blur-[10.5px] font-redhat text-base leading-[1.43] ${light ? "text-white" : "text-black"} whitespace-nowrap lg:w-[719px] h-[71px] py-[25px] px-[20px] xl:px-[59px] rounded-[95px]`}>
       {navItems.map((item, index) => (
         <NavLink
           key={index}
@@ -55,7 +57,7 @@ const GiveButton = () => (
   </Link>
 );
 
-export default function Navbar() {
+export default function Navbar({ light = false, overlay = false }) {
   const [Sidenav, SetSideNav] = useState(false);
 
   const toggleSidenav = () => {
@@ -63,10 +65,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full relative z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between items-center gap-[10px] lg:gap-[20px] backdrop-blur-[6.5px]">
-      <Logo />
+    <nav className={`w-full ${overlay ? "absolute top-0 inset-x-0" : "relative"} z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between items-center gap-[10px] lg:gap-[20px] backdrop-blur-[6.5px]`}>
+      <Logo light={light} />
       <div className="hidden min-[1120px]:block">
-        <NavMenu />
+        <NavMenu light={light} />
       </div>
       <div className="hidden min-[1120px]:block">
         <GiveButton />
@@ -196,3 +198,11 @@ export default function Navbar() {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  light: PropTypes.bool,
+  overlay: PropTypes.bool,
+};
+
+Logo.propTypes = { light: PropTypes.bool };
+NavMenu.propTypes = { light: PropTypes.bool };

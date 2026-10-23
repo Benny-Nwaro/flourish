@@ -1,28 +1,18 @@
 import Layout from "../components/Layout";
-import Approach from "../components/Approach";
-import Flourishing from "../components/Flourishing";
-import WeFlourish from "../components/WeFlourish";
-import MyExperience from "../components/MyExperience";
-import line from "../assets/icons/aboutLine.png";
+import AboutHero from "../components/about/AboutHero";
+import AboutCards from "../components/about/AboutCards";
+import Testimonies from "../components/about/Testimonies";
+import OurApproach from "../components/about/OurApproach";
 
 export default function About() {
   return (
-    <section>
-      <div className="absolute top-30 right-0">
-        <img src={line} alt="line" className="w-fit h-fit" />
-      </div>
+    <div className="bg-pageGrey overflow-x-clip">
       <Layout>
-        <WeFlourish />
-        <Flourishing />
-        <MyExperience
-          bgColor={"bg-brandBlue"}
-          cardColor={"bg-cardBlue"}
-          textColor={"text-white"}
-          inactiveArrow={"bg-[#FFE3A8]"}
-          activeArrow={"bg-[#F9D000]"}
-        />
-        <Approach />
+        <AboutHero />
+        <AboutCards />
+        <Testimonies />
+        <OurApproach />
       </Layout>
-    </section>
+    </div>
   );
 }

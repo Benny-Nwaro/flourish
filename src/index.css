@@ -24,6 +24,7 @@
   --font-redhat: "Red Hat Display", sans-serif;
   --font-stemBold: "stemBold", sans-serif;
   --font-stemRegular: "stem", sans-serif;
+  --font-stemMedium: "stemMedium", sans-serif;
   --font-dmserif: "DM Serif Display", serif;
   /* Champion Gothic is a licensed font; Anton stands in until the file is added */
   --font-champion: "Champion Gothic", "Anton", sans-serif;
@@ -56,6 +57,13 @@
 }
 
 @font-face {
+  font-family: stemMedium;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/em-stem/Stem-Medium.otf");
+}
+
+@font-face {
   font-family: stem;
   font-style: normal;
   font-display: swap;
@@ -72,6 +80,14 @@ body {
 @utility text-h2 {
   font-family: var(--font-champion);
   font-size: clamp(36px, 5.28vw, 76px);
+  line-height: 0.983;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+@utility text-h3 {
+  font-family: var(--font-champion);
+  font-size: clamp(40px, 4.17vw, 60px);
   line-height: 0.983;
   letter-spacing: -0.025em;
   text-transform: uppercase;
