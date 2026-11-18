@@ -70,7 +70,7 @@ export default function WaysToGive() {
 
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col gap-[52px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[40px] md:gap-[52px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[7px] text-black">
           <span className="bg-brandBlue/10 text-brandBlue text-caption rounded-[65.48px] px-[33.309px] py-[18.875px]">
             Give to the Flourish Generation Church

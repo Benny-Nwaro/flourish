@@ -8,7 +8,7 @@ function WelcomeCard({ title, to, dark = false, gap }) {
   return (
     <Link
       to={to}
-      className={`${dark ? "bg-brandBlue text-white" : "bg-white text-black"} group relative flex flex-col overflow-hidden rounded-[20px] w-full lg:w-[550px] pb-[60px] lg:pb-0 lg:h-[679px]`}
+      className={`${dark ? "bg-brandBlue text-white" : "bg-white text-black"} group relative flex flex-col overflow-hidden rounded-[20px] w-full md:flex-1 xl:flex-none xl:w-[550px] pb-[50px] xl:pb-0 xl:h-[679px]`}
     >
       <div className="relative aspect-[550/471] w-full shrink-0 overflow-hidden">
         <img
@@ -17,7 +17,7 @@ function WelcomeCard({ title, to, dark = false, gap }) {
           className="absolute max-w-none w-[123.27%] left-[-11.64%] top-[-23.73%] transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <div className="flex flex-col items-start px-[30px] md:px-[62px] pt-[40px] lg:pt-[61.66px] w-full lg:w-[518px]" style={{ gap }}>
+      <div className="flex flex-col items-start px-[30px] md:px-[40px] xl:px-[62px] pt-[32px] md:pt-[40px] xl:pt-[61.66px] w-full xl:w-[518px]" style={{ gap }}>
         <h3 className="text-subheading uppercase">{title}</h3>
         <div className="flex items-start gap-[19px]">
           <span className="text-body">Learn More</span>
@@ -44,7 +44,7 @@ WelcomeCard.propTypes = {
 export default function Welcome() {
   return (
     <section className="bg-sectionGrey">
-      <div className="flex flex-col gap-[60px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] xl:py-[150px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[40px] md:gap-[60px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] xl:py-[150px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[16px] max-w-[608px] text-black">
           <span className="bg-brandBlue/10 text-brandBlue text-caption rounded-[65.48px] px-[33.309px] py-[18.875px]">
             Welcome to the Flourish Generation Church
@@ -57,7 +57,7 @@ export default function Welcome() {
             glimpse on our upcoming events, stay updated for what will come next!
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row flex-wrap gap-[39px]">
+        <div className="flex flex-col md:flex-row gap-[24px] xl:gap-[39px]">
           <WelcomeCard title="About us" to="/whoweare" gap={52} />
           <WelcomeCard title="Be part of our community" to="/become-a-member" dark gap={23} />
         </div>

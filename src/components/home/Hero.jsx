@@ -4,7 +4,7 @@ import globe from "../../assets/figma/globe.svg";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center gap-[63px] px-[20px] lg:px-[40px] xl:px-[150px] pt-[60px] xl:pt-[81px] pb-[100px] xl:pb-[150px] max-w-[1440px] mx-auto">
+    <section className="flex flex-col items-center gap-[40px] md:gap-[63px] px-[20px] lg:px-[40px] xl:px-[150px] pt-[60px] xl:pt-[81px] pb-[64px] md:pb-[100px] xl:pb-[150px] max-w-[1440px] mx-auto">
       <div className="flex flex-col items-center gap-[30.794px] max-w-[712px] text-center text-black">
         <h1 className="text-h2">
           He has set <span className="text-brandBlue">eternity</span> in our hearts
@@ -32,7 +32,7 @@ export default function Hero() {
           />
         </div>
         {/* Globe badge overlapping the image's top-right corner */}
-        <div className="absolute right-[22.5px] top-[-102.8px] hidden md:flex items-center justify-center w-[139.493px] h-[130.78px] pointer-events-none">
+        <div className="absolute right-[22.5px] top-[-102.8px] hidden lg:flex items-center justify-center w-[139.493px] h-[130.78px] pointer-events-none">
           <img
             src={globe}
             alt=""

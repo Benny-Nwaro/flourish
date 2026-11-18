@@ -5,7 +5,7 @@ import insetImage from "../../assets/figma/flourish-inset.png";
 export default function FlourishSide() {
   return (
     <section className="bg-white">
-      <div className="flex flex-col lg:flex-row items-center gap-[60px] xl:gap-[98px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px] xl:gap-[98px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         {/* Photo collage: large portrait with an inset photo overlapping its bottom-right corner */}
         <div className="relative w-[482px] h-[608px] shrink-0 mr-[34.5px] lg:mr-0 max-sm:[zoom:0.66]">
           <div className="absolute inset-0 overflow-hidden bg-[#dcdcdc]">

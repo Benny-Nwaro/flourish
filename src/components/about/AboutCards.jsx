@@ -4,9 +4,9 @@ import visionImage from "../../assets/figma/about-vision.jpg";
 
 function TextCard({ title, children }) {
   return (
-    <div className="flex-1 min-w-0 flex flex-col justify-center gap-[24px] bg-white rounded-[32px] px-[30px] py-[50px] md:px-[112px] md:py-[93px] text-black">
+    <div className="flex-1 min-w-0 flex flex-col justify-center gap-[24px] bg-white rounded-[32px] px-[30px] py-[50px] md:px-[60px] md:py-[60px] xl:px-[112px] xl:py-[93px] text-black">
       <h2 className="text-h2-md">{title}</h2>
-      <p className="text-trim font-redhat text-[18px] md:text-[22px] leading-[1.51] tracking-[-0.01em]">{children}</p>
+      <p className="text-trim font-redhat text-[18px] xl:text-[22px] leading-[1.51] tracking-[-0.01em]">{children}</p>
     </div>
   );
 }
@@ -19,8 +19,8 @@ TextCard.propTypes = {
 // Image slot: 373px wide, crop offsets taken from the Figma frame
 function ImageCard({ src, alt, imgClass, className = "" }) {
   return (
-    <div className={`relative shrink-0 w-full md:w-[373px] h-[400px] md:h-auto md:min-h-[532px] md:self-stretch overflow-hidden rounded-[21px] ${className}`}>
-      <img src={src} alt={alt} className={`absolute max-w-none ${imgClass}`} />
+    <div className={`relative shrink-0 w-full lg:w-[373px] h-[400px] md:h-[480px] lg:h-auto lg:min-h-[532px] lg:self-stretch overflow-hidden rounded-[21px] ${className}`}>
+      <img src={src} alt={alt} className={`absolute max-w-none max-lg:inset-0 max-lg:size-full max-lg:object-cover max-lg:object-top ${imgClass}`} />
     </div>
   );
 }
@@ -36,8 +36,8 @@ const churchCrop = "w-[798.9px] h-[1033.7px] left-[-260.9px] object-cover";
 
 export default function AboutCards() {
   return (
-    <section className="flex flex-col gap-[55px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
-      <div className="flex flex-col md:flex-row gap-[24px] items-stretch">
+    <section className="flex flex-col gap-[40px] md:gap-[55px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col lg:flex-row gap-[24px] items-stretch">
         <TextCard
           title={
             <>
@@ -54,15 +54,15 @@ export default function AboutCards() {
         <ImageCard src={churchImage} alt="Woman worshipping" imgClass={`${churchCrop} top-[-38.3px]`} />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-[24px] items-stretch">
-        <ImageCard src={churchImage} alt="Woman worshipping" imgClass={`${churchCrop} top-[-48.3px]`} className="max-md:order-last" />
+      <div className="flex flex-col lg:flex-row gap-[24px] items-stretch">
+        <ImageCard src={churchImage} alt="Woman worshipping" imgClass={`${churchCrop} top-[-48.3px]`} className="max-lg:order-last" />
         <TextCard title="Our Mission">
           We are on a mission to make all men see, know and reflect Christ to
           our Generation.
         </TextCard>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-[24px] items-stretch">
+      <div className="flex flex-col lg:flex-row gap-[24px] items-stretch">
         <TextCard
           title={
             <>

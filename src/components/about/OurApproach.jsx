@@ -24,7 +24,7 @@ ApproachCard.propTypes = {
 export default function OurApproach() {
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col gap-[64px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[40px] md:gap-[64px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex flex-col gap-[16px] text-black">
           <h2 className="text-h2">Our Approach</h2>
           <p className="text-body">

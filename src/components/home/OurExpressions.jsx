@@ -5,7 +5,7 @@ import flagNigeria from "../../assets/figma/flag-nigeria.svg";
 export default function OurExpressions() {
   return (
     <section className="bg-black rounded-[5px] overflow-hidden">
-      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[118px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[118px] max-w-[1440px] mx-auto">
         <h2 className="text-h2 text-white text-center max-w-[840px]">Our Expressions</h2>
 
         <div className="flex items-center gap-[20px]">
@@ -18,19 +18,19 @@ export default function OurExpressions() {
           </span>
         </div>
 
-        <div className="w-full max-w-[1140px] bg-cardDark p-[30px] md:p-[100px]">
+        <div className="w-full max-w-[1140px] bg-cardDark p-[30px] md:p-[60px] xl:p-[100px]">
           <div className="flex flex-col items-start gap-[26px] text-white">
             <div className="flex items-center justify-center size-[61.225px] rounded-[9.996px] bg-iconBlue">
               <img src={routingIcon} alt="" width={37.484} height={37.484} className="w-[37.484px] h-[37.484px] translate-x-[0.62px] translate-y-[0.62px]" />
             </div>
-            <h3 className="text-trim font-stemBold text-[30px] md:text-[42px] leading-[0.98] tracking-[-0.01em]">
+            <h3 className="text-trim font-stemBold text-[26px] md:text-[36px] xl:text-[42px] leading-[0.98] tracking-[-0.01em]">
               Flourish GC Enugu
             </h3>
             <a
               href="https://maps.app.goo.gl/gs7deNniRgcREiRa7"
               target="_blank"
               rel="noreferrer"
-              className="text-trim font-redhat text-[24px] md:text-[36px] leading-[1.43] tracking-[-0.01em] hover:underline"
+              className="text-trim font-redhat text-[19px] md:text-[28px] xl:text-[36px] leading-[1.43] tracking-[-0.01em] hover:underline"
             >
               Mater Purisima Event Centre, 187 Ogui Road, Just Opposite 4 Market
               Days Supermarket, China Town, Enugu, Enugu State

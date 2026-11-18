@@ -5,7 +5,7 @@ import insetImage from "../../assets/figma/flourish-inset.png";
 export default function AboutPace() {
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col lg:flex-row items-center gap-[60px] xl:gap-[74px] px-[20px] lg:px-[40px] xl:p-[150px] py-[100px] xl:min-h-[956px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px] xl:gap-[74px] px-[20px] lg:px-[40px] xl:p-[150px] py-[64px] md:py-[100px] xl:min-h-[956px] max-w-[1440px] mx-auto">
         <div className="relative w-[548px] h-[608px] shrink-0 max-sm:[zoom:0.62]">
           <div className="absolute left-[3.5px] top-0 w-[540.5px] h-[608.612px] overflow-hidden rounded-[21px] bg-[#dcdcdc]">
             <img

@@ -10,7 +10,7 @@ function PlatformCard({ title, cta, href, children }) {
   return (
     <Tag
       {...(href ? { href, target: "_blank", rel: "noreferrer" } : {})}
-      className="group relative block w-full lg:w-[359px] h-[530px] overflow-hidden rounded-[14px] bg-white"
+      className="group relative block w-full lg:w-[359px] h-[340px] lg:h-[530px] overflow-hidden rounded-[14px] bg-white"
     >
       {children}
       <div className="absolute left-[52px] top-[52.25px] flex flex-col items-start gap-[22px]">
@@ -38,7 +38,7 @@ PlatformCard.propTypes = {
 export default function StreamingPlatforms() {
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col gap-[26px] px-[20px] lg:px-[40px] xl:p-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[26px] px-[20px] lg:px-[40px] xl:p-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[16px] max-w-[889px] text-black">
           <MintTag>Join us Live</MintTag>
           <h2 className="text-h2">Streaming Platforms</h2>
@@ -49,11 +49,11 @@ export default function StreamingPlatforms() {
         </div>
         <div className="flex flex-col lg:flex-row gap-[32px]">
           <PlatformCard title="Join us on Youtube" cta="Watch now" href="https://www.youtube.com/@flourishgc_global">
-            <img src={youtubeIcon} alt="" width={379} height={349} className="absolute left-[136px] top-[225.25px] w-[379px] h-[349px] max-w-none" />
+            <img src={youtubeIcon} alt="" width={379} height={349} className="absolute left-[136px] top-[225.25px] max-lg:left-auto max-lg:right-[-150px] max-lg:top-[90px] w-[379px] h-[349px] max-w-none" />
           </PlatformCard>
           <PlatformCard title="Join us on Mixlr" cta="Join us now">
             <div
-              className="absolute left-[41px] top-[243.25px] w-[391px] h-[407px] bg-[#9f9f9f]"
+              className="absolute left-[41px] top-[243.25px] max-lg:left-auto max-lg:right-[-120px] max-lg:top-[70px] w-[391px] h-[407px] bg-[#9f9f9f]"
               style={{
                 maskImage: `url(${mixlrDots})`,
                 maskSize: "349px 349px",
@@ -67,7 +67,7 @@ export default function StreamingPlatforms() {
             />
           </PlatformCard>
           <PlatformCard title="Join us on Facebook" cta="Join us now" href="https://web.facebook.com/flourishnationglobal">
-            <img src={facebookIcon} alt="" width={345} height={345} className="absolute left-[98px] top-[251.25px] w-[345px] h-[345px] max-w-none" />
+            <img src={facebookIcon} alt="" width={345} height={345} className="absolute left-[98px] top-[251.25px] max-lg:left-auto max-lg:right-[-140px] max-lg:top-[110px] w-[345px] h-[345px] max-w-none" />
           </PlatformCard>
         </div>
       </div>

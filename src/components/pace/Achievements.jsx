@@ -4,7 +4,7 @@ import achievementsImage from "../../assets/figma/pace-achievements.jpg";
 export default function Achievements() {
   return (
     <section className="bg-[#fffefe]">
-      <div className="flex flex-col lg:flex-row items-center gap-[60px] xl:gap-[98px] px-[20px] lg:px-[40px] xl:p-[150px] py-[100px] xl:min-h-[956px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col lg:flex-row items-center gap-[40px] md:gap-[60px] xl:gap-[98px] px-[20px] lg:px-[40px] xl:p-[150px] py-[64px] md:py-[100px] xl:min-h-[956px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[16px] flex-1 min-w-0 text-black">
           <MintTag>The Church with Eternity in View</MintTag>
           <h2 className="text-h2 max-w-[522px]">Achievements</h2>

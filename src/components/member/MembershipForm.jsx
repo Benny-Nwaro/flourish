@@ -78,7 +78,7 @@ export default function MembershipForm() {
 
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col gap-[52px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[40px] md:gap-[52px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[24px] text-black">
           <span className="bg-brandBlue/10 text-brandBlue text-caption rounded-[65.48px] px-[33.309px] py-[18.875px]">
             Be part of us
@@ -86,7 +86,7 @@ export default function MembershipForm() {
           <h2 className="text-h3 text-trim">Membership form</h2>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-[52px]">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-[40px] md:gap-[52px]">
           <div className={row}>
             <TextInput label="First Name" placeholder="Enter first name" required autoComplete="given-name" {...bind("firstName")} />
             <TextInput label="Last Name" placeholder="Enter last name" required autoComplete="family-name" {...bind("lastName")} />

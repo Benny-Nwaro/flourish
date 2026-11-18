@@ -12,7 +12,7 @@ export default function SermonsHero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent xl:hidden" />
       <Navbar light overlay />
-      <div className="relative h-full max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:px-0 pt-[200px] pb-[80px] xl:p-0">
+      <div className="relative h-full max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:px-0 pt-[200px] pb-[48px] md:pb-[80px] xl:p-0">
         <div className="hidden md:flex absolute right-[60px] xl:right-[236.5px] top-[542px] items-center justify-center w-[139.493px] h-[130.78px] pointer-events-none">
           <img src={globe} alt="" width={119.394} height={108.028} className="w-[119.394px] h-[108.028px] rotate-[-12.18deg]" />
         </div>

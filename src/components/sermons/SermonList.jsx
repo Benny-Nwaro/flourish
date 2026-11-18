@@ -67,10 +67,10 @@ export default function SermonList() {
   const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   return (
-    <section className="flex flex-col gap-[45px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+    <section className="flex flex-col gap-[45px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
       <div className="flex flex-col md:flex-row md:items-center gap-6 lg:gap-[243px]">
         <h2 className="text-h3 text-trim text-black whitespace-nowrap">Latest Sermons</h2>
-        <label className="flex flex-1 items-center gap-[10px] h-[64px] min-w-0 bg-white border-[1.5px] border-black rounded-[11px] pl-[36px] pr-[22px] focus-within:ring-2 focus-within:ring-brandBlue">
+        <label className="flex w-full md:flex-1 items-center gap-[10px] h-[64px] min-w-0 bg-white border-[1.5px] border-black rounded-[11px] pl-[36px] pr-[22px] focus-within:ring-2 focus-within:ring-brandBlue">
           <input
             type="search"
             value={query}

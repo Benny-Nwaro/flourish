@@ -11,7 +11,7 @@ export default function AboutHero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent xl:hidden" />
       <Navbar light overlay />
-      <div className="relative w-full max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:pl-[150px] xl:pr-[118px] pt-[160px] pb-[80px] xl:pb-[123px]">
+      <div className="relative w-full max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:pl-[150px] xl:pr-[118px] pt-[160px] pb-[48px] md:pb-[80px] xl:pb-[123px]">
         <div className="flex flex-col items-start gap-[18px]">
           <span className="bg-lightBlue text-brandBlue text-caption rounded-[65.48px] px-[33.309px] py-[18.875px]">
             The Family of Flourish GC

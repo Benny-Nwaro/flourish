@@ -22,9 +22,9 @@ export default function Home() {
             alt=""
             width={84}
             height={84}
-            className="absolute left-[-22.4px] top-[170.6px] w-[84px] h-[84px] pointer-events-none hidden md:block"
+            className="absolute left-[-22.4px] top-[170.6px] w-[84px] h-[84px] pointer-events-none hidden xl:block"
           />
-          <div className="absolute right-[-248.1px] top-[-38px] w-[457.124px] h-[445.179px] hidden md:flex items-center justify-center pointer-events-none">
+          <div className="absolute right-[-248.1px] top-[-38px] w-[457.124px] h-[445.179px] hidden xl:flex items-center justify-center pointer-events-none">
             <div className="relative w-[298.338px] h-[348.812px] rotate-[-54.63deg] overflow-hidden">
               <img
                 src={doodleGreen}

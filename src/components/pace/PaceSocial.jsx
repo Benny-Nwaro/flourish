@@ -13,7 +13,7 @@ const accounts = [
 export default function PaceSocial() {
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col items-start gap-[25px] px-[20px] lg:px-[40px] xl:px-[144px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col items-start gap-[25px] px-[20px] lg:px-[40px] xl:px-[144px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <h2 className="text-h3 text-trim text-black max-w-[636px]">Click on icon to follow his social media and keep up</h2>
         <div className="flex flex-wrap items-center gap-x-[24px] gap-y-[21px] py-[30.526px] w-full xl:justify-between">
           {accounts.map(({ icon, label, href }) => (

@@ -14,7 +14,7 @@ export default function Testimonies() {
 
   return (
     <section className="bg-brandBlue rounded-[5px] overflow-hidden">
-      <div className="flex flex-col gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex items-start justify-between gap-4">
           <h2 className="text-h2-md text-white">Our Vision</h2>
           <div className="flex gap-[2.7px] shrink-0">
@@ -27,7 +27,7 @@ export default function Testimonies() {
           </div>
         </div>
 
-        <div key={current} className="fade-in flex flex-col items-start gap-[66px] bg-cardBlue rounded-[22px] px-[24px] py-[40px] md:px-[99px] md:py-[92px]">
+        <div key={current} className="fade-in flex flex-col items-start gap-[40px] md:gap-[66px] bg-cardBlue rounded-[22px] px-[24px] py-[40px] md:px-[99px] md:py-[92px]">
           <p className="text-trim font-redhat text-[24px] md:text-[36px] leading-[1.43] tracking-[-0.01em] text-white">
             {testimony}
           </p>

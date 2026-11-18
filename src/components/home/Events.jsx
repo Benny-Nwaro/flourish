@@ -97,7 +97,7 @@ export default function Events() {
 
   return (
     <section className="bg-white">
-      <div className="flex flex-col gap-[60px] py-[100px] xl:py-[150px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[40px] md:gap-[60px] py-[64px] md:py-[100px] xl:py-[150px] max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row gap-6 md:items-end md:justify-between px-[20px] lg:px-[40px] xl:px-[150px]">
           <div className="flex flex-col items-start gap-[16px] max-w-[608px] text-black">
             <span className="bg-brandBlue/10 text-brandBlue text-caption rounded-[65.48px] px-[33.309px] py-[18.875px]">

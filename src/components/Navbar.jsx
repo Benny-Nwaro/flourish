@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-router";
 import PropTypes from "prop-types";
 import logo from "../assets/figma/logo.svg";
 import logoWhite from "../assets/figma/logo-white.svg";
 import menu from "../assets/images/icon-menu.svg";
-import close from "../assets/images/icon-close-menu.svg";
+import closeIcon from "../assets/images/icon-close-menu.svg";
 import { NavLink } from "react-router";
 
 const Logo = ({ light }) => (
@@ -19,16 +20,17 @@ const Logo = ({ light }) => (
   </Link>
 );
 
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Who we are", path: "/whoweare" },
+  { name: "Sermons", path: "/sermons" },
+  { name: "About PACE", path: "/aboutpace" },
+  { name: "Expressions", path: "/expressions" },
+  { name: "Blogs", path: "/blogs" },
+  { name: "Live", path: "/live" },
+];
+
 const NavMenu = ({ light }) => {
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Who we are", path: "/Whoweare" },
-    { name: "Sermons", path: "/Sermons" },
-    { name: "About PACE", path: "/AboutPACE" },
-    { name: "Expressions", path: "/Expressions" },
-    { name: "Blogs", path: "/Blogs" },
-    { name: "Live", path: "/Live" },
-  ];
 
   return (
     <div className={`flex gap-2 xl:gap-5 items-center justify-between backdrop-blur-[10.5px] font-redhat text-base leading-[1.43] ${light ? "text-white" : "text-black"} whitespace-nowrap lg:w-[719px] h-[71px] py-[25px] px-[20px] xl:px-[59px] rounded-[95px]`}>
@@ -50,19 +52,31 @@ const NavMenu = ({ light }) => {
 };
 
 const GiveButton = () => (
-  <Link to="/give">
-    <button className="border-[3.155px] border-white h-[53px] rounded-[58.975px] bg-brandBlue px-[42px] font-stemBold text-[18.612px] leading-[0.93] tracking-[0.01em] text-white hover:text-brandBlue hover:bg-lightBlue transition-colors duration-200">
-      Give
-    </button>
+  <Link
+    to="/give"
+    className="inline-flex items-center border-[3.155px] border-white h-[53px] rounded-[58.975px] bg-brandBlue px-[42px] font-stemBold text-[18.612px] leading-[0.93] tracking-[0.01em] text-white hover:text-brandBlue hover:bg-lightBlue transition-colors duration-200"
+  >
+    Give
   </Link>
 );
 
-export default function Navbar({ light = false, overlay = false }) {
-  const [Sidenav, SetSideNav] = useState(false);
 
-  const toggleSidenav = () => {
-    SetSideNav(!Sidenav);
-  };
+export default function Navbar({ light = false, overlay = false }) {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
+  // Lock page scroll and allow Escape to close while the mobile menu is open
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <nav className={`w-full ${overlay ? "absolute top-0 inset-x-0" : "relative"} z-50 px-[20px] lg:px-[40px] xl:px-[150px] py-[17px] flex justify-between items-center gap-[10px] lg:gap-[20px] backdrop-blur-[6.5px]`}>
@@ -74,127 +88,80 @@ export default function Navbar({ light = false, overlay = false }) {
         <GiveButton />
       </div>
 
-      <div
-        className={`min-[1120px]:hidden z-999 justify-center items-center bg-white rounded-full p-4 ${Sidenav ? "hidden" : "flex"}`}
+      <button
+        type="button"
+        aria-label="Open menu"
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+        onClick={() => setOpen(true)}
+        className="min-[1120px]:hidden flex items-center justify-center size-[54px] rounded-full bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandBlue"
       >
-        <img
-          src={menu}
-          alt="menuIcon"
-          className={Sidenav ? "hidden" : "flex h-[22px]  cursor-pointer"}
-          onClick={toggleSidenav}
-        />
-      </div>
+        <img src={menu} alt="" className="h-[22px]" />
+      </button>
 
+      {/* Mobile menu: full-screen panel, portalled so the nav's backdrop-filter doesn't contain it */}
+      {createPortal(
       <div
-        className={`absolute right-0 flex justify-end overflow-hidden z-50 w-full h-[550px] ${
-          Sidenav ? "pointer-events-auto" : "pointer-events-none"
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Site menu"
+        aria-hidden={!open}
+        inert={open ? undefined : ""}
+        className={`min-[1120px]:hidden fixed inset-0 z-[1000] flex flex-col bg-white text-black transition-[opacity,visibility] duration-300 ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div
-          className={` right-0 w-[60%] flex flex-col justify-between bg-slate-200 bg-opacity-80 shadow-md  p-5 rounded-2xl ${
-            Sidenav ? "translate-x-0" : "translate-x-full "
-          }  ease-in-out duration-500`}
-        >
-          <div className="flex bg-white rounded-full p-4 w-fit self-end">
-            <img
-              src={close}
-              alt="closeIcon"
-              className="h-[25px] cursor-pointer"
-              onClick={toggleSidenav}
-            />
-          </div>
-          <ul className="text-black font-kuano  text-[22px] flex flex-col">
-            <li className="my-3 hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/home"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              {" "}
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/whoweare"
-              >
-                Who we are
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/sermons"
-              >
-                Sermons
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/aboutpace"
-              >
-                About PACE
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/expressions"
-              >
-                Expressions
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/Blogs"
-              >
-                Blogs
-              </NavLink>
-            </li>
-            <li className="my-3  hover:text-blue-700 hover:text-xl">
-              <NavLink
-                className={({ isActive }) =>
-                  `${
-                    isActive ? "font-bold" : ""
-                  } hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-brandBlue`
-                }
-                to="/Live"
-              >
-                Live
-              </NavLink>
-            </li>
-          </ul>
-          <div className="text-gray-600 font-kuano text-lg flex flex-col">
-            <GiveButton />
-          </div>
+        <div className="flex items-center justify-between px-[20px] lg:px-[40px] py-[17px]">
+          <Logo />
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={close}
+            className="flex items-center justify-center size-[54px] rounded-full bg-pageGrey focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brandBlue"
+          >
+            <img src={closeIcon} alt="" className="h-[22px]" />
+          </button>
         </div>
-      </div>
+        <ul className="flex-1 overflow-y-auto flex flex-col gap-[6px] px-[20px] lg:px-[40px] pt-[24px]">
+          {navItems.map((item, i) => (
+            <li
+              key={item.path}
+              className={`transition-[opacity,translate] duration-500 ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
+              style={{ transitionDelay: open ? `${80 + i * 40}ms` : "0ms" }}
+            >
+              <NavLink
+                to={item.path}
+                end={item.path === "/"}
+                onClick={close}
+                className={({ isActive }) =>
+                  `block py-[6px] text-h3 ${isActive ? "text-brandBlue" : "text-black"} hover:text-brandBlue transition-colors`
+                }
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-wrap items-center gap-[12px] px-[20px] lg:px-[40px] pt-[20px] pb-[32px] border-t border-borderGrey">
+          <Link
+            to="/give"
+            onClick={close}
+            className="inline-flex items-center h-[53px] rounded-[58.975px] bg-brandBlue px-[32px] font-stemBold text-[18px] leading-[0.93] tracking-[0.01em] text-white"
+          >
+            Give
+          </Link>
+          <Link
+            to="/become-a-member"
+            onClick={close}
+            className="inline-flex items-center h-[53px] rounded-[58.975px] bg-lightBlue px-[28px] font-stemBold text-[18px] leading-[0.93] tracking-[0.01em] text-brandBlue"
+          >
+            Become a member
+          </Link>
+        </div>
+      </div>,
+      document.body
+      )}
     </nav>
   );
 }
@@ -205,4 +172,5 @@ Navbar.propTypes = {
 };
 
 Logo.propTypes = { light: PropTypes.bool };
+
 NavMenu.propTypes = { light: PropTypes.bool };

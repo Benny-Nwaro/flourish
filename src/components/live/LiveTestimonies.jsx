@@ -11,8 +11,8 @@ export default function LiveTestimonies() {
 
   return (
     <section className="bg-pageGrey rounded-[5px] overflow-hidden">
-      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:p-[150px] py-[100px] max-w-[1440px] mx-auto">
-        <div key={current} className="fade-in flex flex-col items-start gap-[66px] w-full max-w-[1140px] bg-white rounded-[22px] px-[24px] py-[40px] md:px-[99px] md:py-[92px]">
+      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:p-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
+        <div key={current} className="fade-in flex flex-col items-start gap-[40px] md:gap-[66px] w-full max-w-[1140px] bg-white rounded-[22px] px-[24px] py-[40px] md:px-[99px] md:py-[92px]">
           <p className="text-trim font-redhat text-[24px] md:text-[36px] leading-[1.43] tracking-[-0.01em] text-black">{testimony}</p>
           <div className="flex items-center gap-[19px]">
             <div className="relative w-[59.22px] h-[58.634px] shrink-0 overflow-hidden rounded-full bg-black flex items-center justify-center">

@@ -11,7 +11,7 @@ export default function PaceHero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent xl:hidden" />
       <Navbar light overlay />
-      <div className="relative max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:px-0 pt-[260px] pb-[80px] xl:p-0">
+      <div className="relative max-w-[1440px] mx-auto px-[20px] lg:px-[40px] xl:px-0 pt-[260px] pb-[48px] md:pb-[80px] xl:p-0">
         <div className="flex flex-col items-start gap-[18px] max-w-[556px] xl:absolute xl:left-[151px] xl:top-[369px]">
           <span className="text-trim bg-lightBlue text-brandBlue font-stemBold text-[14px] leading-[0.93] tracking-[0.01em] rounded-[65.48px] px-[33.309px] py-[18.875px]">
             PACE

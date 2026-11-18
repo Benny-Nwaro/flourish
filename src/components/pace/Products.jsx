@@ -36,7 +36,7 @@ ProductCard.propTypes = {
 export default function Products() {
   return (
     <section className="bg-pageGrey">
-      <div className="flex flex-col gap-[36px] px-[20px] lg:px-[40px] xl:p-[150px] py-[100px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-[36px] px-[20px] lg:px-[40px] xl:p-[150px] py-[64px] md:py-[100px] max-w-[1440px] mx-auto">
         <div className="flex flex-col items-start gap-[16px] max-w-[889px] text-black">
           <MintTag>The Church with Eternity in View</MintTag>
           <h2 className="text-h2">His Products and Intellectual Properties</h2>

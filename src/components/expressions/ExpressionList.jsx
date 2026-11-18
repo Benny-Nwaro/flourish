@@ -13,7 +13,7 @@ const filters = [
 
 function ExpressionCard({ name, type, address, mapUrl }) {
   return (
-    <article className="bg-cardDark p-[30px] md:p-[80px] w-full">
+    <article className="bg-cardDark p-[30px] md:p-[40px] xl:p-[80px] w-full">
       <div className="flex flex-col items-start gap-[26px] text-white">
         <div className="flex items-center justify-center size-[61.225px] rounded-[9.996px] bg-iconBlue">
           <img src={routingIcon} alt="" width={37.484} height={37.484} className="w-[37.484px] h-[37.484px] translate-x-[0.62px] translate-y-[0.62px]" />
@@ -24,11 +24,11 @@ function ExpressionCard({ name, type, address, mapUrl }) {
         <h3 className="text-subheading uppercase">{name}</h3>
         {address &&
           (mapUrl ? (
-            <a href={mapUrl} target="_blank" rel="noreferrer" className="text-trim font-redhat text-[22px] md:text-[28px] leading-[1.43] tracking-[-0.01em] hover:underline">
+            <a href={mapUrl} target="_blank" rel="noreferrer" className="text-trim font-redhat text-[19px] md:text-[22px] xl:text-[28px] leading-[1.43] tracking-[-0.01em] hover:underline">
               {address}
             </a>
           ) : (
-            <p className="text-trim font-redhat text-[22px] md:text-[28px] leading-[1.43] tracking-[-0.01em]">{address}</p>
+            <p className="text-trim font-redhat text-[19px] md:text-[22px] xl:text-[28px] leading-[1.43] tracking-[-0.01em]">{address}</p>
           ))}
       </div>
     </article>
@@ -48,7 +48,7 @@ export default function ExpressionList() {
 
   return (
     <section className="bg-black rounded-[5px] overflow-hidden">
-      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[118px] max-w-[1440px] mx-auto">
+      <div className="flex flex-col items-center gap-[43px] px-[20px] lg:px-[40px] xl:px-[150px] py-[64px] md:py-[118px] max-w-[1440px] mx-auto">
         <h2 className="text-h2 text-white text-center max-w-[840px]">Our Expressions</h2>
         <div className="flex flex-wrap justify-center items-stretch gap-[20px]">
           {filters.map(({ name, flag, width, height }) => {

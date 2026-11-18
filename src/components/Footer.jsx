@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="flex flex-col gap-[20px] pt-[50px] bg-white">
       {/* QUICK LINKS AND FORM */}
       <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap gap-[50px] lg:gap-[83px] items-start px-[20px] lg:px-[40px] xl:px-[150px] w-full max-w-[1440px] mx-auto">
-        <div className="flex flex-col gap-[18px] lg:w-[321px] shrink-0 text-black">
+        <div className="flex flex-col gap-[18px] w-full lg:w-[321px] shrink-0 text-black">
           <img src={logo} alt="Flourish Generation Church" width={104} height={39} className="w-[104px] h-[39px]" />
           <p className="text-trim font-redhat text-base leading-[1.43] tracking-[-0.01em]">
             Experience the joy of fellowship and personal growth at our upcoming
