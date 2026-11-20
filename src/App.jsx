@@ -29,6 +29,14 @@ function App() {
           <Route path="live" element={<Live />} />
           <Route path="become-a-member" element={<BecomeMember />} />
           <Route
+            path="studio"
+            element={
+              <Suspense fallback={<div className="flex items-center justify-center h-screen font-redhat text-lg text-black">Loading Flourish Studio...</div>}>
+                <StudioPage />
+              </Suspense>
+            }
+          />
+          <Route
             path="studio/*"
             element={
               <Suspense fallback={<div className="flex items-center justify-center h-screen font-redhat text-lg text-black">Loading Flourish Studio...</div>}>
