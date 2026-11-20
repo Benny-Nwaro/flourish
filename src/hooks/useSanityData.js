@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { client } from "../lib/sanity";
 
 /**
- * Fetches data from Sanity.
- * If Sanity has no records yet or is unreachable, gracefully falls back to static data.
+ * Fetches dynamic content from Sanity and merges it with existing content.
+ * New Sanity items display first, followed by existing/old messages and content.
  */
-export function useSanityData(query, fallbackData) {
+export function useSanityData(query, fallbackData = []) {
   const [data, setData] = useState(fallbackData);
   const [loading, setLoading] = useState(true);
 
@@ -14,13 +14,24 @@ export function useSanityData(query, fallbackData) {
     client
       .fetch(query)
       .then((results) => {
-        if (isMounted && Array.isArray(results) && results.length > 0) {
-          setData(results);
+        if (!isMounted || !Array.isArray(results)) return;
+
+        if (results.length === 0) {
+          setData(fallbackData);
+        } else {
+          // Merge Sanity items with existing content, deduplicating by title/name
+          const sanityTitles = new Set(
+            results.map((item) => (item.title || item.name || "").trim().toLowerCase())
+          );
+          const remainingFallback = (fallbackData || []).filter(
+            (item) => !sanityTitles.has((item.title || item.name || "").trim().toLowerCase())
+          );
+          setData([...results, ...remainingFallback]);
         }
       })
       .catch((err) => {
-        // Fallback silently to static data
         console.warn("Using local church data fallback:", err?.message || err);
+        if (isMounted) setData(fallbackData);
       })
       .finally(() => {
         if (isMounted) setLoading(false);
@@ -29,7 +40,7 @@ export function useSanityData(query, fallbackData) {
     return () => {
       isMounted = false;
     };
-  }, [query]);
+  }, [query, fallbackData]);
 
   return { data, loading };
 }
