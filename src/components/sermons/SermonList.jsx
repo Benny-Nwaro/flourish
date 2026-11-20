@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { useMemo, useState } from "react";
-import { sermons } from "../../constants/data";
+import { sermons as staticSermons } from "../../constants/data";
+import { useSanityData } from "../../hooks/useSanityData";
+import { sermonsQuery } from "../../lib/sanity";
 import searchIcon from "../../assets/figma/icon-search.svg";
 import headphoneIcon from "../../assets/figma/icon-headphone.svg";
 import downloadIcon from "../../assets/figma/icon-document-download.svg";
@@ -56,12 +58,13 @@ SermonCard.propTypes = {
 };
 
 export default function SermonList() {
+  const { data: sermons } = useSanityData(sermonsQuery, staticSermons);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(
     () => sermons.filter((s) => s.title.toLowerCase().includes(query.trim().toLowerCase())),
-    [query]
+    [query, sermons]
   );
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);

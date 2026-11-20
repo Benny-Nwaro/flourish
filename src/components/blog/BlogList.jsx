@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
-import { blogPosts } from "../../constants/data";
+import { blogPosts as staticBlogPosts } from "../../constants/data";
+import { useSanityData } from "../../hooks/useSanityData";
+import { blogPostsQuery } from "../../lib/sanity";
 
 function shareLinks(title) {
   const url = typeof window !== "undefined" ? window.location.href : "";
   const text = encodeURIComponent(`${title} ${url}`);
   return [
     { name: "Whatsapp", href: `https://wa.me/?text=${text}` },
-    { name: "Instagram", href: "https://www.instagram.com/flourishgenerationchurch/" },
-    { name: "Twitter", href: `https://twitter.com/intent/tweet?text=${text}` },
+    { name: "Instagram", href: "https://www.instagram.com/flourishnation_global/" },
   ];
 }
 
@@ -41,6 +42,7 @@ BlogCard.propTypes = {
 };
 
 export default function BlogList() {
+  const { data: blogPosts } = useSanityData(blogPostsQuery, staticBlogPosts);
   return (
     <>
       <section className="px-[20px] lg:px-[40px] xl:px-[150px] py-[100px] max-w-[1440px] mx-auto">

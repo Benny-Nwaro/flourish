@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Oops from "./pages/ErrorPage.jsx";
@@ -9,6 +10,8 @@ import Sermons from "./pages/Sermons.jsx";
 import Live from "./pages/Live.jsx";
 import BecomeMember from "./pages/BecomeMember.jsx";
 import { BrowserRouter, Route, Routes } from "react-router";
+
+const StudioPage = lazy(() => import("./pages/StudioPage.jsx"));
 
 function App() {
   return (
@@ -25,6 +28,14 @@ function App() {
           <Route path="give" element={<Give />} />
           <Route path="live" element={<Live />} />
           <Route path="become-a-member" element={<BecomeMember />} />
+          <Route
+            path="studio/*"
+            element={
+              <Suspense fallback={<div className="flex items-center justify-center h-screen font-redhat text-lg text-black">Loading Flourish Studio...</div>}>
+                <StudioPage />
+              </Suspense>
+            }
+          />
           <Route path="*" element={<Oops />} />
         </Routes>
       </BrowserRouter>

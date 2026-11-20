@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { testimonies } from "../../constants/data";
+import { testimonies as staticTestimonies } from "../../constants/data";
+import { useSanityData } from "../../hooks/useSanityData";
+import { testimoniesQuery } from "../../lib/sanity";
 import prevIcon from "../../assets/figma/carousel-prev.svg";
 import nextIcon from "../../assets/figma/carousel-next.svg";
 
 export default function Testimonies() {
+  const { data: testimonies } = useSanityData(testimoniesQuery, staticTestimonies);
   const [current, setCurrent] = useState(0);
   const isFirst = current === 0;
   const isLast = current === testimonies.length - 1;

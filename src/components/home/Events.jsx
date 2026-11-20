@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { useRef, useState, useEffect } from "react";
-import { events } from "../../constants/data";
+import { events as staticEvents } from "../../constants/data";
+import { useSanityData } from "../../hooks/useSanityData";
+import { eventsQuery } from "../../lib/sanity";
 import prevIcon from "../../assets/figma/carousel-prev.svg";
 import nextIcon from "../../assets/figma/carousel-next.svg";
 import calendarIcon from "../../assets/figma/icon-calendar.svg";
@@ -62,6 +64,7 @@ EventCard.propTypes = {
 };
 
 export default function Events() {
+  const { data: events } = useSanityData(eventsQuery, staticEvents);
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);

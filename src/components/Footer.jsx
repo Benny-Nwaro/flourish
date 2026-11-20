@@ -1,13 +1,11 @@
 import { Link } from "react-router";
 import logo from "../assets/figma/logo-footer.svg";
-import social from "../assets/figma/social.svg";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
 
-// Hit areas laid over the single Figma social-icons graphic (165px wide)
 const socialLinks = [
-  { label: "Facebook", href: "https://web.facebook.com/flourishnationglobal", left: 0 },
-  { label: "X (Twitter)", href: null, left: 41 },
-  { label: "LinkedIn", href: null, left: 83 },
-  { label: "Instagram", href: "https://www.instagram.com/flourishgenerationchurch/", left: 124 },
+  { label: "Facebook", href: "https://web.facebook.com/flourishnationglobal", icon: FaFacebookF },
+  { label: "Instagram", href: "https://www.instagram.com/flourishnation_global/", icon: FaInstagram },
+  { label: "YouTube", href: "https://www.youtube.com/@flourishgc_global", icon: FaYoutube },
 ];
 
 export default function Footer() {
@@ -75,21 +73,19 @@ export default function Footer() {
               Copyright Flourish Generation Church {new Date().getFullYear()}
             </p>
           </div>
-          <div className="relative w-[165px] h-[21.372px]">
-            <img src={social} alt="" width={165} height={21.372} className="block w-[165px] h-[21.372px]" />
-            {socialLinks.map(({ label, href, left }) =>
-              href ? (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={label}
-                  className="absolute top-[-6px] h-[33px] w-[41px]"
-                  style={{ left }}
-                />
-              ) : null
-            )}
+          <div className="flex items-center gap-[20px]">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="text-black hover:text-brandBlue transition-colors duration-200"
+              >
+                <Icon className="w-[19px] h-[19px]" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
